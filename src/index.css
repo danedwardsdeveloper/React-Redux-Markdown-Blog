@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+}
+
+.header ul {
+  list-style-type: none;
+  padding: 0;
+}
+.header ul li {
+  display: inline-block;
+  padding-right: 2rem;
+}
+
+.article {
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  background-color: lightgray;
+}

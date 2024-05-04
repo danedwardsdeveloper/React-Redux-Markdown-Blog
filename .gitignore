@@ -1,0 +1,17 @@
+# dependencies
+/node_modules
+
+# build output
+/build
+
+# dotenv environment variables
+.env 
+.env.* 
+
+# IDE settings
+.vscode/
+.idea/
+
+# Logs, OS files
+*.log
+.DS_Store
