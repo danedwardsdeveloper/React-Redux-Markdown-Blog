@@ -1,7 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import Markdown from "react-markdown";
 
-function ProfilePage() {
+function Article() {
   const params = useParams();
   console.log(params);
   return (
@@ -11,4 +12,4 @@ function ProfilePage() {
   );
 }
 
-export default ProfilePage;
+export default Article;

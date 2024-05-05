@@ -5,8 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Profiles from "./pages/Profiles";
-import ProfilePage from "./pages/ProfilePage";
+import Article from "./pages/Article";
 import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
@@ -20,12 +19,12 @@ const router = createBrowserRouter([
     element: <About />,
   },
   {
-    path: "/profiles",
-    element: <Profiles />,
+    path: "/:articleTitle",
+    element: <Article />,
   },
   {
-    path: "/profiles/:profileId",
-    element: <ProfilePage />,
+    path: "/BEM---Structuring-Your-CSS-for-Clarity-and-Maintainability",
+    element: "<Article />",
   },
 ]);
 

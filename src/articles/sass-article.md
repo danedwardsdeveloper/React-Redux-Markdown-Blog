@@ -1,6 +1,6 @@
 ---
 title: CSS with Superpowers - A Dive into Sass
-date: 2023-05-02
+date: 2024-05-01
 author: Google Gemini
 tags: Sass, CSS
 ---
@@ -21,7 +21,7 @@ Sass (Syntactically Awesome Style Sheets) is a powerful CSS preprocessor. Think 
    background-color: $primary-color;
    }`
 
-1. **Nesting:** Replicate the natural hierarchy of your HTML within your CSS for better organization:
+2. **Nesting:** Replicate the natural hierarchy of your HTML within your CSS for better organization:
 
    SCSS
 
@@ -35,11 +35,7 @@ Sass (Syntactically Awesome Style Sheets) is a powerful CSS preprocessor. Think 
    }
    }`
 
-   Use code [with caution.](notion://www.notion.so/faq#coding)
-
-   content_copy
-
-1. **Mixins:** Create reusable blocks of styles, like functions for your CSS:
+3. **Mixins:** Create reusable blocks of styles, like functions for your CSS:
 
    SCSS
 
@@ -51,21 +47,13 @@ Sass (Syntactically Awesome Style Sheets) is a powerful CSS preprocessor. Think 
    @include border-radius(5px);
    }`
 
-   Use code [with caution.](notion://www.notion.so/faq#coding)
-
-   content_copy
-
-1. **Logic and Calculations:** Sass supports basic programming concepts:
+4. **Logic and Calculations:** Sass supports basic programming concepts:
 
    SCSS
 
    `@for $i from 1 through 5 {
   .item-#{$i} { width: 20% * $i; }
 }`
-
-   Use code [with caution.](notion://www.notion.so/faq#coding)
-
-   content_copy
 
 **Getting Started with Sass**
 
@@ -88,10 +76,6 @@ body { background-color: #f8f8f8; }
 header { background-color: #2980b9; color: #fff; }
 button { background-color: #2980b9;  border: none; color: #fff; padding: 10px 20px; }
 button:hover { background-color: #246a9b; }`
-
-Use code [with caution.](notion://www.notion.so/faq#coding)
-
-content_copy
 
 **Enhanced with Sass:**
 
@@ -118,10 +102,6 @@ padding: 10px 20px;
 
 }
 }`
-
-Use code [with caution.](notion://www.notion.so/faq#coding)
-
-content_copy
 
 **Benefits:**
 

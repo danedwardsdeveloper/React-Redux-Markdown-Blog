@@ -1,17 +1,26 @@
 import React from "react";
-import styles from "./Components.css";
+// import styles from "./Components.css";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <p className="page-count">Page 1 of 10</p>
-      <p className="older-posts">Older posts =</p>
-      <ul className="social-icons">
-        <li>GitHub</li>
-        <li>CodePen</li>
-      </ul>
-      <a href="#">Top of page</a>
-      <p className="copyright-notice">&copy; Dan Edwards, 2024</p>
+    <footer>
+      <div className="footer-col-1">
+        <ul className="social-icons-list">
+          <li>
+            <a href="">GitHub</a>
+          </li>
+          <li>
+            <a href="">CodePen</a>
+          </li>
+          <li>
+            <a href="">CV</a>
+          </li>
+        </ul>
+        <p className="copyright-notice">&copy; Dan Edwards, 2024</p>
+      </div>
+      <div className="footer-col-2">
+        <a href="#">Top of page</a>
+      </div>
     </footer>
   );
 }

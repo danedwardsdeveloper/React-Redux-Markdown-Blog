@@ -4,8 +4,8 @@ const fs = require("fs");
 const dirPath = path.join(__dirname, "../src/articles");
 let postList = [];
 
-const getPosts = async () => {
-  await fs.readdir(dirPath, (err, files) => {
+const getPosts = () => {
+  fs.readdir(dirPath, (err, files) => {
     if (err) {
       return console.log(`Failed to list contents of the directory: ${err}`);
     }
@@ -37,7 +37,10 @@ const getPosts = async () => {
         const lines = contents.split("\n");
         const metadataIndices = lines.reduce(getMetadataIndices, []);
         const metadata = parseMetadata({ lines, metadataIndices });
+        const date = new Date(metadata.date);
+        const timestamp = date.getTime() / 1000;
         const content = parseContent({ lines, metadataIndices });
+        console.log(timestamp);
         post = {
           id: i + 1,
           title: metadata.title ? metadata.title : "Title not specified",
@@ -53,9 +56,7 @@ const getPosts = async () => {
       });
     });
   });
-  setTimeout(() => {
-    // console.log(postList);
-  }, 500);
+  setTimeout(() => {}, 500);
   return;
 };
 

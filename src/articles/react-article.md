@@ -1,7 +1,7 @@
 ---
 title: Unlock the Power of React - A Beginner's Guide
-date: 2023-05-02
-author: Google Gemini
+date: 2024-05-02
+author: Rebecca Glasscock
 tags: React
 ---
 

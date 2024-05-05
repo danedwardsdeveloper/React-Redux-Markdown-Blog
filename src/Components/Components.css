@@ -1,4 +1,4 @@
-.header {
+/* .header {
   background-color: aliceblue;
 }
 
@@ -6,6 +6,42 @@
   background-color: lightpink;
 }
 
-.footer {
-  background-color: aliceblue;
+.pagination {
+  margin-bottom: 8rem;
+  display: flex;
+  justify-content: space-between;
 }
+
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 4rem 0;
+  display: flex;
+}
+
+.footer-col-1 {
+  width: 65%;
+}
+
+.footer-col-2 {
+  width: 35%;
+  text-align: end;
+}
+
+.social-icons-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-icons-list li {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.1em 1em;
+  font-size: 1.6rem;
+  background-color: #eee;
+  border-radius: 3px;
+}
+
+.copyright-notice {
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.5);
+} */
