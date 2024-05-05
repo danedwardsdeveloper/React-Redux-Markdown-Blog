@@ -1,6 +1,6 @@
 ---
 title: Unlock the Power of React - A Beginner's Guide
-date: 2024-05-02
+date: May 02, 2024
 author: Rebecca Glasscock
 tags: React
 ---

@@ -22,10 +22,6 @@ const router = createBrowserRouter([
     path: "/:articleTitle",
     element: <Article />,
   },
-  {
-    path: "/BEM---Structuring-Your-CSS-for-Clarity-and-Maintainability",
-    element: "<Article />",
-  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

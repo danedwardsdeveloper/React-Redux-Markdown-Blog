@@ -8,9 +8,9 @@ function Header() {
       <header>
         <div className="header-row header-row-1">
           <div className="header-column-1">
-            <a href="#">
+            <Link to="/">
               <h1 className="site-title">Array of Sunshine</h1>
-            </a>
+            </Link>
           </div>
           <div className="header-column-2">
             <form action="" className="search-form">
@@ -22,8 +22,12 @@ function Header() {
         <div className="header-row header-row-2">
           <nav>
             <ul>
-              <li className="active">Home</li>
-              <li>About</li>
+              <li className="active">
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
             </ul>
           </nav>
         </div>

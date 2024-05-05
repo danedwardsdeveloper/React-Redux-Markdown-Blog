@@ -1,5 +1,5 @@
 import React from "react";
-import postList from "../articles/articles.json";
+import articleList from "../articles/articles.json";
 import { Link } from "react-router-dom";
 
 const trimArticle = (str, maxChar = 700) => {
@@ -19,11 +19,11 @@ const generatePath = (str) => {
   return str.replace(/\s+/g, "-");
 };
 
-function PostList() {
+function ArticlePreviews() {
   return (
     <main className="post-list">
-      {postList.length &&
-        postList.map((post, i) => {
+      {articleList.length &&
+        articleList.map((post, i) => {
           return (
             <article className="post" key={post.id}>
               <div className="post-info-container">
@@ -46,4 +46,4 @@ function PostList() {
   );
 }
 
-export default PostList;
+export default ArticlePreviews;

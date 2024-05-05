@@ -9,6 +9,9 @@ const getPosts = () => {
     if (err) {
       return console.log(`Failed to list contents of the directory: ${err}`);
     }
+
+    let filesProcessed = 0;
+
     files.forEach((file, i) => {
       let obj = {};
       let post;
@@ -42,21 +45,27 @@ const getPosts = () => {
         const content = parseContent({ lines, metadataIndices });
         console.log(timestamp);
         post = {
-          id: i + 1,
+          id: timestamp,
           title: metadata.title ? metadata.title : "Title not specified",
           author: metadata.author ? metadata.author : "Author not specified",
           date: metadata.date ? metadata.date : "Date not specified",
           content: content ? content : "Content not specified",
         };
         postList.push(post);
-        if (i === postList.length - 1) {
-          let data = JSON.stringify(postList);
+
+        filesProcessed++;
+
+        if (filesProcessed === files.length - 1) {
+          let sortedList = postList.sort((a, b) => {
+            return a.id < b.id ? 1 : -1;
+          });
+          let data = JSON.stringify(sortedList);
           fs.writeFileSync("src/articles/articles.json", data);
         }
       });
     });
   });
-  setTimeout(() => {}, 500);
+  // setTimeout(() => {}, 500);
   return;
 };
 

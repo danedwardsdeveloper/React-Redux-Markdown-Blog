@@ -8,6 +8,8 @@
 
 ### To-Do List
 
+- Style the About page
+- Clean up the code that generates article paths
 - Create a single-post layout
 - Style the markdown nicely
 - Add code syntax highlighting using a library
