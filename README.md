@@ -8,18 +8,25 @@
 
 ### To-Do List
 
-- Create a single-post layout
-- Fix the error when clicking on article links
-- Style the About page
-- Implement dynamic page title changes
+- Limit article previews to 5 most recent on home page
+- Enable dynamic pagination
+- Transfer the SingleArticle & About page styling from the static version
+- Style the Error page
+- What is the H1 on the homepage??
+- Add a brief site description
+- Site metadata
+- Favicon
+- Implement dynamic page title (browser tab) changes
 - Style the markdown nicely
 - Add code syntax highlighting using a library
-- Display newest posts at the top of the page
+- Add copy buttons for each code block
 - Turn preview text into a link
 - Add fade-in animations when scrolling down the homepage
 - Design a sidebar and dynamically display other relevant blog posts
 - Make the site responsive
 - Remove the word 'post' from the codebase - I prefer the term 'article' and it should be consistent for clarity
-- Make the search bar functional (...eventually. I don't currently have the skills to do this)
 
-- Currently having a problem parsing the Markdown files. Am going to make big changes to public/main.js to see if I can fix it.
+## Nice-to-Have-but-not-Essential To-Do List
+
+- Enable dynamic pagination on individual articles (next article, previous article)
+- Make the search bar functional (...eventually)
