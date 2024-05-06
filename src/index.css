@@ -34,7 +34,7 @@ body {
 }
 
 .site-title:hover,
-.post-title:hover {
+.article-title:hover {
   color: #fe8c00;
   background: -webkit-linear-gradient(left, #fe8c00, #f83600);
   -webkit-background-clip: text;
@@ -149,30 +149,30 @@ main {
   margin-top: 10rem;
 }
 
-.post {
+.article {
   margin-bottom: 1rem;
   display: flex;
   margin-bottom: 10rem;
 }
 
-.post-info-container {
+.article-info-container {
   flex: 0 0 40%;
   max-width: 40%;
 }
 
-.post-preview-container {
+.article-preview-container {
   margin-left: 5%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-.post-author,
-.post-date {
+.article-author,
+.article-date {
   font-size: 1.3rem;
 }
 
-.post-preview {
+.article-preview {
   font-size: 1.6rem;
   margin: 0 0 2.5rem 0;
   text-align: justify;

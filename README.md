@@ -2,15 +2,16 @@
 
 ### Features
 
-- Blog articles are written as .md files with metadata at the top and added to the articles folder, then they're parsed by /public/main.js, and added to src/articles/articles.json
+- Blog articles are written as .md files with metadata at the top and added to the articles folder, then they're parsed by `/public/main.js`, and added to src/articles/articles.json
 - Homepage then generates dynamic article previews
 - Markdown is removed from the truncated previews to make the homepage look neat
 
 ### To-Do List
 
-- Style the About page
-- Clean up the code that generates article paths
 - Create a single-post layout
+- Fix the error when clicking on article links
+- Style the About page
+- Implement dynamic page title changes
 - Style the markdown nicely
 - Add code syntax highlighting using a library
 - Display newest posts at the top of the page

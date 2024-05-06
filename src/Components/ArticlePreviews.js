@@ -2,39 +2,22 @@ import React from "react";
 import articleList from "../articles/articles.json";
 import { Link } from "react-router-dom";
 
-const trimArticle = (str, maxChar = 700) => {
-  return str.length > maxChar ? str.substring(0, maxChar - 3) + "..." : str;
-};
-
-const removeMarkdown = (str) => {
-  const markdownPatterns = [/\*\*(.*?)\*\*/g, /__(.*?)__/g, /\[(.*?)\]\((.*?)\)/g, /^#+\s(.*)/gm, /`(.*?)`/g, /\n={2,}/g];
-  let cleanedStr = str;
-  markdownPatterns.forEach((pattern) => {
-    cleanedStr = cleanedStr.replace(pattern, "$1");
-  });
-  return cleanedStr;
-};
-
-const generatePath = (str) => {
-  return str.replace(/\s+/g, "-");
-};
-
 function ArticlePreviews() {
   return (
-    <main className="post-list">
+    <main className="article-list">
       {articleList.length &&
-        articleList.map((post, i) => {
+        articleList.map((article, i) => {
           return (
-            <article className="post" key={post.id}>
-              <div className="post-info-container">
-                <p className="post-author">by {post.author}</p>
-                <h2 className="post-title">{post.title}</h2>
-                <p className="post-date">{post.date}</p>
+            <article className="article" key={article.id}>
+              <div className="article-info-container">
+                <p className="article-author">by {article.author}</p>
+                <h2 className="article-title">{article.title}</h2>
+                <p className="article-date">{article.date}</p>
               </div>
-              <div className="post-preview-container">
-                <p className="post-preview">{removeMarkdown(trimArticle(post.content))}</p>
+              <div className="article-preview-container">
+                <p className="article-preview">{article.preview}</p>
                 <p className="read-more">
-                  <Link key={generatePath(post.title)} to={`/${generatePath(post.title)}`}>
+                  <Link key={article.id} to={article.path}>
                     Read more
                   </Link>
                 </p>
