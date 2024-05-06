@@ -5,8 +5,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Article from "./pages/Article";
+import ArticlePage from "./Components/Article";
 import NotFound from "./pages/NotFound";
+import SingleArticle from "./pages/SingleArticle";
 
 const router = createBrowserRouter([
   {
@@ -19,8 +20,8 @@ const router = createBrowserRouter([
     element: <About />,
   },
   {
-    path: "/:articleTitle",
-    element: <Article />,
+    path: "/articles/:path",
+    element: <SingleArticle />,
   },
 ]);
 
