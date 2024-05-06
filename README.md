@@ -20,6 +20,7 @@
 - Style the markdown nicely
 - Add code syntax highlighting using a library
 - Add copy buttons for each code block
+- Add copy buttons for each code block
 - Turn preview text into a link
 - Add fade-in animations when scrolling down the homepage
 - Design a sidebar and dynamically display other relevant blog posts
