@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Markdown from "react-markdown";
 import articles from "../articles/articles.json";
 import Header from "../Components/Header";
 import Tags from "../Components/Tags";
@@ -40,13 +41,14 @@ const ArticlePage = () => {
             <h1>{article.title}</h1>
             <p>by {article.date}</p>
             <Tags tags={article.tags} />
-            <p>{article.content}</p>
+            <Markdown children={article.content} />
+            {/* <p>{article.content}</p> */}
           </>
         ) : (
           <p>Something went wrong - article not found.</p>
         )}
       </div>
-      <SideBar />
+      {/* <SideBar /> */}
       <Pagination />
       <Footer />
     </div>

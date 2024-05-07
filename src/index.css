@@ -55,8 +55,10 @@ p {
   margin-bottom: 2.5rem;
 }
 
-ul {
+ul,
+ol {
   margin-bottom: 2.5rem;
+  font-size: 1.6rem;
 }
 
 h2 {
@@ -232,4 +234,18 @@ footer {
   font-size: 1.3rem;
   background-color: lightgrey;
   border-radius: 4px;
+}
+
+pre {
+  background-color: #333;
+  color: whitesmoke;
+  display: block;
+  width: 50%;
+  overflow-x: scroll;
+  border-radius: 0.4rem;
+  padding: 2rem 6rem;
+}
+
+code {
+  font-size: 1.6rem;
 }

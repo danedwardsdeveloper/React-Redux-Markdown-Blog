@@ -22,9 +22,9 @@
 ### To-Do List
 
 - Add styling to the markdown so it's consistent
+- Fix punctuation replacement error. Getting `isn"t` instead of `isn't` etc.
 - Turn each tag into a link to a page of relevant article previews
 - Transfer the SingleArticle & About page styling from the static version
-- Add code syntax highlighting using a library
 - Write a test that checks that the number of objects in `articles.json` matches the number of `.md` files in `src/articles`
 - Enable dynamic pagination
 - Style the Error page
@@ -32,8 +32,9 @@
 - Add a brief site description
 - Site metadata
 - Favicon
+- Add code syntax highlighting using a library
 - Add copy buttons for each code block
-- Add copy buttons for each code block
+- Add line numbers to code blocks
 - Turn preview text into a link
 - Add fade-in animations when scrolling down the homepage
 - Design a sidebar and dynamically display other relevant blog posts

@@ -13,6 +13,7 @@ function Home() {
   // Slice: start is inclusive, end is exclusive
   // First item is at index 0
   let firstFivePreviews = articles.slice(0, 5);
+  // let firstFivePreviews = articles;
 
   return (
     <div className="page-container">
