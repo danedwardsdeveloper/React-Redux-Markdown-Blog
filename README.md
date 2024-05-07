@@ -6,6 +6,13 @@
 - Homepage then generates dynamic article previews
 - Markdown is removed from the truncated previews to make the homepage look neat
 
+### How to add a new article
+
+- Delete `src/articles/articles.json`
+- Run `public/main.js`
+- A new `articles.json` file should be generated
+- Everything is taken care of! The newest post will be displayed at the top of the homepage
+
 ### To-Do List
 
 - Limit article previews to 5 most recent on home page
