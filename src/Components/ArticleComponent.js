@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import articles from "../articles/articles.json";
 
-const SingleArticle = () => {
+function ArticleComponent() {
   const [article, setArticle] = useState(null);
   const { path } = useParams();
 
@@ -27,6 +27,6 @@ const SingleArticle = () => {
       )}
     </div>
   );
-};
+}
 
-export default SingleArticle;
+export default ArticleComponent;

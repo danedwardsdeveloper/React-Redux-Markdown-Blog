@@ -1,28 +1,42 @@
 import React, { useState, useEffect } from "react";
-import Article from "../Components/Article";
+import { useParams } from "react-router-dom";
+import articles from "../articles/articles.json";
+import Header from "../Components/Header";
+import SideBar from "../Components/SideBar";
+import Pagination from "../Components/Pagination";
+import Footer from "../Components/Footer";
 
-function ArticlesContainer(props) {
-  const [articles, setArticles] = useState([]);
+const ArticlePage = () => {
+  const [article, setArticle] = useState(null);
+  const { path } = useParams();
 
   useEffect(() => {
-    const fetchArticles = async () => {
-      const response = await fetch("/src/articles/articles.json");
-      const data = await response.json();
-      setArticles(data[0]);
+    const findArticle = () => {
+      const matchingArticle = articles.find((article) => article.path === path);
+      setArticle(matchingArticle);
     };
 
-    fetchArticles();
-  }, []);
+    findArticle();
+  }, [path]);
 
   return (
-    <div className="articles-container">
-      <h2>Non-dynamic title!</h2>
-      <p>Non-dynamic content!</p>
-      {articles.map((props) => (
-        <Article key={props.id} article={props.content} />
-      ))}
+    <div className="page-container">
+      <Header />
+      <div>
+        {article ? (
+          <>
+            <h1>{article.title}</h1>
+            <p>{article.content}</p>
+          </>
+        ) : (
+          <p>Loading article...</p>
+        )}
+      </div>
+      <SideBar />
+      <Pagination />
+      <Footer />
     </div>
   );
-}
+};
 
-export default ArticlesContainer;
+export default ArticlePage;
