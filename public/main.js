@@ -19,7 +19,7 @@ function removeMarkdown(str) {
 
 function generatePath(str) {
   const removePunctuation = (str) => {
-    const punctuationRegex = /[.,/#!$%^&*;:{}=\-_`~()'"]/g;
+    let punctuationRegex = /[.,/#!$%^&*;:{}=\-_`~()'"]/g;
     return str.replace(punctuationRegex, "");
   };
   const addDashes = (str) => {
@@ -30,13 +30,14 @@ function generatePath(str) {
 
 function getPosts() {
   fs.readdir(dirPath, (err, files) => {
+    const markdownFiles = files.filter((file) => file.endsWith(".md"));
     if (err) {
       return console.log(`Failed to list contents of the directory: ${err}`);
     }
 
     let filesProcessed = 0;
 
-    files.forEach((file, i) => {
+    markdownFiles.forEach((file, i) => {
       let obj = {};
       let post;
       fs.readFile(`${dirPath}/${file}`, "utf8", (err, contents) => {
@@ -63,6 +64,7 @@ function getPosts() {
         };
         let lines = contents.split("\n");
         let metadataIndices = lines.reduce(getMetadataIndices, []);
+        console.log(metadataIndices);
         let metadata = parseMetadata({ lines, metadataIndices });
         let date = new Date(metadata.date);
         let timestamp = date.getTime() / 1000;
@@ -91,6 +93,7 @@ function getPosts() {
           fs.writeFileSync("src/articles/articles.json", data);
         }
       });
+      console.log(file);
     });
   });
   return;

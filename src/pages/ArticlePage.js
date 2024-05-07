@@ -8,12 +8,30 @@ import Footer from "../Components/Footer";
 
 const ArticlePage = () => {
   const [article, setArticle] = useState(null);
+  const [error, setError] = useState(null);
   const { path } = useParams();
 
+  // useEffect(() => {
+  //   const findArticle = () => {
+  //     const matchingArticle = articles.find((article) => article.path === path);
+  //     setArticle(matchingArticle);
+  //   };
+
+  //   findArticle();
+  // }, [path]);
+
   useEffect(() => {
-    const findArticle = () => {
-      const matchingArticle = articles.find((article) => article.path === path);
-      setArticle(matchingArticle);
+    const findArticle = async () => {
+      try {
+        const matchingArticle = articles.find((article) => article.path === path);
+        if (!matchingArticle) {
+          throw new Error("Article not found");
+        }
+        setArticle(matchingArticle);
+      } catch (error) {
+        setError(error);
+        console.log(error);
+      }
     };
 
     findArticle();
@@ -25,11 +43,13 @@ const ArticlePage = () => {
       <div>
         {article ? (
           <>
+            <p>by {article.author}</p>
             <h1>{article.title}</h1>
+            <p>by {article.date}</p>
             <p>{article.content}</p>
           </>
         ) : (
-          <p>Loading article...</p>
+          <p>Something went wrong - article not found.</p>
         )}
       </div>
       <SideBar />

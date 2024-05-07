@@ -72,4 +72,4 @@ This CSS framework, referenced frequently throughout the book, allowed developer
 
 Overall, I’d say this is well worth a read, but not much use as a reference book. And I must say: don’t bother buying this book new. I bought mine on Amazon for £19.99, but there are copies in very good condition on eBay for less than £3. It’s also online as a [PDF](https://wtf.tw/ref/duckett.pdf).
 
-I have since come across a much better book: HTML, CSS & JavaScript in Easy Steps by Mike McGrath. Updated in 2020, this is similar (weirdly almost identical in size and weight to the Duckett book) but much more up-to-date whistle-stop tour of the languages of web development.
+I have since come across a much better book: HTML, CSS & JavaScript in Easy Steps by Mike McGrath. Updated in 2020, this is a similar (weirdly almost identical in size and weight to the Duckett book) but much more up-to-date whistle-stop tour of the languages of web development.
