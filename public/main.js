@@ -83,14 +83,17 @@ function getArticles() {
         let content = removeProblemCharacters(parseContent({ lines, metadataIndices }));
         let preview = removeMarkdown(trimArticle(content));
         let path = generatePath(metadata.title);
+        let tagString = metadata.tags;
+        let tags = tagString.split(", ");
         article = {
           id: timestamp,
-          title: metadata.title ? metadata.title : "Title not specified",
-          author: metadata.author ? metadata.author : "Author not specified",
-          date: metadata.date ? metadata.date : "Date not specified",
+          title: metadata.title,
+          author: metadata.author,
+          date: metadata.date,
           path: path,
-          preview: preview ? preview : "Preview not specified",
-          content: content ? content : "Content not specified",
+          tags: tags,
+          preview: preview,
+          content: content,
         };
 
         articleList.push(article);

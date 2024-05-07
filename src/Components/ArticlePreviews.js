@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import Tags from "./Tags";
 
 const ArticlePreviews = (props) => {
   return (
@@ -11,6 +12,7 @@ const ArticlePreviews = (props) => {
               <p className="article-author">by {article.author}</p>
               <h2 className="article-title">{article.title}</h2>
               <p className="article-date">{article.date}</p>
+              <Tags tags={article.tags} />
             </div>
             <div className="article-preview-container">
               <p className="article-preview">{article.preview}</p>

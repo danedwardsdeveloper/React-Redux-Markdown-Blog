@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Header from "../Components/Header.js";
 import Pagination from "../Components/Pagination.js";
 import Footer from "../Components/Footer.js";
@@ -6,7 +6,7 @@ import ArticlePreviews from "../Components/ArticlePreviews.js";
 import articles from "../articles/articles.json";
 
 function Home() {
-  const [previews, setPreviews] = useState(null);
+  // const [previews, setPreviews] = useState(null);
   useEffect(() => {
     document.title = "Home | Array of Sunshine";
   }, []);

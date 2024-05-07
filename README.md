@@ -21,8 +21,9 @@
 
 ### To-Do List
 
-- Transfer the SingleArticle & About page styling from the static version
 - Add styling to the markdown so it's consistent
+- Turn each tag into a link to a page of relevant article previews
+- Transfer the SingleArticle & About page styling from the static version
 - Add code syntax highlighting using a library
 - Write a test that checks that the number of objects in `articles.json` matches the number of `.md` files in `src/articles`
 - Enable dynamic pagination
@@ -37,7 +38,9 @@
 - Add fade-in animations when scrolling down the homepage
 - Design a sidebar and dynamically display other relevant blog posts
 - Make the site responsive
-- Remove the word 'post' from the codebase - I prefer the term 'article' and it should be consistent for clarity
+- ~~Remove the word 'post' from the codebase - I prefer the term 'article' and it should be consistent for clarity~~
+- ~~Display article tags on single article page~~
+- ~~Display article tags on home page~~
 - ~~Limit article previews to 5 most recent on home page~~
 - ~~This article: **HTML & CSS by Jon Duckett. Is it still relevant?** isn't displaying in full for some reason, possibly because I pasted it from Notion. Fix this error. Solution: wrote a function to find and replace problem characters a weird apostrophe that isn't an apostrope, and an nbsb that looks like a space. Removed question marks from the path~~
 - ~~Add a `removeProblemCharacters` function to `public/main.js` to prevent problems in `articles.json`~~

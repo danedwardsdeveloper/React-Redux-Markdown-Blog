@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import articles from "../articles/articles.json";
 import Header from "../Components/Header";
+import Tags from "../Components/Tags";
 import SideBar from "../Components/SideBar";
 import Pagination from "../Components/Pagination";
 import Footer from "../Components/Footer";
@@ -38,6 +39,7 @@ const ArticlePage = () => {
             <p>by {article.author}</p>
             <h1>{article.title}</h1>
             <p>by {article.date}</p>
+            <Tags tags={article.tags} />
             <p>{article.content}</p>
           </>
         ) : (

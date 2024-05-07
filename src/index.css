@@ -225,3 +225,11 @@ footer {
   /* width: 100%; */
   /* max-width: 100%; */
 }
+
+.tag {
+  margin-right: 0.8rem;
+  padding: 0.2rem 1rem;
+  font-size: 1.3rem;
+  background-color: lightgrey;
+  border-radius: 4px;
+}
