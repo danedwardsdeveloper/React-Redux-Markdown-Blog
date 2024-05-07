@@ -4,6 +4,19 @@ const fs = require("fs");
 const dirPath = path.join(__dirname, "../src/articles");
 let articleList = [];
 
+function removeProblemCharacters(jsString) {
+  return jsString.replace(/\u2019|\u00A0|\u2013/g, (match) => {
+    switch (match) {
+      case "\u2019":
+        return '"';
+      case "\u00A0":
+        return " ";
+      case "\u2013":
+        return "-";
+    }
+  });
+}
+
 function trimArticle(str, maxChar = 700) {
   return str.length > maxChar ? str.substring(0, maxChar - 3) + "..." : str;
 }
@@ -19,7 +32,7 @@ function removeMarkdown(str) {
 
 function generatePath(str) {
   const removePunctuation = (str) => {
-    let punctuationRegex = /[.,/#!$%^&*;:{}=\-_`~()'"]/g;
+    let punctuationRegex = /[.,/?#!$%^&*;:{}=\-_`~()'"]/g;
     return str.replace(punctuationRegex, "");
   };
   const addDashes = (str) => {
@@ -28,7 +41,7 @@ function generatePath(str) {
   return addDashes(removePunctuation(str)).toLowerCase();
 }
 
-function getPosts() {
+function getArticles() {
   fs.readdir(dirPath, (err, files) => {
     const markdownFiles = files.filter((file) => file.endsWith(".md"));
     if (err) {
@@ -39,7 +52,7 @@ function getPosts() {
 
     markdownFiles.forEach((file, i) => {
       let obj = {};
-      let post;
+      let article;
       fs.readFile(`${dirPath}/${file}`, "utf8", (err, contents) => {
         const getMetadataIndices = (acc, elem, i) => {
           if (/^---/.test(elem)) {
@@ -64,14 +77,13 @@ function getPosts() {
         };
         let lines = contents.split("\n");
         let metadataIndices = lines.reduce(getMetadataIndices, []);
-        console.log(metadataIndices);
         let metadata = parseMetadata({ lines, metadataIndices });
         let date = new Date(metadata.date);
         let timestamp = date.getTime() / 1000;
-        let content = parseContent({ lines, metadataIndices });
+        let content = removeProblemCharacters(parseContent({ lines, metadataIndices }));
         let preview = removeMarkdown(trimArticle(content));
         let path = generatePath(metadata.title);
-        post = {
+        article = {
           id: timestamp,
           title: metadata.title ? metadata.title : "Title not specified",
           author: metadata.author ? metadata.author : "Author not specified",
@@ -81,7 +93,7 @@ function getPosts() {
           content: content ? content : "Content not specified",
         };
 
-        articleList.push(post);
+        articleList.push(article);
 
         filesProcessed++;
 
@@ -93,10 +105,9 @@ function getPosts() {
           fs.writeFileSync("src/articles/articles.json", data);
         }
       });
-      console.log(file);
     });
   });
   return;
 }
 
-getPosts();
+getArticles();
