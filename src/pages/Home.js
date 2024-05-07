@@ -7,6 +7,9 @@ import articles from "../articles/articles.json";
 
 function Home() {
   const [previews, setPreviews] = useState(null);
+  useEffect(() => {
+    document.title = "Home | Array of Sunshine";
+  }, []);
   // Slice: start is inclusive, end is exclusive
   // First item is at index 0
   let firstFivePreviews = articles.slice(0, 5);

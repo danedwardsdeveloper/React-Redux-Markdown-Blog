@@ -31,7 +31,6 @@
 - Add a brief site description
 - Site metadata
 - Favicon
-- Implement dynamic page title (browser tab) changes
 - Add copy buttons for each code block
 - Add copy buttons for each code block
 - Turn preview text into a link
@@ -42,6 +41,7 @@
 - ~~Limit article previews to 5 most recent on home page~~
 - ~~This article: **HTML & CSS by Jon Duckett. Is it still relevant?** isn't displaying in full for some reason, possibly because I pasted it from Notion. Fix this error. Solution: wrote a function to find and replace problem characters a weird apostrophe that isn't an apostrope, and an nbsb that looks like a space. Removed question marks from the path~~
 - ~~Add a `removeProblemCharacters` function to `public/main.js` to prevent problems in `articles.json`~~
+- ~~Implement dynamic page title (browser tab) changes~~
 
 ## Nice-to-Have-but-not-Essential To-Do List
 

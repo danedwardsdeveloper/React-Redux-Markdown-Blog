@@ -11,15 +11,6 @@ const ArticlePage = () => {
   const [error, setError] = useState(null);
   const { path } = useParams();
 
-  // useEffect(() => {
-  //   const findArticle = () => {
-  //     const matchingArticle = articles.find((article) => article.path === path);
-  //     setArticle(matchingArticle);
-  //   };
-
-  //   findArticle();
-  // }, [path]);
-
   useEffect(() => {
     const findArticle = async () => {
       try {
@@ -28,6 +19,7 @@ const ArticlePage = () => {
           throw new Error("Article not found");
         }
         setArticle(matchingArticle);
+        document.title = `${matchingArticle.title} | Array of Sunshine`;
       } catch (error) {
         setError(error);
         console.log(error);
