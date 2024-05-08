@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   color: rgba(0, 0, 0, 0.8);
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 body {
@@ -296,6 +296,16 @@ code {
 
 .top-of-page {
   font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.5);
+  transition: color 0.5s;
+  border: none;
+  background-color: transparent;
+  font-family: Georgia, serif;
+  padding: 0;
+}
+
+.top-of-page:hover {
+  color: black;
 }
 
 .next {

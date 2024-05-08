@@ -1,5 +1,8 @@
 import React from "react";
-// import styles from "./Components.css";
+
+const handleScrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 function Footer() {
   return (
@@ -20,9 +23,9 @@ function Footer() {
         <p className="copyright-notice">&copy; Dan Edwards, 2024</p>
       </div>
       <div className="footer-col-2">
-        <a href="#" className="top-of-page">
+        <button className="top-of-page" onClick={handleScrollToTop}>
           Top of page
-        </a>
+        </button>
       </div>
     </footer>
   );

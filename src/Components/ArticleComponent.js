@@ -3,6 +3,11 @@ import React from "react";
 import MarkdownRenderer from "./MarkdownRenderer";
 
 function ArticleComponent({ article }) {
+  window.scrollTo({
+    top: 0,
+    behavior: "instant",
+  });
+
   return (
     <article className="full-article">
       <p>by {article.author}</p>
