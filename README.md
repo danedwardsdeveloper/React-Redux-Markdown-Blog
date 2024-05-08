@@ -12,7 +12,7 @@
 - Run `public/main.js`
 - `articles.json` file should be rewritten including the new article. If you've copied & pasted from a different text editor, you'll need to check through the file for characters that cause problems when converted to JSON.
 - If you find any new ones (highlighted in yellow on my VS Code theme), look up the character code [here](https://www.babelstone.co.uk/Unicode/whatisit.html) and add a replace case to the `removeProblemCharacters` function in `/public/main.js`
-- Then (hopefully) everything is taken care of! The newest post will be displayed at the top of the homepage
+- Then (hopefully) everything will be taken care of dynamically! The newest post will be displayed at the top of the homepage
 
 #### Troubleshooting
 
@@ -32,13 +32,13 @@
 - Add a brief site description
 - Site metadata
 - Favicon
-- Add code syntax highlighting using a library
 - Add copy buttons for each code block
 - Add line numbers to code blocks
 - Turn preview text into a link
 - Add fade-in animations when scrolling down the homepage
 - Design a sidebar and dynamically display other relevant blog posts
 - Make the site responsive
+- ~~Add code syntax highlighting using a library~~
 - ~~Remove the word 'post' from the codebase - I prefer the term 'article' and it should be consistent for clarity~~
 - ~~Display article tags on single article page~~
 - ~~Display article tags on home page~~

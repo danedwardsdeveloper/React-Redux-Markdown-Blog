@@ -27,7 +27,8 @@ This is some `inline code`
 
 Here's a code block:
 
-```JSON
+```javascript
+// index.js
 {
   "firstName": "John",
   "lastName": "Smith",

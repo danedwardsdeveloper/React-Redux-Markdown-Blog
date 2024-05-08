@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Markdown from "react-markdown";
 import articles from "../articles/articles.json";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dracula as theme } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Header from "../Components/Header";
 import Tags from "../Components/Tags";
 import SideBar from "../Components/SideBar";
@@ -41,11 +43,25 @@ const ArticlePage = () => {
             <h1>{article.title}</h1>
             <p>by {article.date}</p>
             <Tags tags={article.tags} />
-            <Markdown children={article.content} />
-            {/* <p>{article.content}</p> */}
+            <Markdown
+              children={article.content}
+              components={{
+                code(props) {
+                  const { children, className, node, ...rest } = props;
+                  const match = /language-(\w+)/.exec(className || "");
+                  return match ? (
+                    <SyntaxHighlighter {...rest} PreTag="div" children={String(children).replace(/\n$/, "")} language={match[1]} style={theme} showLineNumbers="true" />
+                  ) : (
+                    <code {...rest} className={className}>
+                      {children}
+                    </code>
+                  );
+                },
+              }}
+            />
           </>
         ) : (
-          <p>Something went wrong - article not found.</p>
+          <h2>Something went wrong - article not found.</h2>
         )}
       </div>
       {/* <SideBar /> */}
