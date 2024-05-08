@@ -11,10 +11,18 @@ function SideBar({ articleTags }) {
           <li>
             <Link to="/not-found">Another article</Link>
           </li>
+          <li>
+            <Link to="/not-found">Another article</Link>
+          </li>
+          <li>
+            <Link to="/not-found">Another article</Link>
+          </li>
         </ul>
       </section>
-      SideBar
-      <Tags tags={articleTags} />
+      <section className="tags-section">
+        <h3>Tags</h3>
+        <Tags tags={articleTags} />
+      </section>
     </aside>
   );
 }

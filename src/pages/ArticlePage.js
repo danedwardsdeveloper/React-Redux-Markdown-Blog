@@ -34,8 +34,11 @@ function ArticlePage() {
   return (
     <div className="page-container">
       <Header />
-      {article && <ArticleComponent article={article} />}
-      {article && <SideBar articleTags={article.tags} />} <Pagination />
+      <main className="main--article">
+        {article && <ArticleComponent article={article} />}
+        {article && <SideBar articleTags={article.tags} />}
+      </main>
+      <Pagination />
       <Footer />
     </div>
   );

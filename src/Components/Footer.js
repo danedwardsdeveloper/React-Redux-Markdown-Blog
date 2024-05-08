@@ -20,7 +20,9 @@ function Footer() {
         <p className="copyright-notice">&copy; Dan Edwards, 2024</p>
       </div>
       <div className="footer-col-2">
-        <a href="#">Top of page</a>
+        <a href="#" className="top-of-page">
+          Top of page
+        </a>
       </div>
     </footer>
   );

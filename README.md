@@ -21,7 +21,10 @@
 
 ### To-Do List
 
-- Add styling to the markdown so it's consistent
+- Add conditional loading to the article page to handle errors gracefully
+- Add loads of articles (hundreds of poems & Shakespeare's sonnets?) to demonstrate saleability
+- Diff check the styling between static & react versions
+- Check article bodies for errors
 - Fix punctuation replacement error. Getting `isn"t` instead of `isn't` etc.
 - Turn each tag into a link to a page of relevant article previews
 - Transfer the SingleArticle & About page styling from the static version
@@ -38,6 +41,7 @@
 - Add fade-in animations when scrolling down the homepage
 - Design a sidebar and dynamically display other relevant blog posts
 - Make the site responsive
+- ~~Add styling to the markdown so it's consistent~~
 - ~~Generate author links~~
 - ~~Add code syntax highlighting using a library~~
 - ~~Remove the word 'post' from the codebase - I prefer the term 'article' and it should be consistent for clarity~~
