@@ -40,13 +40,17 @@ h3 {
   color: #000;
 }
 
-.article-title {
+.article-title--full {
   font-size: 5rem;
+}
+
+.article-title--preview {
+  font-size: 4.4rem;
   color: black;
 }
 
 .site-title:hover,
-.article-title a:hover {
+.article-title--preview a:hover {
   color: #fe8c00;
   background: -webkit-linear-gradient(left, #fe8c00, #f83600);
   -webkit-background-clip: text;
@@ -213,6 +217,13 @@ main {
 .article-preview-container {
   display: flex;
   margin-bottom: 10rem;
+}
+
+.article-preview {
+  font-size: 1.6rem;
+  margin: 0 0 2.5rem 0;
+  text-align: justify;
+  color: #000;
 }
 
 .article-meta-col {

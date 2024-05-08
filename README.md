@@ -21,6 +21,8 @@
 
 ### To-Do List
 
+- Automatically scroll to the top of the page instantly when clicking on an article link
+- Scroll smoothly when clicking on 'top of page' internal link
 - Add conditional loading to the article page to handle errors gracefully
 - Add loads of articles (hundreds of poems & Shakespeare's sonnets?) to demonstrate saleability
 - Diff check the styling between static & react versions

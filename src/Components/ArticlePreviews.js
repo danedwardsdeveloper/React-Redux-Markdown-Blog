@@ -16,7 +16,7 @@ const ArticlePreviews = (props) => {
                   {article.author}
                 </Link>
               </p>
-              <h2 className="article-title">
+              <h2 className="article-title--preview">
                 <Link to={articlePath}>{article.title}</Link>
               </h2>
               <p className="article-date">{article.date}</p>

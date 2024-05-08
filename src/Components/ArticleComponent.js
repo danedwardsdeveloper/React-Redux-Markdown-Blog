@@ -6,7 +6,7 @@ function ArticleComponent({ article }) {
   return (
     <article className="full-article">
       <p>by {article.author}</p>
-      <h1 className="article-title">{article.title}</h1>
+      <h1 className="article-title--full">{article.title}</h1>
       <p>by {article.date}</p>
       <MarkdownRenderer children={article.content} />
     </article>
