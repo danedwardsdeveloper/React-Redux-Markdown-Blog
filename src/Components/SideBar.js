@@ -1,8 +1,9 @@
 import React from "react";
 import Tags from "./Tags";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-function SideBar({ articleTags }) {
+function SideBar(props) {
   return (
     <aside className="sidebar">
       <section className="recent-section">
@@ -21,10 +22,15 @@ function SideBar({ articleTags }) {
       </section>
       <section className="tags-section">
         <h3>Tags</h3>
-        <Tags tags={articleTags} />
+        <Tags {...props} />
       </section>
     </aside>
   );
 }
+
+// SideBar.propTypes = {
+//   articleTags: PropTypes.arrayOf(PropTypes.string),
+//   aboutTags: PropTypes.arrayOf(PropTypes.string),
+// };
 
 export default SideBar;
