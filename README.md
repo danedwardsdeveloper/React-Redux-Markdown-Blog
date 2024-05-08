@@ -38,6 +38,7 @@
 - Add fade-in animations when scrolling down the homepage
 - Design a sidebar and dynamically display other relevant blog posts
 - Make the site responsive
+- ~~Generate author links~~
 - ~~Add code syntax highlighting using a library~~
 - ~~Remove the word 'post' from the codebase - I prefer the term 'article' and it should be consistent for clarity~~
 - ~~Display article tags on single article page~~

@@ -42,7 +42,6 @@ const ArticlePage = () => {
             <p>by {article.author}</p>
             <h1>{article.title}</h1>
             <p>by {article.date}</p>
-            <Tags tags={article.tags} />
             <Markdown
               children={article.content}
               components={{

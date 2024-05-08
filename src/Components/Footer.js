@@ -7,13 +7,14 @@ function Footer() {
       <div className="footer-col-1">
         <ul className="social-icons-list">
           <li>
-            <a href="">GitHub</a>
+            <a href="https://github.com/danedwardsdeveloper" target="_blank">
+              GitHub
+            </a>
           </li>
           <li>
-            <a href="">CodePen</a>
-          </li>
-          <li>
-            <a href="">CV</a>
+            <a href="https://danedwardsdeveloper.com/" target="_blank">
+              CV
+            </a>
           </li>
         </ul>
         <p className="copyright-notice">&copy; Dan Edwards, 2024</p>

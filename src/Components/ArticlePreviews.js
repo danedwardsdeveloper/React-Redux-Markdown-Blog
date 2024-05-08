@@ -1,23 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Tags from "./Tags";
 
 const ArticlePreviews = (props) => {
   return (
-    <main className="article-list">
+    <main className="main--home-page">
       {props.articles.map((article) => {
+        let articlePath = `/articles/${article.path}`;
+        let authorPath = `/writers/${article.authorPath}`;
         return (
-          <section className="article" key={article.id}>
-            <div className="article-info-container">
-              <p className="article-author">by {article.author}</p>
-              <h2 className="article-title">{article.title}</h2>
+          <section className="article-preview-container" key={article.id}>
+            <div className="article-meta-col">
+              <p className="article-author">
+                by&nbsp;
+                <Link to={authorPath} className="article-author">
+                  {article.author}
+                </Link>
+              </p>
+              <h2 className="article-title">
+                <Link to={articlePath}>{article.title}</Link>
+              </h2>
               <p className="article-date">{article.date}</p>
-              <Tags tags={article.tags} />
             </div>
-            <div className="article-preview-container">
-              <p className="article-preview">{article.preview}</p>
+            <div className="article-content-col">
+              <p>
+                <Link to={articlePath} className="article-preview">
+                  {article.preview}
+                </Link>
+              </p>
               <p className="read-more">
-                <Link key={article.id} to={`/articles/${article.path}`}>
+                <Link key={article.id} to={articlePath}>
                   Read more
                 </Link>
               </p>

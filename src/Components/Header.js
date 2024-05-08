@@ -13,14 +13,14 @@ function Header() {
             </Link>
           </div>
           <div className="header-column-2">
-            <form action="" className="search-form" id="search-form">
-              {/* <img className="search-icon" src="./assets/icons/google-search-icon.svg" alt="" /> */}
-              <input type="search" placeholder="Search..." className="search-input" name="search-form" />
-            </form>
+            {/* <form action="" className="search-form" id="search-form"> */}
+            {/* <img className="search-icon" src="./assets/icons/google-search-icon.svg" alt="" /> */}
+            {/* <input type="search" placeholder="Search..." className="search-input" name="search-form" /> */}
+            {/* </form> */}
           </div>
         </div>
         <div className="header-row header-row-2">
-          <nav>
+          <nav className="main-nav">
             <ul>
               <li className="active">
                 <Link to="/">Home</Link>

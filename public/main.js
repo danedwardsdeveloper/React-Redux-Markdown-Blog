@@ -83,6 +83,7 @@ function getArticles() {
         let content = removeProblemCharacters(parseContent({ lines, metadataIndices }));
         let preview = removeMarkdown(trimArticle(content));
         let path = generatePath(metadata.title);
+        let authorPath = generatePath(metadata.author);
         let tagString = metadata.tags;
         let tags = tagString.split(", ");
         article = {
@@ -91,6 +92,7 @@ function getArticles() {
           author: metadata.author,
           date: metadata.date,
           path: path,
+          authorPath: authorPath,
           tags: tags,
           preview: preview,
           content: content,
