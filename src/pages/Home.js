@@ -6,9 +6,9 @@ import ArticlePreviews from "../Components/ArticlePreviews.js";
 import articles from "../articles/articles.json";
 
 function Home() {
-  useEffect(() => {
-    document.title = "Home | Array of Sunshine | Front-End WebDev Blog:  JavaScript, React, Coding book Reviews";
-  }, []);
+  // useEffect(() => {
+  //   document.title = "Home | Array of Sunshine | Front-End WebDev Blog:  JavaScript, React, Coding book Reviews";
+  // }, []);
 
   const [articlePreviews, setArticlePreviews] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -28,8 +28,10 @@ function Home() {
   const currentArticles = articlePreviews.slice(indexOfFirstArticle, indexOfLastArticle);
   const numberOfPages = Math.ceil(articlePreviews.length / articlesPerPage);
 
-  console.log(`Number of pages: ${numberOfPages}`);
-  console.log(`Number of articles: ${articles.length}`);
+  useEffect(() => {
+    let title = `${currentPage === 1 ? "Home" : "Page " + currentPage} | Array of Sunshine | Front-End WebDev Blog: JavaScript, React, Coding Book Reviews`;
+    document.title = title;
+  }, [currentPage]);
 
   return (
     <div className="page-container">

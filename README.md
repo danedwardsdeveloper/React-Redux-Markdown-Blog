@@ -21,10 +21,8 @@
 
 ### To-Do List
 
-- Clicking 'older posts' changes the path to `/pages/2` etc.
 - Prevent incorrect article paths from displaying an empty page
 - Add conditional loading to the article page to handle errors gracefully
-- Add loads of articles (hundreds of poems & Shakespeare's sonnets?) to demonstrate scalability
 - Diff check the styling between static & react versions
 - Check article bodies for errors
 - Turn each author into a page of previews by that author
@@ -40,11 +38,13 @@
 - Add screenshot to Twitter OG metadata
 - Make markdown links open in a new tab
 - Demonstrate Markdown format in ReadMe
+- Clean up the article content
+- Invite other programmers to write articles
 
 ## Nice-to-Have-but-not-Essential To-Do List
 
 - Enable dynamic pagination on individual articles (next article, previous article)
-- Add fade-in animations when scrolling down the homepage
+- Add fade-in animations when scrolling down the homepage (Harder than expected)
 - Add copy buttons for each code block
 - Scroll to the top of the <article> element when clicking on a link (This seems much harder than expected!)
 - Make the search bar functional (...eventually)
@@ -75,6 +75,7 @@
 - ~~Homepage metadata~~
 - ~~Fix punctuation replacement error. Getting `isn"t` instead of `isn't` etc. Fixed! Prettify was messing everything up - solution was to wrap punctuation in backticks.~~
 - ~~Conditional rendering of 'Newer posts' & ''Older posts' nav as when appropriate~~
+- ~~Dynamic page titles when using pagination nav links~~
 
 ### Helpful resources
 
