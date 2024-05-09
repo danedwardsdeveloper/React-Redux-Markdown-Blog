@@ -21,7 +21,8 @@
 
 ### To-Do List
 
-- Turn each tag into a link to a page of relevant article previews
+- Tidy up Home page function
+- Try to consolidate Home, Author & Tags pages as they're essentially the same
 - Turn each author into a page of previews by that author
 - Add conditional loading to the article page to handle errors gracefully
 - Diff check the styling between static & react versions
@@ -78,6 +79,7 @@
 - ~~Conditional rendering of 'Newer posts' & ''Older posts' nav as when appropriate~~
 - ~~Dynamic page titles when using pagination nav links~~
 - ~~Fix sidebar recent article paths~~
+- ~~Turn each tag into a link to a page of relevant article previews~~
 
 ### Helpful resources
 
