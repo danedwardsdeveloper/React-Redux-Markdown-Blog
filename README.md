@@ -21,6 +21,7 @@
 
 ### To-Do List
 
+- Hide 'Newer posts' || ''Older posts' nav links when appropriate
 - Clicking 'older posts' changes the path to `/pages/2` etc.
 - Prevent incorrect article paths from displaying an empty page
 - Add conditional loading to the article page to handle errors gracefully
@@ -33,13 +34,13 @@
 - Enable preview page sorted by author
 - Transfer the SingleArticle & About page styling from the static version
 - Write a test that checks that the number of objects in `articles.json` matches the number of `.md` files in `src/articles`
-- Enable dynamic pagination
 - Design a sidebar and dynamically display other relevant blog posts
 - Make the site responsive
 - Enable dynamic metadata
 - Add screenshot to ReadMe
 - Add screenshot to Twitter OG metadata
 - Make markdown links open in a new tab
+- Demonstrate Markdown format in ReadMe
 
 ## Nice-to-Have-but-not-Essential To-Do List
 
@@ -52,6 +53,7 @@
 
 ### To-Do List | Completed
 
+- ~~Enable dynamic pagination~~
 - ~~Add 'newer posts' link, which will be hidden on page one.~~
 - ~~Style the Error page~~
 - ~~Favicon~~

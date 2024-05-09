@@ -1,23 +1,32 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function PaginationOld() {
-  let currentPageNumber = 1;
-  let totalPages = 10;
+function PaginationOld({ numberOfPages, currentPage, setCurrentPage }) {
+  // let currentPageNumber = 1;
+  // let totalPages = 10;
+  // const pageNumbers = [...Array(nPages + 1).keys()].slice(1);
+
+  const goToNextPage = () => {
+    if (currentPage !== numberOfPages) setCurrentPage(currentPage + 1);
+  };
+
+  const goToPrevPage = () => {
+    if (currentPage !== 1) setCurrentPage(currentPage - 1);
+  };
 
   return (
     <nav className="pagination">
       <p className="page-count">
-        Page&nbsp;<span>{currentPageNumber}</span>&nbsp;of&nbsp;<span>{totalPages}</span>
+        Page&nbsp;<span>{currentPage}</span>&nbsp;of&nbsp;<span>{numberOfPages}</span>
       </p>
       <ul>
         <li>
-          <Link to="/" className="previous">
+          <Link onClick={goToPrevPage} className="previous">
             Newer posts
           </Link>
         </li>
         <li>
-          <Link to="/" className="next">
+          <Link onClick={goToNextPage} className="next">
             Older posts
           </Link>
         </li>

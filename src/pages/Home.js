@@ -11,24 +11,33 @@ function Home() {
     document.title = "Home | Array of Sunshine | Front-End WebDev Blog:  JavaScript, React, Coding book Reviews";
   }, []);
 
-  // const [articlePreviews, setArticlePreviews] = useState([]);
-  // setArticlePreviews(articles);
+  const [articlePreviews, setArticlePreviews] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  let firstFivePreviews = articles.slice(0, 5);
-  // const totalPages = articles.length;
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [previewsPerPage] = useState(5);
-  // const indexOfLastPreview = currentPage * previewsPerPage;
-  // const indexOfFirstPreview = indexOfLastPreview - previewsPerPage;
-  // const currentPreviews = articles.slice(indexOfFirstPreview, indexOfLastPreview);
-  // console.log(currentPreviews);
+  useEffect(() => {
+    const fetchData = async () => {
+      setArticlePreviews(articles);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [articlesPerPage] = useState(5);
+  const indexOfLastArticle = currentPage * articlesPerPage;
+  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
+  const currentArticles = articlePreviews.slice(indexOfFirstArticle, indexOfLastArticle);
+  const numberOfPages = Math.ceil(articlePreviews.length / articlesPerPage);
+
+  console.log(`Number of pages: ${numberOfPages}`);
+  console.log(`Number of articles: ${articles.length}`);
 
   return (
     <div className="page-container">
       <Header />
-      <ArticlePreviews articles={firstFivePreviews} />
+      <ArticlePreviews articles={currentArticles} />
       {/* <PaginationNew /> */}
-      <PaginationOld />
+      <PaginationOld numberOfPages={numberOfPages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <Footer />
     </div>
   );
