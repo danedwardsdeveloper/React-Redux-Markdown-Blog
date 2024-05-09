@@ -20,7 +20,7 @@ function ArticlePage() {
           throw new Error("Article not found");
         }
         setArticle(matchingArticle);
-        document.title = `${matchingArticle.title} | Array of Sunshine`;
+        document.title = `${matchingArticle.title} | Array of Sunshine | Front-End WebDev Blog: JavaScript, React, Coding book Reviews`;
       } catch (error) {
         setError(error);
         console.log(error);

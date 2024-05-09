@@ -5,7 +5,7 @@ import Footer from "../Components/Footer";
 
 function About() {
   useEffect(() => {
-    document.title = "About | Array of Sunshine";
+    document.title = "About | Array of Sunshine | Front-End WebDev Blog: JavaScript, React, Coding book Reviews";
   }, []);
 
   const aboutTags = ["Book reviews", "JavaScript", "React"];
@@ -15,9 +15,8 @@ function About() {
       <Header />
       <main className="main--article">
         <article className="full-article">
-          <h1 className="article-title">About Me</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione earum quidem magni non quod laboriosam iusto ducimus veniam culpa numquam, dolorem similique quia saepe amet ipsam dolores deleniti. Doloremque, vel?</p>
-          <p>You can't find out more about me.</p>
+          <h1 className="article-title--full">About Me</h1>
+          <p>Hello, I'm Dan Edwards. I used to be a musician but now I'm a front-end web developer, and I love writing JavaScript and working with React. I also like reading, hence all the book reviews. I live in Bolton, UK. </p>
         </article>
         <SideBar aboutTags={aboutTags} />
       </main>

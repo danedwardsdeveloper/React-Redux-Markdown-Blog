@@ -21,11 +21,8 @@
 
 ### Easy To-Do List
 
-- Add a brief site description
-- Homepage metadata
 - Style the Error page
 - Fix punctuation replacement error. Getting `isn"t` instead of `isn't` etc.
-- Add screenshot to ReadMe
 
 ### To-Do List
 
@@ -43,6 +40,8 @@
 - Design a sidebar and dynamically display other relevant blog posts
 - Make the site responsive
 - Enable dynamic metadata
+- Add screenshot to ReadMe
+- Add screenshot to Twitter OG metadata
 
 ## Nice-to-Have-but-not-Essential To-Do List
 
@@ -68,3 +67,6 @@
 - ~~This article: HTML & CSS by Jon Duckett. Is it still relevant? isn't displaying in full for some reason, possibly because I pasted it from Notion. Fix this error. Solution: wrote a function to find and replace problem characters a weird apostrophe that isn't an apostrope, and an nbsb that looks like a space. Removed question marks from the path~~
 - ~~Add a `removeProblemCharacters` function to `public/main.js` to prevent problems in `articles.json`~~
 - ~~Implement dynamic page title (browser tab) changes~~
+- ~~Buy domain name~~
+- ~~Add a brief site description to About page~~
+- ~~Homepage metadata~~

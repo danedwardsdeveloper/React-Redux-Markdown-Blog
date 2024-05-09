@@ -7,7 +7,7 @@ import articles from "../articles/articles.json";
 
 function Home() {
   useEffect(() => {
-    document.title = "Home | Array of Sunshine";
+    document.title = "Home | Array of Sunshine | Front-End WebDev Blog:  JavaScript, React, Coding book Reviews";
   }, []);
 
   // const [articlePreviews, setArticlePreviews] = useState([]);
