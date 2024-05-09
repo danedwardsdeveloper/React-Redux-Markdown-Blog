@@ -28,9 +28,9 @@ function SideBar(props) {
   );
 }
 
-// SideBar.propTypes = {
-//   articleTags: PropTypes.arrayOf(PropTypes.string),
-//   aboutTags: PropTypes.arrayOf(PropTypes.string),
-// };
+SideBar.propTypes = {
+  articleTags: PropTypes.arrayOf(PropTypes.string),
+  aboutTags: PropTypes.arrayOf(PropTypes.string),
+};
 
 export default SideBar;

@@ -1,25 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../Components/Header.js";
-import Pagination from "../Components/Pagination.js";
+import PaginationNew from "../Components/PaginationNew.js";
 import Footer from "../Components/Footer.js";
 import ArticlePreviews from "../Components/ArticlePreviews.js";
 import articles from "../articles/articles.json";
 
 function Home() {
-  // const [previews, setPreviews] = useState(null);
   useEffect(() => {
     document.title = "Home | Array of Sunshine";
   }, []);
-  // Slice: start is inclusive, end is exclusive
-  // First item is at index 0
+
+  const [articlePreviews, setArticlePreviews] = useState([]);
+  setArticlePreviews(articles);
+
   let firstFivePreviews = articles.slice(0, 5);
-  // let firstFivePreviews = articles;
+  const totalPages = articles.length;
+  const [currentPage, setCurrentPage] = useState(1);
+  const [previewsPerPage] = useState(5);
+  const indexOfLastPreview = currentPage * previewsPerPage;
+  const indexOfFirstPreview = indexOfLastPreview - previewsPerPage;
+  const currentPreviews = articles.slice(indexOfFirstPreview, indexOfLastPreview);
+  // console.log(currentPreviews);
 
   return (
     <div className="page-container">
       <Header />
       <ArticlePreviews articles={firstFivePreviews} />
-      <Pagination />
+      <PaginationNew />
       <Footer />
     </div>
   );

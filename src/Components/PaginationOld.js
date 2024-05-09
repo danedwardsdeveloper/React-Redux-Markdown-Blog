@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Pagination() {
+function PaginationOld() {
   return (
     <nav className="pagination">
       <p className="page-count">Page 1 of 10</p>
@@ -12,4 +12,4 @@ function Pagination() {
   );
 }
 
-export default Pagination;
+export default PaginationOld;

@@ -3,9 +3,8 @@ import { useParams } from "react-router-dom";
 import Header from "../Components/Header";
 import ArticleComponent from "../Components/ArticleComponent";
 import articles from "../articles/articles.json";
-// import MarkdownRenderer from "../Components/MarkdownRenderer";
 import SideBar from "../Components/SideBar";
-import Pagination from "../Components/Pagination";
+import PaginationNew from "../Components/PaginationNew";
 import Footer from "../Components/Footer";
 
 function ArticlePage() {
@@ -38,7 +37,7 @@ function ArticlePage() {
         {article && <ArticleComponent article={article} />}
         {article && <SideBar articleTags={article.tags} />}
       </main>
-      <Pagination />
+      <PaginationNew />
       <Footer />
     </div>
   );
