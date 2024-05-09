@@ -22,9 +22,9 @@
 ### To-Do List
 
 - Turn each tag into a link to a page of relevant article previews
+- Turn each author into a page of previews by that author
 - Add conditional loading to the article page to handle errors gracefully
 - Diff check the styling between static & react versions
-- Turn each author into a page of previews by that author
 - Enable preview page sorted by tags
 - Enable preview page sorted by author
 - Transfer the SingleArticle & About page styling from the static version

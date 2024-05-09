@@ -9,7 +9,7 @@ function Tags(props) {
         <ul>
           {props.tags.map((tag) => (
             <li key={tag}>
-              <Link to={tag}>{tag}</Link>
+              <Link to={`/tags/${tag}`}>{tag}</Link>
             </li>
           ))}
         </ul>

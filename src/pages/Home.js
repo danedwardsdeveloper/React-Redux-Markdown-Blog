@@ -6,15 +6,13 @@ import ArticlePreviews from "../Components/ArticlePreviews.js";
 import articles from "../articles/articles.json";
 
 function Home() {
-  // useEffect(() => {
-  //   document.title = "Home | Array of Sunshine | Front-End WebDev Blog:  JavaScript, React, Coding book Reviews";
-  // }, []);
-
   const [articlePreviews, setArticlePreviews] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    // Add try / catch statements here
     const fetchData = async () => {
+      setLoading(true);
       setArticlePreviews(articles);
       setLoading(false);
     };
@@ -37,7 +35,6 @@ function Home() {
     <div className="page-container">
       <Header />
       <ArticlePreviews articles={currentArticles} />
-      {/* <PaginationNew /> */}
       <Pagination numberOfPages={numberOfPages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <Footer />
     </div>
