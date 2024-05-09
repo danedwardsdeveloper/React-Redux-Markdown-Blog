@@ -30,9 +30,9 @@
 - Turn each tag into a link to a page of relevant article previews
 - Enable preview page sorted by author
 - Transfer the SingleArticle & About page styling from the static version
-- Write a test that checks that the number of objects in `articles.json` matches the number of `.md` files in `src/articles`
 - Design a sidebar and dynamically display other relevant blog posts
 - Make the site responsive
+- Write a test that checks that the number of objects in `articles.json` matches the number of `.md` files in `src/articles`
 - Enable dynamic metadata
 - Add screenshot to ReadMe
 - Add screenshot to Twitter OG metadata
