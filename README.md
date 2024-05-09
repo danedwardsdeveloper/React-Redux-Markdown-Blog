@@ -19,11 +19,6 @@
 - Check the `.md` metadata is formatted correctly. There is not much scope for error
 - Check that punctuation in the title isn't causing issues with the path
 
-### Easy To-Do List
-
-- Style the Error page
-- Fix punctuation replacement error. Getting `isn"t` instead of `isn't` etc.
-
 ### To-Do List
 
 - Prevent incorrect article paths from displaying an empty page
@@ -43,16 +38,20 @@
 - Enable dynamic metadata
 - Add screenshot to ReadMe
 - Add screenshot to Twitter OG metadata
+- Make markdown links open in a new tab
 
 ## Nice-to-Have-but-not-Essential To-Do List
 
 - Enable dynamic pagination on individual articles (next article, previous article)
 - Add fade-in animations when scrolling down the homepage
 - Add copy buttons for each code block
+- Scroll to the top of the <article> element when clicking on a link (This seems much harder than expected!)
 - Make the search bar functional (...eventually)
+- Organise `article.md` files into folders, ensuring they can still be read by `main.js`
 
 ### To-Do List | Completed
 
+- ~~Style the Error page~~
 - ~~Favicon~~
 - ~~Add line numbers to code blocks~~
 - ~~Turn preview text into a link~~
@@ -71,3 +70,4 @@
 - ~~Buy domain name~~
 - ~~Add a brief site description to About page~~
 - ~~Homepage metadata~~
+- ~~Fix punctuation replacement error. Getting `isn"t` instead of `isn't` etc. Fixed! Prettify was messing everything up - solution was to wrap punctuation in backticks.~~
