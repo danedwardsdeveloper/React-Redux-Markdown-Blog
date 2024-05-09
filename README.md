@@ -21,11 +21,12 @@
 
 ### To-Do List
 
+- Fix sidebar recent article paths
+- Turn each tag into a link to a page of relevant article previews
 - Add conditional loading to the article page to handle errors gracefully
 - Diff check the styling between static & react versions
 - Turn each author into a page of previews by that author
 - Enable preview page sorted by tags
-- Turn each tag into a link to a page of relevant article previews
 - Enable preview page sorted by author
 - Transfer the SingleArticle & About page styling from the static version
 - Design a sidebar and dynamically display other relevant blog posts
@@ -51,6 +52,7 @@
 
 ### To-Do List | Completed
 
+- ~~Display the three most recent articles in the sidebar that aren't the current article~~
 - ~~Check article bodies for errors~~
 - ~~Enable dynamic pagination~~
 - ~~Add 'newer posts' link, which will be hidden on page one.~~

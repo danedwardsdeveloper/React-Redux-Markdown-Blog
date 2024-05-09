@@ -8,7 +8,8 @@ import SideBar from "../Components/SideBar";
 import Footer from "../Components/Footer";
 
 function ArticlePage() {
-  const [article, setArticle] = useState(null);
+  const [matchingArticle, setMatchingArticle] = useState(null);
+  const [recentArticles, setRecentArticles] = useState([]);
   const [error, setError] = useState(null);
   const { path } = useParams();
 
@@ -19,8 +20,13 @@ function ArticlePage() {
         if (!matchingArticle) {
           throw new Error("Article not found");
         }
-        setArticle(matchingArticle);
+        setMatchingArticle(matchingArticle);
+
         document.title = `${matchingArticle.title} | Array of Sunshine | Front-End WebDev Blog: JavaScript, React, Coding book Reviews`;
+
+        let filteredArticles = articles.filter((article) => article.title !== matchingArticle.title);
+        let recentArticles = filteredArticles.slice(0, 3);
+        setRecentArticles(recentArticles);
       } catch (error) {
         setError(error);
         console.log(error);
@@ -34,8 +40,8 @@ function ArticlePage() {
     <div className="page-container">
       <Header />
       <main className="main--article">
-        {article && <ArticleComponent article={article} />}
-        {article && <SideBar articleTags={article.tags} />}
+        {matchingArticle && <ArticleComponent article={matchingArticle} />}
+        {matchingArticle && <SideBar tags={matchingArticle.tags} recentArticles={recentArticles} />}
       </main>
       {/* <Pagination /> */}
       <Footer />

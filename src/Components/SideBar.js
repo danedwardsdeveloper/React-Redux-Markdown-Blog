@@ -9,20 +9,17 @@ function SideBar(props) {
       <section className="recent-section">
         <h3>Recent articles</h3>
         <ul>
-          <li>
-            <Link to="/not-found">Another article</Link>
-          </li>
-          <li>
-            <Link to="/not-found">Another article</Link>
-          </li>
-          <li>
-            <Link to="/not-found">Another article</Link>
-          </li>
+          {props.recentArticles.map((article) => (
+            <li key={article.title}>
+              <Link to={article.path}>{article.title}</Link>
+            </li>
+          ))}
         </ul>
       </section>
       <section className="tags-section">
         <h3>Tags</h3>
         <Tags {...props} />
+        {/* <Tags articleTags={props.articleTags} /> */}
       </section>
     </aside>
   );

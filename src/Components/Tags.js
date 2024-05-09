@@ -5,18 +5,9 @@ import PropTypes from "prop-types";
 function Tags(props) {
   return (
     <>
-      {props.aboutTags && (
+      {props.tags && (
         <ul>
-          {props.aboutTags.map((tag) => (
-            <li key={tag}>
-              <Link to={tag}>{tag}</Link>
-            </li>
-          ))}
-        </ul>
-      )}{" "}
-      {props.articleTags && (
-        <ul>
-          {props.articleTags.map((tag) => (
+          {props.tags.map((tag) => (
             <li key={tag}>
               <Link to={tag}>{tag}</Link>
             </li>
