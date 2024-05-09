@@ -4,7 +4,7 @@ import Header from "../Components/Header";
 import ArticleComponent from "../Components/ArticleComponent";
 import articles from "../articles/articles.json";
 import SideBar from "../Components/SideBar";
-import PaginationNew from "../Components/PaginationNew";
+// import Pagination from "../Components/Pagination";
 import Footer from "../Components/Footer";
 
 function ArticlePage() {
@@ -37,7 +37,7 @@ function ArticlePage() {
         {article && <ArticleComponent article={article} />}
         {article && <SideBar articleTags={article.tags} />}
       </main>
-      <PaginationNew />
+      {/* <Pagination /> */}
       <Footer />
     </div>
   );

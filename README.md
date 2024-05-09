@@ -75,3 +75,7 @@
 - ~~Add a brief site description to About page~~
 - ~~Homepage metadata~~
 - ~~Fix punctuation replacement error. Getting `isn"t` instead of `isn't` etc. Fixed! Prettify was messing everything up - solution was to wrap punctuation in backticks.~~
+
+### Helpful resources
+
+- [Enabling pagination using React](https://www.educative.io/answers/how-to-implement-pagination-in-reactjs)

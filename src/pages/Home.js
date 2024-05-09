@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "../Components/Header.js";
-import PaginationOld from "../Components/PaginationOld.js";
-import PaginationNew from "../Components/PaginationNew.js";
+import Pagination from "../Components/Pagination.js";
 import Footer from "../Components/Footer.js";
 import ArticlePreviews from "../Components/ArticlePreviews.js";
 import articles from "../articles/articles.json";
@@ -37,7 +36,7 @@ function Home() {
       <Header />
       <ArticlePreviews articles={currentArticles} />
       {/* <PaginationNew /> */}
-      <PaginationOld numberOfPages={numberOfPages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <Pagination numberOfPages={numberOfPages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <Footer />
     </div>
   );

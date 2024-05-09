@@ -1,11 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-function PaginationOld({ numberOfPages, currentPage, setCurrentPage }) {
-  // let currentPageNumber = 1;
-  // let totalPages = 10;
-  // const pageNumbers = [...Array(nPages + 1).keys()].slice(1);
-
+function Pagination({ numberOfPages, currentPage, setCurrentPage }) {
   const goToNextPage = () => {
     if (currentPage !== numberOfPages) setCurrentPage(currentPage + 1);
   };
@@ -35,4 +31,4 @@ function PaginationOld({ numberOfPages, currentPage, setCurrentPage }) {
   );
 }
 
-export default PaginationOld;
+export default Pagination;
