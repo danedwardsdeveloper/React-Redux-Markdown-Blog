@@ -19,28 +19,32 @@
 - Check the `.md` metadata is formatted correctly. There is not much scope for error
 - Check that punctuation in the title isn't causing issues with the path
 
+### Easy To-Do List
+
+- Favicon
+- Add a brief site description
+- Homepage metadata
+- Style the Error page
+- Fix punctuation replacement error. Getting `isn"t` instead of `isn't` etc.
+
 ### To-Do List
 
 - Add conditional loading to the article page to handle errors gracefully
 - Add loads of articles (hundreds of poems & Shakespeare's sonnets?) to demonstrate saleability
 - Diff check the styling between static & react versions
 - Check article bodies for errors
-- Fix punctuation replacement error. Getting `isn"t` instead of `isn't` etc.
+- Turn each author into a page of previews by that author
+- Enable preview page sorted by tags
 - Turn each tag into a link to a page of relevant article previews
+- Enable preview page sorted by author
 - Transfer the SingleArticle & About page styling from the static version
 - Write a test that checks that the number of objects in `articles.json` matches the number of `.md` files in `src/articles`
 - Enable dynamic pagination
-- Style the Error page
-- What is the H1 on the homepage??
-- Add a brief site description
-- Site metadata
-- Favicon
-- Add copy buttons for each code block
-- Add line numbers to code blocks
-- Turn preview text into a link
-- Add fade-in animations when scrolling down the homepage
 - Design a sidebar and dynamically display other relevant blog posts
 - Make the site responsive
+- Enable dynamic metadata
+- ~~Add line numbers to code blocks~~
+- ~~Turn preview text into a link~~
 - ~~Automatically scroll to the top of the page instantly when clicking on an article link~~
 - ~~Scroll smoothly when clicking on 'top of page' internal link~~
 - ~~Add styling to the markdown so it's consistent~~
@@ -50,11 +54,13 @@
 - ~~Display article tags on single article page~~
 - ~~Display article tags on home page~~
 - ~~Limit article previews to 5 most recent on home page~~
-- ~~This article: **HTML & CSS by Jon Duckett. Is it still relevant?** isn't displaying in full for some reason, possibly because I pasted it from Notion. Fix this error. Solution: wrote a function to find and replace problem characters a weird apostrophe that isn't an apostrope, and an nbsb that looks like a space. Removed question marks from the path~~
+- ~~This article: HTML & CSS by Jon Duckett. Is it still relevant? isn't displaying in full for some reason, possibly because I pasted it from Notion. Fix this error. Solution: wrote a function to find and replace problem characters a weird apostrophe that isn't an apostrope, and an nbsb that looks like a space. Removed question marks from the path~~
 - ~~Add a `removeProblemCharacters` function to `public/main.js` to prevent problems in `articles.json`~~
 - ~~Implement dynamic page title (browser tab) changes~~
 
 ## Nice-to-Have-but-not-Essential To-Do List
 
 - Enable dynamic pagination on individual articles (next article, previous article)
+- Add fade-in animations when scrolling down the homepage
+- Add copy buttons for each code block
 - Make the search bar functional (...eventually)
