@@ -26,8 +26,9 @@
 
 ### To-Do List
 
+- Prevent incorrect article paths from displaying an empty page
 - Add conditional loading to the article page to handle errors gracefully
-- Add loads of articles (hundreds of poems & Shakespeare's sonnets?) to demonstrate saleability
+- Add loads of articles (hundreds of poems & Shakespeare's sonnets?) to demonstrate scalability
 - Diff check the styling between static & react versions
 - Check article bodies for errors
 - Turn each author into a page of previews by that author

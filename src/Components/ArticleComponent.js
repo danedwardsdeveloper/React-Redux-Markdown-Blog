@@ -2,6 +2,10 @@ import React from "react";
 import MarkdownRenderer from "./MarkdownRenderer";
 
 function ArticleComponent({ article }) {
+  const element = document.getElementById("myElement");
+  const elementHeight = element.offsetHeight;
+  console.log("Element height (including padding, border, scrollbar):", elementHeight);
+
   window.scrollTo({
     top: 0,
     behavior: "instant",

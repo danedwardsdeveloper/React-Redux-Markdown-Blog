@@ -177,15 +177,15 @@ main {
 
 .full-article {
   margin-top: 0;
-  max-width: 65%;
+  width: 65%;
   margin-bottom: 10rem;
+  flex: 65;
 }
 
 .sidebar {
   margin-left: 5%;
-  flex: 1;
-  width: 100%;
-  max-width: 100%;
+  flex: 35;
+  width: 35%;
 }
 
 .tags-section h3,
@@ -326,4 +326,14 @@ code {
 
 .next:hover:after {
   right: -1rem;
+}
+
+.nav--error-page ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav--error-page li {
+  margin-right: 2rem;
+  display: inline-block;
 }
