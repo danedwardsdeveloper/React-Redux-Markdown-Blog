@@ -21,10 +21,8 @@
 
 ### To-Do List
 
-- Prevent incorrect article paths from displaying an empty page
 - Add conditional loading to the article page to handle errors gracefully
 - Diff check the styling between static & react versions
-- Check article bodies for errors
 - Turn each author into a page of previews by that author
 - Enable preview page sorted by tags
 - Turn each tag into a link to a page of relevant article previews
@@ -49,9 +47,11 @@
 - Scroll to the top of the <article> element when clicking on a link (This seems much harder than expected!)
 - Make the search bar functional (...eventually)
 - Organise `article.md` files into folders, ensuring they can still be read by `main.js`
+- Prevent incorrect article paths from displaying an empty page
 
 ### To-Do List | Completed
 
+- ~~Check article bodies for errors~~
 - ~~Enable dynamic pagination~~
 - ~~Add 'newer posts' link, which will be hidden on page one.~~
 - ~~Style the Error page~~
