@@ -21,7 +21,6 @@
 
 ### To-Do List
 
-- Fix sidebar recent article paths
 - Turn each tag into a link to a page of relevant article previews
 - Add conditional loading to the article page to handle errors gracefully
 - Diff check the styling between static & react versions
@@ -78,6 +77,7 @@
 - ~~Fix punctuation replacement error. Getting `isn"t` instead of `isn't` etc. Fixed! Prettify was messing everything up - solution was to wrap punctuation in backticks.~~
 - ~~Conditional rendering of 'Newer posts' & ''Older posts' nav as when appropriate~~
 - ~~Dynamic page titles when using pagination nav links~~
+- ~~Fix sidebar recent article paths~~
 
 ### Helpful resources
 

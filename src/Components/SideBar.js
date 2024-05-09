@@ -11,15 +11,14 @@ function SideBar(props) {
         <ul>
           {props.recentArticles.map((article) => (
             <li key={article.title}>
-              <Link to={article.path}>{article.title}</Link>
+              <Link to={`/articles/${article.path}`}>{article.title}</Link>
             </li>
           ))}
         </ul>
       </section>
       <section className="tags-section">
         <h3>Tags</h3>
-        <Tags {...props} />
-        {/* <Tags articleTags={props.articleTags} /> */}
+        <Tags tags={props.tags} />
       </section>
     </aside>
   );
