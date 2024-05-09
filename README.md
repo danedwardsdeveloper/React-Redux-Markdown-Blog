@@ -21,11 +21,11 @@
 
 ### Easy To-Do List
 
-- Favicon
 - Add a brief site description
 - Homepage metadata
 - Style the Error page
 - Fix punctuation replacement error. Getting `isn"t` instead of `isn't` etc.
+- Add screenshot to ReadMe
 
 ### To-Do List
 
@@ -43,6 +43,17 @@
 - Design a sidebar and dynamically display other relevant blog posts
 - Make the site responsive
 - Enable dynamic metadata
+
+## Nice-to-Have-but-not-Essential To-Do List
+
+- Enable dynamic pagination on individual articles (next article, previous article)
+- Add fade-in animations when scrolling down the homepage
+- Add copy buttons for each code block
+- Make the search bar functional (...eventually)
+
+### To-Do List | Completed
+
+- ~~Favicon~~
 - ~~Add line numbers to code blocks~~
 - ~~Turn preview text into a link~~
 - ~~Automatically scroll to the top of the page instantly when clicking on an article link~~
@@ -57,10 +68,3 @@
 - ~~This article: HTML & CSS by Jon Duckett. Is it still relevant? isn't displaying in full for some reason, possibly because I pasted it from Notion. Fix this error. Solution: wrote a function to find and replace problem characters a weird apostrophe that isn't an apostrope, and an nbsb that looks like a space. Removed question marks from the path~~
 - ~~Add a `removeProblemCharacters` function to `public/main.js` to prevent problems in `articles.json`~~
 - ~~Implement dynamic page title (browser tab) changes~~
-
-## Nice-to-Have-but-not-Essential To-Do List
-
-- Enable dynamic pagination on individual articles (next article, previous article)
-- Add fade-in animations when scrolling down the homepage
-- Add copy buttons for each code block
-- Make the search bar functional (...eventually)
