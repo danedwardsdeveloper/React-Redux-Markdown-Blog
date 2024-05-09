@@ -21,7 +21,6 @@
 
 ### To-Do List
 
-- Hide 'Newer posts' || ''Older posts' nav links when appropriate
 - Clicking 'older posts' changes the path to `/pages/2` etc.
 - Prevent incorrect article paths from displaying an empty page
 - Add conditional loading to the article page to handle errors gracefully
@@ -75,6 +74,7 @@
 - ~~Add a brief site description to About page~~
 - ~~Homepage metadata~~
 - ~~Fix punctuation replacement error. Getting `isn"t` instead of `isn't` etc. Fixed! Prettify was messing everything up - solution was to wrap punctuation in backticks.~~
+- ~~Conditional rendering of 'Newer posts' & ''Older posts' nav as when appropriate~~
 
 ### Helpful resources
 

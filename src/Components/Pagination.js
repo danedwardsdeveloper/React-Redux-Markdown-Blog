@@ -16,16 +16,20 @@ function Pagination({ numberOfPages, currentPage, setCurrentPage }) {
         Page&nbsp;<span>{currentPage}</span>&nbsp;of&nbsp;<span>{numberOfPages}</span>
       </p>
       <ul>
-        <li>
-          <Link onClick={goToPrevPage} className="previous">
-            Newer posts
-          </Link>
-        </li>
-        <li>
-          <Link onClick={goToNextPage} className="next">
-            Older posts
-          </Link>
-        </li>
+        {currentPage > 1 && (
+          <li>
+            <Link onClick={goToPrevPage} className="previous">
+              Newer posts
+            </Link>
+          </li>
+        )}
+        {currentPage < numberOfPages && (
+          <li>
+            <Link onClick={goToNextPage} className="next">
+              Older posts
+            </Link>
+          </li>
+        )}
       </ul>
     </nav>
   );
