@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "../Components/Header.js";
+import PaginationOld from "../Components/PaginationOld.js";
 import PaginationNew from "../Components/PaginationNew.js";
 import Footer from "../Components/Footer.js";
 import ArticlePreviews from "../Components/ArticlePreviews.js";
@@ -26,7 +27,8 @@ function Home() {
     <div className="page-container">
       <Header />
       <ArticlePreviews articles={firstFivePreviews} />
-      <PaginationNew />
+      {/* <PaginationNew /> */}
+      <PaginationOld />
       <Footer />
     </div>
   );

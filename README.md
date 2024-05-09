@@ -21,6 +21,7 @@
 
 ### To-Do List
 
+- Clicking 'older posts' changes the path to `/pages/2` etc.
 - Prevent incorrect article paths from displaying an empty page
 - Add conditional loading to the article page to handle errors gracefully
 - Add loads of articles (hundreds of poems & Shakespeare's sonnets?) to demonstrate scalability
@@ -51,6 +52,7 @@
 
 ### To-Do List | Completed
 
+- ~~Add 'newer posts' link, which will be hidden on page one.~~
 - ~~Style the Error page~~
 - ~~Favicon~~
 - ~~Add line numbers to code blocks~~

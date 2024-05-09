@@ -244,6 +244,18 @@ main {
   justify-content: space-between;
 }
 
+.pagination ul {
+  list-style: none;
+}
+
+.pagination ul li {
+  display: inline-block;
+}
+
+.previous {
+  margin-right: 3rem;
+}
+
 footer {
   border-top: 1px solid rgba(0, 0, 0, 0.5);
   padding: 4rem 0;
@@ -308,12 +320,14 @@ code {
   color: black;
 }
 
-.next {
+.next,
+.previous {
   font-size: 1.6rem;
   color: black;
 }
 
-.next:hover {
+.next:hover,
+.previous:hover {
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -326,6 +340,16 @@ code {
 
 .next:hover:after {
   right: -1rem;
+}
+.previous::before {
+  content: "←";
+  position: relative;
+  left: -0.5rem;
+  transition: all 0.5s;
+}
+
+.previous:hover:before {
+  left: -1rem;
 }
 
 .nav--error-page ul {
