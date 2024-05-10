@@ -79,11 +79,11 @@
 - ~~Homepage metadata~~
 - ~~Fix punctuation replacement error. Getting `isn"t` instead of `isn't` etc. Fixed! Prettify was messing everything up - solution was to wrap punctuation in backticks.~~
 - ~~Conditional rendering of 'Newer posts' & ''Older posts' nav as when appropriate~~
-- ~~Dynamic page titles when using pagination nav links~~
-- ~~Fix sidebar recent article paths~~
-- ~~Turn each tag into a link to a page of relevant article previews~~
-- ~~Turn each author into a page of previews by that author~~
-- ~~Update site title for tags & authors pages~~
+- [x] Dynamic page titles when using pagination nav links
+- [x] Fix sidebar recent article paths
+- [x] Turn each tag into a link to a page of relevant article previews
+- [x] Turn each author into a page of previews by that author
+- [x] Update site title for tags & authors pages
 
 ### Helpful resources
 

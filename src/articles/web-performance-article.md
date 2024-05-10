@@ -1,18 +1,20 @@
 ---
 title: Demystifying Web Performance Optimization
 date: May 07, 2024
-author: Dan Edwards
+author: Google Gemini
 tags: Performance
 ---
 
-Does your website feel sluggish? Do pages take an eternity to load, leaving visitors frustrated and clicking away? Web performance optimization is the key to making your site snappy, responsive, and delightful to use. Let's break down some essential concepts and techniques.
+**Does your website feel sluggish? Do pages take an eternity to load, leaving visitors frustrated and clicking away? Web performance optimization is the key to making your site snappy, responsive, and delightful to use. Let's break down some essential concepts and techniques.**
 
 ## Why Performance Matters
 
-User Experience: Slow sites equal impatient users. Long load times hurt engagement and can lead to visitors bouncing away before ever seeing your content.
-Search Rankings: Google and other search engines factor in page speed when ranking websites. Faster sites tend to gain an edge.
-Conversions: If your site is an e-commerce store, every second of delay can hurt sales. Performance is directly linked to revenue.
-Key Areas to Target
+**User Experience:**
+
+- Slow sites equal impatient users. Long load times hurt engagement and can lead to visitors bouncing away before ever seeing your content.
+  Search Rankings: Google and other search engines factor in page speed when ranking websites. Faster sites tend to gain an edge.
+  Conversions: If your site is an e-commerce store, every second of delay can hurt sales. Performance is directly linked to revenue.
+  Key Areas to Target
 
 Image Optimization: Images are often the biggest culprits. Compress them, use modern formats (WebP, AVIF), and make sure they're sized correctly for display.
 Minimize HTTP Requests: Every time the browser asks for a file (image, script, stylesheet), it slows things down. Combine resources where possible.
