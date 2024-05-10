@@ -29,8 +29,9 @@ function About() {
       <Header />
       <main className="main--article">
         <article className="full-article">
-          <h1 className="article-title--full">About Me</h1>
-          <p>Hello, I'm Dan Edwards. I used to be a musician but now I'm a front-end web developer, and I love writing JavaScript and working with React. I also like reading, hence all the book reviews. I live in Bolton, UK. </p>
+          <h1 className="article-title--full">About</h1>
+          <p>Array of Sunshine is a blog about front-end web development, with practical JavaScript & React tutorials, and in-depth coding book reviews. Created by Dan Edwards.</p>
+          <p>Dan is a front-end web developer based in Bolton, UK. Currently training to full-stack with Codecademy.</p>
         </article>
         <SideBar tags={tags} recentArticles={recentArticles} />
       </main>
