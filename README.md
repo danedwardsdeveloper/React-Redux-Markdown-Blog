@@ -21,9 +21,8 @@
 
 ### To-Do List
 
-- Tidy up Home page function
-- Try to consolidate Home, Author & Tags pages as they're essentially the same
 - Turn each author into a page of previews by that author
+- Try to consolidate Author & Tags pages as they're essentially the same
 - Add conditional loading to the article page to handle errors gracefully
 - Diff check the styling between static & react versions
 - Enable preview page sorted by tags
@@ -49,9 +48,11 @@
 - Make the search bar functional (...eventually)
 - Organise `article.md` files into folders, ensuring they can still be read by `main.js`
 - Prevent incorrect article paths from displaying an empty page
+- Bracket animation on site title
 
 ### To-Do List | Completed
 
+- ~~Tidy up Home page function~~
 - ~~Display the three most recent articles in the sidebar that aren't the current article~~
 - ~~Check article bodies for errors~~
 - ~~Enable dynamic pagination~~
@@ -84,3 +85,4 @@
 ### Helpful resources
 
 - [Enabling pagination using React](https://www.educative.io/answers/how-to-implement-pagination-in-reactjs)
+- [CSS Bracket hover animation](https://codepen.io/adatg/pen/BGLVGL?editors=0100)

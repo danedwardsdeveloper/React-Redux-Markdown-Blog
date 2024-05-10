@@ -8,7 +8,11 @@
   margin: 0;
   padding: 0;
   color: rgba(0, 0, 0, 0.8);
-  /* scroll-behavior: smooth; */
+}
+
+:focus-visible {
+  outline-color: #f83600;
+  outline-offset: 5px;
 }
 
 body {
@@ -25,20 +29,64 @@ body {
   padding: 0 2rem;
 }
 
-.site-title,
-.site-title:visited {
-  font-family: "Arial Black", sans-serif;
-  display: inline-block;
-  font-size: 2.2rem;
-  color: #000;
-}
-
 h1,
 h2,
 h3 {
   margin: 0 0 2rem 0;
   color: #000;
 }
+
+.site-title,
+.site-title:visited {
+  font-family: "Arial Black", sans-serif;
+  display: inline-block;
+  font-size: 2.2rem;
+  color: #000;
+  /* position: relative; */
+}
+
+/* Animation that doesn't work properly */
+/* .site-title:before {
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: "Arial Black", sans-serif;
+  color: #fe8c00;
+  content: "[";
+  margin-right: 30px;
+  display: inline-block;
+  opacity: 1;
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.site-title:after {
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: "Arial Black", sans-serif;
+  color: #f83600;
+  content: "]";
+  margin-left: 30px;
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+.site-title:hover:before,
+.site-title:hover:after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+} */
 
 .article-title--full {
   font-size: 5rem;

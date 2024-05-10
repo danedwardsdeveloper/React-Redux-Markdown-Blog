@@ -7,23 +7,19 @@ import articles from "../articles/articles.json";
 
 function Home() {
   const [articlePreviews, setArticlePreviews] = useState([]);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Add try / catch statements here
-    const fetchData = async () => {
-      setLoading(true);
+    const fetchData = () => {
       setArticlePreviews(articles);
-      setLoading(false);
     };
     fetchData();
   }, []);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [articlesPerPage] = useState(5);
-  const indexOfLastArticle = currentPage * articlesPerPage;
-  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
-  const currentArticles = articlePreviews.slice(indexOfFirstArticle, indexOfLastArticle);
+  const lastDisplayedArticleIndex = currentPage * articlesPerPage;
+  const firstDisplayedArticleIndex = lastDisplayedArticleIndex - articlesPerPage;
+  const currentArticles = articlePreviews.slice(firstDisplayedArticleIndex, lastDisplayedArticleIndex);
   const numberOfPages = Math.ceil(articlePreviews.length / articlesPerPage);
 
   useEffect(() => {

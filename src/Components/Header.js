@@ -8,9 +8,9 @@ function Header() {
       <header>
         <div className="header-row header-row-1">
           <div className="header-column-1">
-            <Link to="/">
-              <h1 className="site-title">Array of Sunshine</h1>
-            </Link>
+            <h1 className="site-title">
+              <Link to="/">Array of Sunshine</Link>
+            </h1>
           </div>
           <div className="header-column-2">{/* <SearchField /> */}</div>
         </div>
