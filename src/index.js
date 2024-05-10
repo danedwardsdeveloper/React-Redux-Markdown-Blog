@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import ArticlePage from "./pages/ArticlePage";
+import AuthorPage from "./pages/AuthorPage";
 import TagPage from "./pages/TagPage";
 import NotFound from "./pages/NotFound";
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/tags/:tag",
     element: <TagPage />,
+  },
+  {
+    path: "/writers/:author",
+    element: <AuthorPage />,
   },
   {
     path: "/not-found",

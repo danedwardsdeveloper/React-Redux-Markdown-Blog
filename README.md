@@ -21,15 +21,13 @@
 
 ### To-Do List
 
-- Turn each author into a page of previews by that author
-- Try to consolidate Author & Tags pages as they're essentially the same
+- Home nav link should go to results page 1
+- Style tags & authors pages
+- Replace the word 'author' with 'writer' everywhere for consistency
+- Make the site responsive
 - Add conditional loading to the article page to handle errors gracefully
 - Diff check the styling between static & react versions
-- Enable preview page sorted by tags
-- Enable preview page sorted by author
 - Transfer the SingleArticle & About page styling from the static version
-- Design a sidebar and dynamically display other relevant blog posts
-- Make the site responsive
 - Write a test that checks that the number of objects in `articles.json` matches the number of `.md` files in `src/articles`
 - Enable dynamic metadata
 - Add screenshot to ReadMe
@@ -38,6 +36,7 @@
 - Demonstrate Markdown format in ReadMe
 - Clean up the article content
 - Invite other programmers to write articles
+- Style social icons into circles
 
 ## Nice-to-Have-but-not-Essential To-Do List
 
@@ -52,6 +51,8 @@
 
 ### To-Do List | Completed
 
+- ~~Enable preview page sorted by tags~~
+- ~~Design a sidebar and dynamically display other relevant blog posts~~
 - ~~Tidy up Home page function~~
 - ~~Display the three most recent articles in the sidebar that aren't the current article~~
 - ~~Check article bodies for errors~~
@@ -81,6 +82,8 @@
 - ~~Dynamic page titles when using pagination nav links~~
 - ~~Fix sidebar recent article paths~~
 - ~~Turn each tag into a link to a page of relevant article previews~~
+- ~~Turn each author into a page of previews by that author~~
+- ~~Update site title for tags & authors pages~~
 
 ### Helpful resources
 
