@@ -1,10 +1,24 @@
-import React from "react";
+import { useState, useEffect } from "react";
+
+function useCurrentYear() {
+  const [years, setYears] = useState(null);
+  useEffect(() => {
+    try {
+      setYears(new Date().getFullYear());
+    } catch (error) {
+      console.error("Error getting current year:", error);
+      setYears(2024);
+    }
+  }, []);
+  return years ?? 2024;
+}
 
 const handleScrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 function Footer() {
+  const year = useCurrentYear();
   return (
     <footer>
       <div className="footer-col-1">
@@ -20,7 +34,7 @@ function Footer() {
             </a>
           </li>
         </ul>
-        <p className="copyright-notice">&copy; Dan Edwards, 2024</p>
+        <p className="copyright-notice">&copy; Dan Edwards, {year}</p>
       </div>
       <div className="footer-col-2">
         <button className="top-of-page" onClick={handleScrollToTop}>
