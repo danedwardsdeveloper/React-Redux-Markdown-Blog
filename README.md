@@ -32,11 +32,11 @@
 - [ ] Enable dynamic metadata
 - [ ] Add screenshot to ReadMe
 - [ ] Add screenshot to Twitter OG metadata
-- [ ] Make markdown links open in a new tab
 - [ ] Demonstrate Markdown format in ReadMe
 - [ ] Clean up the article content
 - [ ] Invite other programmers to write articles
 - [ ] Style social icons into circles
+- [x ] Make markdown links open in a new tab
 - [x] Enable preview page sorted by tags
 - [x] Design a sidebar and dynamically display other relevant blog posts
 - [x] Tidy up Home page function

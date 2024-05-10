@@ -18,7 +18,7 @@ function ArticleComponent(props) {
       </p>
       <h1 className="article-title--full">{props.article.title}</h1>
       <p>by {props.article.date}</p>
-      <MarkdownRenderer children={props.article.content} />
+      <MarkdownRenderer children={props.article.content} linkTargets="_blank" />
     </article>
   );
 }

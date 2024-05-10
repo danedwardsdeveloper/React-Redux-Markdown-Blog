@@ -1,7 +1,7 @@
 ---
 title: Codecademy - A Gateway to Coding. Pros and Cons
 date: May 03, 2024
-author: Stan Smith
+author: Google Gemini
 tags: Codecademy
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Web Accessibility in Practice | Beyond Checklists
 date: December 25, 2023
-author: Dan Edwards
+author: Google Gemini
 tags: Book review, Accessibility
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: Unlock the Power of React - A Beginner's Guide
 date: May 02, 2024
-author: Rebecca Glasscock
-tags: React
+author: Google Gemini
+tags: React, JavaScript
 ---
 
 In the realm of ever-evolving web development, React has risen as a dominant force. This JavaScript library, brought to life by Facebook, has revolutionised how we craft interactive and dynamic user interfaces. If you're eager to embark on your React journey, this article is your guiding light!

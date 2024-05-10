@@ -1,7 +1,7 @@
 ---
 title: BEM - Structuring Your CSS for Clarity and Maintainability
 date: May 04, 2024
-author: Dan Edwards
+author: Google Gemini
 tags: CSS, BEM
 ---
 
