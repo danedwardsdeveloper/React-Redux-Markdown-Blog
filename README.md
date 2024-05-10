@@ -36,6 +36,7 @@
 - [ ] Clean up the article content
 - [ ] Invite other programmers to write articles
 - [ ] Style social icons into circles
+- [ ] Check propTypes on all relevant components
 - [x ] Make markdown links open in a new tab
 - [x] Enable preview page sorted by tags
 - [x] Design a sidebar and dynamically display other relevant blog posts
