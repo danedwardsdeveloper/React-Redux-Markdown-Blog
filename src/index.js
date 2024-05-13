@@ -1,48 +1,43 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
+
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from "react-router-dom";
+
+import { Provider } from "react-redux";
+
+import App from "./app/App";
+import About from "./components/About";
+import Article from "./components/Article";
+import ArticlePreviews from "./components/ArticlePreviews";
+
+import { store } from "./app/store.js";
+
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import reportWebVitals from "./reportWebVitals";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import ArticlePage from "./pages/ArticlePage";
-import AuthorPage from "./pages/AuthorPage";
-import TagPage from "./pages/TagPage";
-import NotFound from "./pages/NotFound";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-    errorElement: <NotFound />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/articles/:path",
-    element: <ArticlePage />,
-  },
-  {
-    path: "/tags/:tag",
-    element: <TagPage />,
-  },
-  {
-    path: "/writers/:author",
-    element: <AuthorPage />,
-  },
-  {
-    path: "/not-found",
-    element: <NotFound />,
-  },
-]);
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<App state={store.getState()} dispatch={store.dispatch} />}>
+      <Route index element={<ArticlePreviews />} />
+      <Route path="about" element={<About />} />
+      <Route path="articles" element={<Article />} />
+    </Route>
+  )
 );
 
-reportWebVitals();
+const root = createRoot(document.getElementById("root"));
+
+const render = () => {
+  root.render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <RouterProvider router={router}>
+          <App state={store.getState()} />
+        </RouterProvider>
+      </Provider>
+    </React.StrictMode>
+  );
+};
+
+render();
+
+store.subscribe(render);

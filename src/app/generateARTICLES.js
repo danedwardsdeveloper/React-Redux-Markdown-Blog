@@ -1,47 +1,47 @@
-const path = require("path");
 const fs = require("fs");
+const path = require("path");
 
-const dirPath = path.join(__dirname, "../src/articles");
-let articleList = [];
+function generateARTICLES() {
+  const dirPath = path.join(__dirname, "./articles");
+  let articleList = [];
 
-function removeProblemCharacters(jsString) {
-  return jsString.replace(/\u2019|\u00A0|\u2013/g, (match) => {
-    switch (match) {
-      case "\u2019":
-        return `'`;
-      case "\u00A0":
-        return ` `;
-      case "\u2013":
-        return `-`;
-    }
-  });
-}
-
-function trimArticle(str, maxChar = 700) {
-  return str.length > maxChar ? str.substring(0, maxChar - 3) + "..." : str;
-}
-
-function removeMarkdown(str) {
-  const markdownPatterns = [/\*\*(.*?)\*\*/g, /__(.*?)__/g, /\[(.*?)\]\((.*?)\)/g, /^#+\s(.*)/gm, /`(.*?)`/g, /\n={2,}/g];
-  let cleanedStr = str;
-  markdownPatterns.forEach((pattern) => {
-    cleanedStr = cleanedStr.replace(pattern, "$1");
-  });
-  return cleanedStr;
-}
-
-function generatePath(str) {
-  const removePunctuation = (str) => {
-    let punctuationRegex = /[.,/?#!$%^&*;:{}=\-_`~()'"]/g;
-    return str.replace(punctuationRegex, "");
+  const removeProblemCharacters = (jsString) => {
+    return jsString.replace(/\u2019|\u00A0|\u2013/g, (match) => {
+      switch (match) {
+        case "\u2019":
+          return `'`;
+        case "\u00A0":
+          return ` `;
+        case "\u2013":
+          return `-`;
+      }
+    });
   };
-  const addDashes = (str) => {
-    return str.replace(/\s+/g, "-");
-  };
-  return addDashes(removePunctuation(str)).toLowerCase();
-}
 
-function getArticles() {
+  const trimArticle = (str, maxChar = 700) => {
+    return str.length > maxChar ? str.substring(0, maxChar - 3) + "..." : str;
+  };
+
+  const removeMarkdown = (str) => {
+    const markdownPatterns = [/\*\*(.*?)\*\*/g, /__(.*?)__/g, /\[(.*?)\]\((.*?)\)/g, /^#+\s(.*)/gm, /`(.*?)`/g, /\n={2,}/g];
+    let cleanedStr = str;
+    markdownPatterns.forEach((pattern) => {
+      cleanedStr = cleanedStr.replace(pattern, "$1");
+    });
+    return cleanedStr;
+  };
+
+  function generatePath(str) {
+    const removePunctuation = (str) => {
+      let punctuationRegex = /[.,/?#!$%^&*;:{}=\-_`~()'"]/g;
+      return str.replace(punctuationRegex, "");
+    };
+    const addDashes = (str) => {
+      return str.replace(/\s+/g, "-");
+    };
+    return addDashes(removePunctuation(str)).toLowerCase();
+  }
+
   fs.readdir(dirPath, (err, files) => {
     const markdownFiles = files.filter((file) => file.endsWith(".md"));
     if (err) {
@@ -60,6 +60,7 @@ function getArticles() {
           }
           return acc;
         };
+
         const parseMetadata = ({ lines, metadataIndices }) => {
           if (metadataIndices.length > 0) {
             let metadata = lines.slice(metadataIndices[0] + 1, metadataIndices[1]);
@@ -69,12 +70,14 @@ function getArticles() {
             return obj;
           }
         };
+
         const parseContent = ({ lines, metadataIndices }) => {
           if (metadataIndices.length > 0) {
             lines = lines.slice(metadataIndices[1] + 1, lines.length);
           }
           return lines.join("\n");
         };
+
         let lines = contents.split("\n");
         let metadataIndices = lines.reduce(getMetadataIndices, []);
         let metadata = parseMetadata({ lines, metadataIndices });
@@ -82,24 +85,24 @@ function getArticles() {
         let timestamp = date.getTime() / 1000;
         let content = removeProblemCharacters(parseContent({ lines, metadataIndices }));
         let preview = removeMarkdown(trimArticle(content));
-        let path = generatePath(metadata.title);
-        let authorPath = generatePath(metadata.author);
+        let slug = generatePath(metadata.title);
+        let authorSlug = generatePath(metadata.author);
         let tagString = metadata.tags;
         let tags = tagString.split(", ");
+
         article = {
           id: timestamp,
           title: metadata.title,
           author: metadata.author,
           date: metadata.date,
-          path: path,
-          authorPath: authorPath,
+          slug: slug,
+          authorSlug: authorSlug,
           tags: tags,
           preview: preview,
           content: content,
         };
 
         articleList.push(article);
-
         filesProcessed++;
 
         if (filesProcessed === files.length - 1) {
@@ -107,7 +110,9 @@ function getArticles() {
             return a.id < b.id ? 1 : -1;
           });
           let data = JSON.stringify(sortedList);
-          fs.writeFileSync("src/articles/articles.json", data);
+
+          const filePath = path.join(__dirname, "../../src/app/ARTICLES.json");
+          fs.writeFileSync(filePath, data);
         }
       });
     });
@@ -115,4 +120,4 @@ function getArticles() {
   return;
 }
 
-getArticles();
+generateARTICLES();

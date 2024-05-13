@@ -1,31 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Pagination({ numberOfPages, currentPage, setCurrentPage }) {
-  const goToNextPage = () => {
-    if (currentPage !== numberOfPages) setCurrentPage(currentPage + 1);
+import { useDispatch, useSelector } from "react-redux";
+import { setPage } from "../features/articles/articlesSlice";
+
+function Pagination() {
+  const dispatch = useDispatch();
+  const { currentPage, totalPages } = useSelector((state) => state.articlesSlice);
+
+  const handleNextPage = () => {
+    const nextPage = currentPage + 1;
+    dispatch(setPage({ currentPage: nextPage }));
   };
 
-  const goToPrevPage = () => {
-    if (currentPage !== 1) setCurrentPage(currentPage - 1);
+  const handlePreviousPage = () => {
+    const previousPage = currentPage - 1;
+    dispatch(setPage({ currentPage: previousPage }));
   };
 
   return (
     <nav className="pagination">
       <p className="page-count">
-        Page&nbsp;<span>{currentPage}</span>&nbsp;of&nbsp;<span>{numberOfPages}</span>
+        Page&nbsp;<span>{currentPage}</span>&nbsp;of&nbsp;<span>{totalPages}</span>
       </p>
       <ul>
         {currentPage > 1 && (
           <li>
-            <Link onClick={goToPrevPage} className="previous">
+            <Link onClick={handlePreviousPage} className="previous">
               Newer posts
             </Link>
           </li>
         )}
-        {currentPage < numberOfPages && (
+        {currentPage < totalPages && (
           <li>
-            <Link onClick={goToNextPage} className="next">
+            <Link onClick={handleNextPage} className="next">
               Older posts
             </Link>
           </li>

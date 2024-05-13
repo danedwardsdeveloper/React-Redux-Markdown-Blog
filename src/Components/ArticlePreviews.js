@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-const ArticlePreviews = (props) => {
+import { setPage, goToPreviousPage, getArticlesByPage, setCurrentPage, getTotalPages } from "../features/articles/articlesSlice";
+
+const ArticlePreviews = () => {
+  const visibleArticles = useSelector((state) => state.articlesSlice.visibleArticles);
+
   return (
     <main className="main--home-page">
-      {props.articles.map((article) => {
+      {visibleArticles.map((article) => {
         let articlePath = `/articles/${article.path}`;
         let authorPath = `/writers/${article.authorPath}`;
         return (

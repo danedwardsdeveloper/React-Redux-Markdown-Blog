@@ -171,9 +171,12 @@ header nav li {
   display: inline-block;
   font-size: 1.5rem;
 }
-header nav li .active {
+header nav li a.active {
   color: rgba(0, 0, 0, 0.8);
+  text-decoration: underline;
+  text-decoration-color: lightgrey;
 }
+
 header nav li:not(:last-child) {
   margin-right: 6rem;
 }

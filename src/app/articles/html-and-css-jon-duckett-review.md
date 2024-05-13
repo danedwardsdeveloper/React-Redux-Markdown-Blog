@@ -9,7 +9,7 @@ tags: Book review, HTML, CSS
 
 However I was pleasantly surprised by how relevant it all seemed, and it helped me to organise and solidify my existing understanding of these languages. The first working draft of HTML 5 was published in January 2008, and the book was published in 2011. While there have been plenty of additions, there isn’t much that’s depreciated or totally out of date. CSS, however, has come a long quite a way since the book’s release, but the information is presently so nicely, and organised so well that I would recommend reading it if you are learning web development.
 
-## The good stuff\*\*
+## The good stuff
 
 #### Great overview of two languages
 
@@ -63,18 +63,17 @@ These units, relative to the viewport size, simplified the creation of responsiv
 
 ##### Variables (Custom Properties)
 
-CSS Variables:\*\* Native variables in CSS allow you to define reusable values, making your stylesheets more dynamic and maintainable. This reduces repetition and eases style updates.
+**CSS Variables:** Native variables in CSS allow you to define reusable values, making your stylesheets more dynamic and maintainable. This reduces repetition and eases style updates.
 
 - **Animations and Transitions**
-
   - **CSS Transitions:** Smoothly transition property changes over a set duration, creating simple animations on hover or other interactions, without the need for JavaScript.
   - **CSS Animations:** More powerful control over animations with `@keyframes`, allowing you to define complex, multi-step animation sequences directly within your stylesheets.
-
+  
 - **Other notable CSS updates**
   - **Calc Function:** Allows calculations within CSS (e.g., `width: calc(100% - 20px);` for dynamic sizing).
   - **Shapes:** Features for creating basic geometric shapes (`circle`, `polygon`) with CSS.
   - **Filters and Blend Modes:** Graphical effects like `blur`, `grayscale`, `drop-shadow`, and blend modes for manipulating image and element appearance.
 
-Overall, I’d say this is well worth a read, but not much use as a reference book. And I must say: don’t bother buying this book new. I bought mine on Amazon for £19.99, but there are copies in very good condition on eBay for less than £3. It’s also online as a [PDF](https://wtf.tw/ref/duckett.pdf).
+**Overall, I’d say this is well worth a read, but not much use as a reference book. And I must say: don’t bother buying this book new. I bought mine on Amazon for £19.99, but there are copies in very good condition on eBay for less than £3. It’s also online as a [PDF](https://wtf.tw/ref/duckett.pdf).**
 
-I have since come across a much better book: HTML, CSS & JavaScript in Easy Steps by Mike McGrath. Updated in 2020, this is a similar (weirdly almost identical in size and weight to the Duckett book) but much more up-to-date whistle-stop tour of the languages of web development.
+**I have since come across a much better book: HTML, CSS & JavaScript in Easy Steps by Mike McGrath. Updated in 2020, this is a similar (weirdly almost identical in size and weight to the Duckett book) but much more up-to-date whistle-stop tour of the languages of web development.**

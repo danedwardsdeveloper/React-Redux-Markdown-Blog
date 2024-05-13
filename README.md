@@ -9,10 +9,10 @@
 ### How to add a new article
 
 1. Stop running the live server, if applicable
-2. Run `public/main.js`
-3. `articles.json` file should be rewritten including the new article. If you've copied & pasted from a different text editor, you'll need to check through the file for characters that cause problems when converted to JSON.
-4. If you find any new ones (highlighted in yellow on my VS Code theme), look up the character code [here](https://www.babelstone.co.uk/Unicode/whatisit.html) and add a replace case to the `removeProblemCharacters` function in `/public/main.js`
-5. Then (hopefully) everything will be taken care of dynamically! The newest post will be displayed at the top of the homepage
+2. Run `src/app/generateARTICLES.js`
+3. `public/ARTICLES.json` file should be rewritten including the new article. If you've copied & pasted from a different text editor, you'll need to check through the file for characters that cause problems when converted to JSON.
+4. If you find any new ones (highlighted in yellow on my VS Code theme), look up the character code [here](https://www.babelstone.co.uk/Unicode/whatisit.html) and add a replace case to the `removeProblemCharacters` function in `generateARTICLES.js`
+5. Everything will be taken care of dynamically! The newest post will be displayed at the top of the homepage
 
 #### Troubleshooting
 
@@ -21,6 +21,7 @@
 
 ### To-Do List
 
+- [ ] Styling of active nav link
 - [ ] Home nav link should go to results page 1
 - [ ] Style tags & authors pages
 - [ ] Replace the word 'author' with 'writer' everywhere for consistency
@@ -88,3 +89,4 @@
 
 - [Enabling pagination using React](https://www.educative.io/answers/how-to-implement-pagination-in-reactjs)
 - [CSS Bracket hover animation](https://codepen.io/adatg/pen/BGLVGL?editors=0100)
+- [Codecademy React Router cheatsheet](https://www.codecademy.com/learn/learn-react-router/modules/learn-react-router/cheatsheet)

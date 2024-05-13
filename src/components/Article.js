@@ -4,7 +4,7 @@ import MarkdownRenderer from "./MarkdownRenderer";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-function ArticleComponent(props) {
+function Article(props) {
   window.scrollTo({
     top: 0,
     behavior: "instant",
@@ -23,4 +23,4 @@ function ArticleComponent(props) {
   );
 }
 
-export default ArticleComponent;
+export default Article;
