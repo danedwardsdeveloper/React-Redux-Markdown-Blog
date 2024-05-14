@@ -4,7 +4,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula as theme } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 function LinkRenderer(props) {
-  console.log({ props });
+  // console.log({ props });
   return (
     <a href={props.href} target="_blank" rel="noreferrer">
       {props.children}

@@ -34,7 +34,6 @@ function Pagination() {
   useEffect(() => {
     let title = `${currentPage === 1 ? "Home" : "Page " + currentPage} | Array of Sunshine | Front-End WebDev Blog: JavaScript, React, Coding Book Reviews`;
     document.title = title;
-    console.log(title);
   }, [currentPage]);
 
   return (

@@ -1,32 +1,33 @@
 import React from "react";
-import Tags from "./Tags";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+import { useSelector, useDispatch } from "react-redux";
 
-function SideBar(props) {
+// import Tags from "./Tags";
+
+import { setCurrentArticle } from "../features/articles/articlesSlice";
+
+function SideBar() {
+  // let tags = currentArticle.tags;
+  let recentArticles = useSelector((state) => state.articlesSlice.recentArticles);
+
   return (
     <aside className="sidebar">
       <section className="recent-section">
         <h3>Recent articles</h3>
         <ul>
-          {props.recentArticles.map((article) => (
+          {recentArticles.map((article) => (
             <li key={article.title}>
-              <Link to={`/articles/${article.path}`}>{article.title}</Link>
+              <Link to={`/articles/${article.slug}`}>{article.title}</Link>
             </li>
           ))}
         </ul>
       </section>
-      <section className="tags-section">
+      {/* <section className="tags-section">
         <h3>Tags</h3>
         <Tags tags={props.tags} />
-      </section>
+      </section> */}
     </aside>
   );
 }
-
-SideBar.propTypes = {
-  articleTags: PropTypes.arrayOf(PropTypes.string),
-  aboutTags: PropTypes.arrayOf(PropTypes.string),
-};
 
 export default SideBar;

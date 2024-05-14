@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Header from "../Components/Header";
-import SideBar from "../Components/SideBar";
-import Footer from "../Components/Footer";
+import Header from "./Header";
+import SideBar from "./SideBar";
+import Footer from "./Footer";
 
-function NotFound() {
+function ErrorPage() {
   useEffect(() => {
     document.title = "Not found | Array of Sunshine | Front-End WebDev Blog: JavaScript, React, Coding book Reviews";
   }, []);
@@ -44,9 +44,8 @@ function NotFound() {
         </article>
         <SideBar aboutTags={aboutTags} />
       </main>
-      <Footer />
     </div>
   );
 }
 
-export default NotFound;
+export default ErrorPage;

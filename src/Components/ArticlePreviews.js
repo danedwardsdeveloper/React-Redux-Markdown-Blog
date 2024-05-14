@@ -1,13 +1,20 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import Pagination from "../components/Pagination";
 
-import { setPage, goToPreviousPage, getArticlesByPage, setCurrentPage, getTotalPages } from "../features/articles/articlesSlice";
+import { setCurrentArticle, setRecentArticles } from "../features/articles/articlesSlice";
 
 const ArticlePreviews = () => {
   const visibleArticles = useSelector((state) => state.articlesSlice.visibleArticles);
+
+  const dispatch = useDispatch();
+
+  const handleClick = (article) => {
+    dispatch(setCurrentArticle(article));
+    dispatch(setRecentArticles(article));
+  };
 
   return (
     <>
@@ -25,18 +32,37 @@ const ArticlePreviews = () => {
                   </Link>
                 </p>
                 <h2 className="article-title--preview">
-                  <Link to={articleSlug}>{article.title}</Link>
+                  <Link
+                    to={articleSlug}
+                    onClick={() => {
+                      handleClick(article);
+                    }}
+                  >
+                    {article.title}
+                  </Link>
                 </h2>
                 <p className="article-date">{article.date}</p>
               </div>
               <div className="article-content-col">
                 <p>
-                  <Link to={articleSlug} className="article-preview">
+                  <Link
+                    to={articleSlug}
+                    onClick={() => {
+                      handleClick(article);
+                    }}
+                    className="article-preview"
+                  >
                     {article.preview}
                   </Link>
                 </p>
                 <p className="read-more">
-                  <Link key={article.id} to={articleSlug}>
+                  <Link
+                    key={article.id}
+                    to={articleSlug}
+                    onClick={() => {
+                      handleClick(article);
+                    }}
+                  >
                     Read more
                   </Link>
                 </p>

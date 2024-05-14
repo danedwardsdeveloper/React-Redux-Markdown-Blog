@@ -1,25 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 // import Header from "./Header";
 // import articles from "../articles/articles.json";
 import SideBar from "./SideBar";
 // import Footer from "./Footer";
 
 function About() {
-  // const tags = ["Book reviews", "JavaScript", "React"];
-  // const [recentArticles, setRecentArticles] = useState([]);
-  // const [error, setError] = useState([]);
-
-  //   const findRecentArticles = async () => {
-  //     try {
-  //       let recentArticles = articles.slice(0, 3);
-  //       setRecentArticles(recentArticles);
+  const tags = ["Book reviews", "JavaScript", "React"];
 
   useEffect(() => {
     document.title = "About | Array of Sunshine | Front-End WebDev Blog: JavaScript, React, Coding book Reviews";
   }, []);
-  //   };
-  //   findRecentArticles();
-  // }, []);
+
+  // useDispatch
 
   return (
     <>

@@ -1,5 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import reportWebVitals from "./reportWebVitals";
 
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route, Outlet } from "react-router-dom";
 
@@ -9,6 +10,7 @@ import App from "./app/App";
 import About from "./components/About";
 import Article from "./components/Article";
 import ArticlePreviews from "./components/ArticlePreviews";
+import ErrorPage from "./components/ErrorPage.js";
 
 import { store } from "./app/store.js";
 
@@ -16,10 +18,10 @@ import "./index.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App state={store.getState()} dispatch={store.dispatch} />}>
+    <Route path="/" element={<App state={store.getState()} dispatch={store.dispatch} errorElement={<ErrorPage />} />}>
       <Route index element={<ArticlePreviews />} />
       <Route path="about" element={<About />} />
-      <Route path="articles" element={<Article />} />
+      <Route path="articles/:slug" element={<Article />} />
     </Route>
   )
 );
@@ -40,4 +42,4 @@ const render = () => {
 
 render();
 
-store.subscribe(render);
+// reportWebVitals(console.log);

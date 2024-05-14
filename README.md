@@ -21,6 +21,8 @@
 
 ### To-Do List
 
+- [ ] **Make recent article links work correctly**
+- [ ] Clicking on site icon or Home takes you to articles page 1
 - [ ] Styling of active nav link
 - [ ] Home nav link should go to results page 1
 - [ ] Style tags & authors pages
@@ -38,6 +40,7 @@
 - [ ] Style social icons into circles
 - [ ] Check propTypes on all relevant components
 - [ ] Invite other programmers to write articles
+- [x] Display recent articles dynamically
 - [x] Auto update footer copyright year with fallback
 - [x ] Make markdown links open in a new tab
 - [x] Enable preview page sorted by tags
