@@ -4,22 +4,39 @@ import { useSelector, useDispatch } from "react-redux";
 
 // import Tags from "./Tags";
 
-import { setCurrentArticle } from "../features/articles/articlesSlice";
+import { setCurrentArticle, setRecentArticles } from "../features/articles/articlesSlice";
 
 function SideBar() {
   // let tags = currentArticle.tags;
   let recentArticles = useSelector((state) => state.articlesSlice.recentArticles);
+
+  const dispatch = useDispatch();
+
+  const handleArticleClick = (article) => {
+    dispatch(setCurrentArticle(article));
+    dispatch(setRecentArticles(article));
+  };
 
   return (
     <aside className="sidebar">
       <section className="recent-section">
         <h3>Recent articles</h3>
         <ul>
-          {recentArticles.map((article) => (
-            <li key={article.title}>
-              <Link to={`/articles/${article.slug}`}>{article.title}</Link>
-            </li>
-          ))}
+          {recentArticles.map((article) => {
+            let articleSlug = `/articles/${article.slug}`;
+            return (
+              <li key={article.title}>
+                <Link
+                  to={articleSlug}
+                  onClick={() => {
+                    handleArticleClick(article);
+                  }}
+                >
+                  {article.title}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </section>
       {/* <section className="tags-section">
