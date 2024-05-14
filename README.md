@@ -21,10 +21,8 @@
 
 ### To-Do List
 
-- [ ] Stop the article changing when you refresh the page
-- [ ] Clicking on site icon or Home takes you to articles page 1
+- [ ] Implement dynamic tags section
 - [ ] Styling of active nav link
-- [ ] Home nav link should go to results page 1
 - [ ] Style tags & authors pages
 - [ ] Replace the word 'author' with 'writer' everywhere for consistency
 - [ ] Make the site responsive
@@ -40,6 +38,8 @@
 - [ ] Style social icons into circles
 - [ ] Check propTypes on all relevant components
 - [ ] Invite other programmers to write articles
+- [ ] Stop the article changing when you refresh the page. Install Redux Persist
+- [x] Clicking on site icon or Home takes you to articles page 1
 - [x] Make recent article links work correctly
 - [x] Display recent articles dynamically
 - [x] Auto update footer copyright year with fallback
