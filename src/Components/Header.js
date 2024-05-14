@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { NavLink, Link } from "react-router-dom";
 
-import { setPage } from "../features/articles/articlesSlice";
+import { setPage, clearFilterTerm } from "../features/articles/articlesSlice";
 
 // import SearchField from "./SearchField";
 
@@ -10,6 +10,7 @@ function Header() {
   const dispatch = useDispatch();
 
   const handleHomeClick = () => {
+    dispatch(clearFilterTerm());
     dispatch(setPage({ currentPage: 1 }));
   };
 
