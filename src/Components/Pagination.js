@@ -1,22 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-
+// import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
+
 import { setPage } from "../features/articles/articlesSlice";
 
 function Pagination() {
   const dispatch = useDispatch();
   const { currentPage, totalPages } = useSelector((state) => state.articlesSlice);
 
+  const scrollOptions = {
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  };
+
+  function scrollToTop(options = scrollOptions) {
+    window.scrollTo(options);
+  }
+
   const handleNextPage = () => {
     const nextPage = currentPage + 1;
     dispatch(setPage({ currentPage: nextPage }));
+    scrollToTop();
   };
 
   const handlePreviousPage = () => {
     const previousPage = currentPage - 1;
     dispatch(setPage({ currentPage: previousPage }));
+    scrollToTop();
   };
+
+  useEffect(() => {
+    let title = `${currentPage === 1 ? "Home" : "Page " + currentPage} | Array of Sunshine | Front-End WebDev Blog: JavaScript, React, Coding Book Reviews`;
+    document.title = title;
+    console.log(title);
+  }, [currentPage]);
 
   return (
     <nav className="pagination">

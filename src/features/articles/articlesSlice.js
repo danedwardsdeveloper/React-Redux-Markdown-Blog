@@ -23,8 +23,8 @@ export const articlesSlice = createSlice({
       const endIndex = currentPage * articlesPerPage;
 
       state.visibleArticles = state.allArticles.slice(startIndex, endIndex);
-      console.log(`Start index: ${startIndex}`);
-      console.log(`End index: ${endIndex}`);
+      // console.log(`Start index: ${startIndex}`);
+      // console.log(`End index: ${endIndex}`);
     },
   },
 });
