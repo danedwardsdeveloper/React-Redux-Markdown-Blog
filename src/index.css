@@ -34,6 +34,11 @@ h2,
 h3 {
   margin: 0 0 2rem 0;
   color: #000;
+  font-family: "Arial Black", sans-serif;
+}
+
+h5 {
+  font-size: 1.6rem;
 }
 
 .site-title,
@@ -90,6 +95,8 @@ h3 {
 
 .article-title--full {
   font-size: 5rem;
+  font-family: "Arial Black", sans-serif;
+  line-height: 1.2;
 }
 
 .article-title--preview {
@@ -131,7 +138,8 @@ ol {
 
 h2 {
   margin: 0 0 2rem 0;
-  font-size: 4.4rem;
+  /* font-size: 4.4rem; */
+  font-size: 3.6rem;
   letter-spacing: -0.1rem;
   line-height: 1.25;
   color: #000;
@@ -242,6 +250,10 @@ main {
 .tags-section h3,
 .recent-section h3 {
   font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
 }
 
 .tags-section li,

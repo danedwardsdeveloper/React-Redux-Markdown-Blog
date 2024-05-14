@@ -22,6 +22,7 @@
 ### To-Do List
 
 - [ ] Implement dynamic tags section
+- [ ] Turn tags into links to Tag page
 - [ ] Styling of active nav link
 - [ ] Style tags & authors pages
 - [ ] Replace the word 'author' with 'writer' everywhere for consistency
