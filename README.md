@@ -21,9 +21,9 @@
 
 ### To-Do List
 
-- [ ] Implement dynamic tags section
-- [ ] Turn tags into links to Tag page
+- [ ] Create ArticlePreview component, as ArticlePreviews is very cluttered!
 - [ ] Styling of active nav link
+- [ ] Style the Error page
 - [ ] Style tags & authors pages
 - [ ] Replace the word 'author' with 'writer' everywhere for consistency
 - [ ] Make the site responsive
@@ -40,6 +40,8 @@
 - [ ] Check propTypes on all relevant components
 - [ ] Invite other programmers to write articles
 - [ ] Stop the article changing when you refresh the page. Install Redux Persist
+- [x] Implement dynamic tags section
+- [x] Turn tags into links to Tag page
 - [x] Clicking on site icon or Home takes you to articles page 1
 - [x] Make recent article links work correctly
 - [x] Display recent articles dynamically
@@ -52,7 +54,6 @@
 - [x] Check article bodies for errors
 - [x] Enable dynamic pagination
 - [x] Add 'newer posts' link, which will be hidden on page one.
-- [x] Style the Error page
 - [x] Favicon
 - [x] Add line numbers to code blocks
 - [x] Turn preview text into a link

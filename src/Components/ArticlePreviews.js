@@ -4,16 +4,15 @@ import { useSelector, useDispatch } from "react-redux";
 
 import Pagination from "../components/Pagination";
 
-import { setCurrentArticle, setRecentArticles } from "../features/articles/articlesSlice";
+import { setCurrentArticle } from "../features/articles/articlesSlice";
 
 const ArticlePreviews = () => {
-  const visibleArticles = useSelector((state) => state.articlesSlice.visibleArticles);
+  const { visibleArticles } = useSelector((state) => state.articlesSlice);
 
   const dispatch = useDispatch();
 
   const handleClick = (article) => {
     dispatch(setCurrentArticle(article));
-    dispatch(setRecentArticles(article));
   };
 
   return (

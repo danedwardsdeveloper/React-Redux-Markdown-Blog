@@ -19,20 +19,18 @@ function Article() {
   });
 
   return (
-    <>
-      <main className="main--article">
-        <article className="full-article">
-          <p>
-            by&nbsp;
-            <Link to={`/writers/${currentArticle.authorPath}`}>{currentArticle.author}</Link>
-          </p>
-          <h1 className="article-title--full">{currentArticle.title}</h1>
-          <p>by {currentArticle.date}</p>
-          <MarkdownRenderer children={currentArticle.content} linkTargets="_blank" />
-        </article>
-        <SideBar />
-      </main>
-    </>
+    <main className="main--article">
+      <article className="full-article">
+        <p>
+          by&nbsp;
+          <Link to={`/writers/${currentArticle.authorPath}`}>{currentArticle.author}</Link>
+        </p>
+        <h1 className="article-title--full">{currentArticle.title}</h1>
+        <p>by {currentArticle.date}</p>
+        <MarkdownRenderer children={currentArticle.content} linkTargets="_blank" />
+      </article>
+      <SideBar />
+    </main>
   );
 }
 

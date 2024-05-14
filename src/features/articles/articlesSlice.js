@@ -9,12 +9,15 @@ export const articlesSlice = createSlice({
   name: "articlesReducer",
   initialState: {
     allArticles: ARTICLES,
+    filteredArticles: [],
     visibleArticles: visibleArticles,
     articlesPerPage: 5,
     currentPage: 1,
     totalPages: totalPages,
     currentArticle: ARTICLES[0],
+    tags: ARTICLES[0].tags,
     recentArticles: ARTICLES.slice(0, 5),
+    filteredPageTitle: "",
   },
   reducers: {
     setPage: (state, action) => {
@@ -28,16 +31,24 @@ export const articlesSlice = createSlice({
     },
 
     setCurrentArticle(state, action) {
-      state.currentArticle = action.payload;
-    },
-
-    setRecentArticles(state, action) {
       let currentArticle = action.payload;
+      state.currentArticle = currentArticle;
 
       state.recentArticles = ARTICLES.filter((article) => currentArticle !== article).slice(0, 5);
+
+      state.tags = currentArticle.tags;
+    },
+    filterArticlesByTag(state, action) {
+      const filterTerm = action.payload;
+      state.filteredPageTitle = filterTerm;
+
+      const filteredArticles = state.allArticles.filter((article) => article.tags.includes(filterTerm));
+      state.filteredArticles = filteredArticles;
+
+      state.visibleArticles = state.filteredArticles.slice(0, 5);
     },
   },
 });
 
-export const { setPage, setCurrentArticle, setRecentArticles } = articlesSlice.actions;
+export const { setPage, setCurrentArticle, filterArticlesByTag } = articlesSlice.actions;
 export default articlesSlice.reducer;

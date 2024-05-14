@@ -2,19 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-// import Tags from "./Tags";
+import Tags from "./Tags";
 
-import { setCurrentArticle, setRecentArticles } from "../features/articles/articlesSlice";
+import { setCurrentArticle } from "../features/articles/articlesSlice";
 
 function SideBar() {
-  // let tags = currentArticle.tags;
-  let recentArticles = useSelector((state) => state.articlesSlice.recentArticles);
+  let { recentArticles } = useSelector((state) => state.articlesSlice);
 
   const dispatch = useDispatch();
 
   const handleArticleClick = (article) => {
     dispatch(setCurrentArticle(article));
-    dispatch(setRecentArticles(article));
   };
 
   return (
@@ -39,10 +37,10 @@ function SideBar() {
           })}
         </ul>
       </section>
-      {/* <section className="tags-section">
+      <section className="tags-section">
         <h3>Tags</h3>
-        <Tags tags={props.tags} />
-      </section> */}
+        <Tags />
+      </section>
     </aside>
   );
 }
