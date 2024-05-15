@@ -6,7 +6,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { setCurrentArticle } from "../features/articles/articlesSlice";
 
 function NextPrev() {
-  const { currentArticle, previousArticle, nextArticle } = useSelector((state) => state.articlesSlice);
+  const { previousArticle, nextArticle } = useSelector((state) => state.articlesSlice);
+
+  let nextArticleSlug = `/articles/${nextArticle.slug}`;
+  let previousArticleSlug = `/articles/${previousArticle.slug}`;
 
   const dispatch = useDispatch();
 
@@ -14,48 +17,32 @@ function NextPrev() {
     dispatch(setCurrentArticle(article));
   };
 
-  let nextArticleSlug = "/error";
-  let previousArticleSlug = "/error";
-
-  useEffect(() => {
-    if (nextArticle) {
-      let nextArticleSlug = `/articles/${nextArticle.slug}`;
-    }
-    if (previousArticle) {
-      let previousArticleSlug = `/articles/${previousArticle.slug}`;
-    }
-  }, [currentArticle]);
-
   return (
     <nav className="next-prev-section">
       <div className="row">
-        <div className="prev">
-          <div className="column">
-            {previousArticle && (
-              <>
-                <p className="prev">
-                  <Link
-                    to={previousArticleSlug}
-                    onClick={() => {
-                      handleClick(previousArticle);
-                    }}
-                  >
-                    Previous article
-                  </Link>
-                </p>
-                <h3>
-                  <Link
-                    to={previousArticleSlug}
-                    onClick={() => {
-                      handleClick(previousArticle);
-                    }}
-                    className="gradient-hover"
-                  >
-                    {previousArticle.title}
-                  </Link>
-                </h3>
-              </>
-            )}
+        <div className="column">
+          <div className="prev">
+            <p className="prev">
+              <Link
+                to={previousArticleSlug}
+                onClick={() => {
+                  handleClick(previousArticle);
+                }}
+              >
+                Previous article
+              </Link>
+            </p>
+            <h3>
+              <Link
+                to={previousArticleSlug}
+                onClick={() => {
+                  handleClick(previousArticle);
+                }}
+                className="gradient-hover"
+              >
+                {previousArticle.title}
+              </Link>
+            </h3>
           </div>
         </div>
         <div className="column">

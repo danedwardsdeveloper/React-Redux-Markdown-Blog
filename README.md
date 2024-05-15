@@ -21,7 +21,7 @@
 
 ### To-Do List
 
-- [ ] Handle edge cases for NextPrev articles (conditional link rendering for first and last links)
+- [ ] Fix about page styling
 - [ ] Styling of active nav link
 - [ ] Set up Error page
 - [ ] Style the Error page
@@ -38,6 +38,7 @@
 - [ ] Check propTypes on all relevant components
 - [ ] Invite other programmers to write articles
 - [ ] Stop the article changing when you refresh the page. Install Redux Persist
+- [x] Handle edge cases for NextPrev articles. (Articles now go round in a circle. If you view the first article, the 'previous' article is the last article, and vice versa. Avoids conditional rendering and a styling issue, plus recommends more content)
 - [x] Enable dynamic pagination on individual articles (NextPrev)
 - [x] Remove spaces from tag slug (book%20review)
 - [x] Style filter term page

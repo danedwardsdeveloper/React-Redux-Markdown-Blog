@@ -446,7 +446,8 @@ code {
 }
 
 .next-prev-section .row .column {
-  flex: 1;
+  padding: 0 1rem;
+  width: 50%;
 }
 
 .next-prev-section .next {

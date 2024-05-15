@@ -16,7 +16,7 @@ export const articlesSlice = createSlice({
     articlesPerPage: articlesPerPage,
     currentPage: 1,
     totalPages: calculateInitialState.totalPages,
-    previousArticle: [],
+    previousArticle: ARTICLES[ARTICLES.length - 1],
     currentArticle: ARTICLES[0],
     nextArticle: ARTICLES[1],
     tags: ARTICLES[0].tags,
@@ -40,17 +40,16 @@ export const articlesSlice = createSlice({
 
       const currentIndex = ARTICLES.findIndex((article) => article === currentArticle);
 
-      let previousArticle = null;
-      let nextArticle = null;
-      if (currentIndex > 0) {
-        previousArticle = ARTICLES[currentIndex - 1];
+      if (currentIndex === 0) {
+        state.previousArticle = ARTICLES[ARTICLES.length - 1];
+      } else {
+        state.previousArticle = ARTICLES[currentIndex - 1];
       }
-      if (currentIndex < ARTICLES.length - 1) {
-        nextArticle = ARTICLES[currentIndex + 1];
+      if (currentIndex === ARTICLES.length - 1) {
+        state.nextArticle = ARTICLES[0];
+      } else {
+        state.nextArticle = ARTICLES[currentIndex + 1];
       }
-
-      state.previousArticle = previousArticle;
-      state.nextArticle = nextArticle;
 
       state.recentArticles = ARTICLES.filter((article) => currentArticle !== article).slice(0, 5);
 
