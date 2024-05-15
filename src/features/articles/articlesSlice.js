@@ -59,7 +59,7 @@ export const articlesSlice = createSlice({
       const filterTerm = action.payload;
       state.filterTerm = filterTerm;
 
-      const filteredArticles = state.allArticles.filter((article) => article.tags.includes(filterTerm));
+      const filteredArticles = state.allArticles.filter((article) => article.tags.includes(filterTerm) || article.author.includes(filterTerm));
       state.filteredArticles = filteredArticles;
 
       state.totalPages = Math.ceil(filteredArticles.length / articlesPerPage);

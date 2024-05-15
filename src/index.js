@@ -23,6 +23,7 @@ const router = createBrowserRouter(
       <Route index element={<ArticlePreviews />} />
       <Route path="about" element={<About />} />
       <Route path="articles/:slug" element={<Article />} />
+      <Route path="writers/:slug" element={<TagPage />} />
       <Route path="tags/:slug" element={<TagPage />} />
     </Route>
   )

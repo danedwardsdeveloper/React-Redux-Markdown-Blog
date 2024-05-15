@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import Pagination from "../components/Pagination";
 
-import { setCurrentArticle } from "../features/articles/articlesSlice";
+import { setCurrentArticle, filterArticlesByTag } from "../features/articles/articlesSlice";
 
 const ArticlePreviews = () => {
   const { visibleArticles } = useSelector((state) => state.articlesSlice);
@@ -13,6 +13,10 @@ const ArticlePreviews = () => {
 
   const handleClick = (article) => {
     dispatch(setCurrentArticle(article));
+  };
+
+  const handleWriterClick = (writer) => {
+    dispatch(filterArticlesByTag(writer));
   };
 
   return (
@@ -26,7 +30,13 @@ const ArticlePreviews = () => {
               <div className="article-meta-col">
                 <p className="article-author">
                   by&nbsp;
-                  <Link to={authorSlug} className="article-author">
+                  <Link
+                    to={authorSlug}
+                    className="article-author"
+                    onClick={() => {
+                      handleWriterClick(article.author);
+                    }}
+                  >
                     {article.author}
                   </Link>
                 </p>

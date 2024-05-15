@@ -21,6 +21,8 @@
 
 ### To-Do List
 
+- [ ] Rename TagPage FilterTermPage
+- [ ] Make FilterTermPage h1 say: 'Articles by' for writers, and 'Articles tagged:' for tags
 - [ ] Fix about page styling
 - [ ] Styling of active nav link
 - [ ] Set up Error page
@@ -38,6 +40,7 @@
 - [ ] Check propTypes on all relevant components
 - [ ] Invite other programmers to write articles
 - [ ] Stop the article changing when you refresh the page. Install Redux Persist
+- [x] Turn each writer into a page of previews by that writer
 - [x] Handle edge cases for NextPrev articles. (Articles now go round in a circle. If you view the first article, the 'previous' article is the last article, and vice versa. Avoids conditional rendering and a styling issue, plus recommends more content)
 - [x] Enable dynamic pagination on individual articles (NextPrev)
 - [x] Remove spaces from tag slug (book%20review)
@@ -80,7 +83,6 @@
 - [x] Dynamic page titles when using pagination nav links
 - [x] Fix sidebar recent article paths
 - [x] Turn each tag into a link to a page of relevant article previews
-- [x] Turn each author into a page of previews by that author
 - [x] Update site title for tags & authors pages
 
 ## Nice-to-Have-but-not-Essential To-Do List
