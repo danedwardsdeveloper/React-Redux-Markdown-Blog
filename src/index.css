@@ -105,7 +105,8 @@ h5 {
 }
 
 .site-title:hover,
-.article-title--preview a:hover {
+.article-title--preview a:hover,
+.gradient-hover:hover {
   color: #fe8c00;
   background: -webkit-linear-gradient(left, #fe8c00, #f83600);
   -webkit-background-clip: text;
@@ -234,17 +235,30 @@ main {
   display: flex;
 }
 
-.full-article {
+.main--article .col {
   margin-top: 0;
   width: 65%;
-  margin-bottom: 10rem;
   flex: 65;
+  padding: 0 1rem;
+}
+
+.article--full {
+  margin-bottom: 10rem;
+}
+
+.article-header {
+  margin-bottom: 10rem;
+}
+
+.article-date {
+  font-style: italic;
 }
 
 .sidebar {
   margin-left: 5%;
   flex: 35;
   width: 35%;
+  padding: 0 1rem;
 }
 
 .tags-section h3,
@@ -383,35 +397,35 @@ code {
   color: black;
 }
 
-.next,
-.previous {
+.pagination-next,
+.pagination-previous {
   font-size: 1.6rem;
   color: black;
 }
 
-.next:hover,
+.pagination-next:hover,
 .previous:hover {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.next::after {
+.pagination-next::after {
   content: "→";
   position: relative;
   right: -0.5rem;
   transition: all 0.5s;
 }
 
-.next:hover:after {
+.pagination-next:hover:after {
   right: -1rem;
 }
-.previous::before {
+.pagination-previous::before {
   content: "←";
   position: relative;
   left: -0.5rem;
   transition: all 0.5s;
 }
 
-.previous:hover:before {
+.pagination-previous:hover:before {
   left: -1rem;
 }
 
@@ -423,4 +437,36 @@ code {
 .nav--error-page li {
   margin-right: 2rem;
   display: inline-block;
+}
+
+.next-prev-section .row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10rem;
+}
+
+.next-prev-section .row .column {
+  flex: 1;
+}
+
+.next-prev-section .prev {
+  text-align: right;
+}
+
+.next-prev-section p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.next-prev-section h3 a {
+  font-size: 2.6rem;
+  color: black;
+  line-height: 1.3;
+}
+
+.filtered-page-term {
+  background-color: orange;
+  background: -webkit-linear-gradient(left, #fe8c00, #f83600);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.2rem;
 }

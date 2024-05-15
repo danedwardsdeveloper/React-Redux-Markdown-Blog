@@ -43,14 +43,14 @@ function Pagination() {
       <ul>
         {currentPage > 1 && (
           <li>
-            <Link onClick={handlePreviousPage} className="previous">
+            <Link onClick={handlePreviousPage} className="pagination-previous">
               Newer posts
             </Link>
           </li>
         )}
         {currentPage < totalPages && (
           <li>
-            <Link onClick={handleNextPage} className="next">
+            <Link onClick={handleNextPage} className="pagination-next">
               Older posts
             </Link>
           </li>

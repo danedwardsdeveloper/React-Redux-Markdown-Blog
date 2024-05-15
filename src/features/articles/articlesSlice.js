@@ -2,9 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import ARTICLES from "../../app/ARTICLES.json";
 
 const articlesPerPage = 5;
-
-const initialState = {
-  articlesPerPage: 5,
+const calculateInitialState = {
   visibleArticles: ARTICLES.slice(0, articlesPerPage),
   totalPages: Math.ceil(ARTICLES.length / articlesPerPage),
 };
@@ -14,14 +12,14 @@ export const articlesSlice = createSlice({
   initialState: {
     allArticles: ARTICLES,
     filteredArticles: ARTICLES,
-    visibleArticles: initialState.visibleArticles,
-    articlesPerPage: initialState.articlesPerPage,
+    visibleArticles: calculateInitialState.visibleArticles,
+    articlesPerPage: articlesPerPage,
     currentPage: 1,
-    totalPages: initialState.totalPages,
+    totalPages: calculateInitialState.totalPages,
     currentArticle: ARTICLES[0],
     tags: ARTICLES[0].tags,
     recentArticles: ARTICLES.slice(0, 5),
-    filteredPageTitle: "",
+    filterTerm: "",
   },
   reducers: {
     setPage: (state, action) => {
@@ -44,7 +42,7 @@ export const articlesSlice = createSlice({
     },
     filterArticlesByTag(state, action) {
       const filterTerm = action.payload;
-      state.filteredPageTitle = filterTerm;
+      state.filterTerm = filterTerm;
 
       const filteredArticles = state.allArticles.filter((article) => article.tags.includes(filterTerm));
       state.filteredArticles = filteredArticles;
@@ -57,8 +55,8 @@ export const articlesSlice = createSlice({
     },
     clearFilterTerm(state, action) {
       state.filteredArticles = ARTICLES;
-      state.filteredPageTitle = "";
-      state.totalPages = initialState.totalPages;
+      state.filterTerm = "";
+      state.totalPages = state.initialState.totalPages;
     },
   },
 });

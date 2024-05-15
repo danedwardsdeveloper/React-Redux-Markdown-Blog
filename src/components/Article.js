@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import MarkdownRenderer from "./MarkdownRenderer";
 import SideBar from "./SideBar";
+import NextPrev from "./NextPrev";
 
 function Article() {
   const currentArticle = useSelector((state) => state.articlesSlice.currentArticle);
@@ -20,15 +21,20 @@ function Article() {
 
   return (
     <main className="main--article">
-      <article className="full-article">
-        <p>
-          by&nbsp;
-          <Link to={`/writers/${currentArticle.authorPath}`}>{currentArticle.author}</Link>
-        </p>
-        <h1 className="article-title--full">{currentArticle.title}</h1>
-        <p>by {currentArticle.date}</p>
-        <MarkdownRenderer children={currentArticle.content} linkTargets="_blank" />
-      </article>
+      <div className="col">
+        <article className="article--full">
+          <div className="article-header">
+            <p>
+              by&nbsp;
+              <Link to={`/writers/${currentArticle.authorPath}`}>{currentArticle.author}</Link>
+            </p>
+            <h1 className="article-title--full">{currentArticle.title}</h1>
+            <p className="article-date">{currentArticle.date}</p>
+          </div>
+          <MarkdownRenderer children={currentArticle.content} linkTargets="_blank" />
+        </article>
+        <NextPrev />
+      </div>
       <SideBar />
     </main>
   );

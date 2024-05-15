@@ -12,7 +12,7 @@
 2. Run `src/app/generateARTICLES.js`
 3. `public/ARTICLES.json` file should be rewritten including the new article. If you've copied & pasted from a different text editor, you'll need to check through the file for characters that cause problems when converted to JSON.
 4. If you find any new ones (highlighted in yellow on my VS Code theme), look up the character code [here](https://www.babelstone.co.uk/Unicode/whatisit.html) and add a replace case to the `removeProblemCharacters` function in `generateARTICLES.js`
-5. Everything will be taken care of dynamically! The newest post will be displayed at the top of the homepage
+5. Everything will be taken care of dynamically. The newest post will be displayed at the top of the homepage.
 
 #### Troubleshooting
 
@@ -21,16 +21,15 @@
 
 ### To-Do List
 
+- [ ] Enable dynamic pagination on individual articles (next article, previous article)
 - [ ] Styling of active nav link
+- [ ] Set up Error page
 - [ ] Style the Error page
-- [ ] Style tags & authors pages
+- [ ] Fix the Markdown code block styling
 - [ ] Replace the word 'author' with 'writer' everywhere for consistency
 - [ ] Make the site responsive
 - [ ] Add conditional loading to the article page to handle errors gracefully
-- [ ] Diff check the styling between static & react versions
-- [ ] Transfer the SingleArticle & About page styling from the static version
 - [ ] Write a test that checks that the number of objects in `articles.json` matches the number of `.md` files in `src/articles`
-- [ ] Enable dynamic metadata
 - [ ] Add screenshot to ReadMe
 - [ ] Add screenshot to Twitter OG metadata
 - [ ] Demonstrate Markdown format in ReadMe
@@ -39,6 +38,8 @@
 - [ ] Check propTypes on all relevant components
 - [ ] Invite other programmers to write articles
 - [ ] Stop the article changing when you refresh the page. Install Redux Persist
+- [x] Remove spaces from tag slug (book%20review)
+- [x] Style filter term page
 - [x] Pagination on Tags pages
 - [x] Implement dynamic tags section
 - [x] Turn tags into links to Tag page
@@ -82,11 +83,10 @@
 
 ## Nice-to-Have-but-not-Essential To-Do List
 
-- [ ] Enable dynamic pagination on individual articles (next article, previous article)
 - [ ] Add fade-in animations when scrolling down the homepage (Harder than expected)
 - [ ] Add copy buttons for each code block
 - [ ] Scroll to the top of the <article> element when clicking on a link (This seems much harder than expected!)
-- [ ] Make the search bar functional (...eventually)
+- [ ] Make the search bar functional
 - [ ] Organise `article.md` files into folders, ensuring they can still be read by `main.js`
 - [ ] Prevent incorrect article paths from displaying an empty page
 - [ ] Bracket animation on site title

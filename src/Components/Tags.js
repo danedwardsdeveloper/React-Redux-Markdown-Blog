@@ -7,11 +7,26 @@ import { filterArticlesByTag } from "../features/articles/articlesSlice";
 function Tags() {
   const { tags } = useSelector((state) => state.articlesSlice);
 
+  const scrollOptions = {
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  };
+
+  function scrollToTop(options = scrollOptions) {
+    window.scrollTo(options);
+  }
+
   const dispatch = useDispatch();
   const handleTagClick = (tag) => {
     dispatch(filterArticlesByTag(tag));
-    // navigate(`/tags/${tag.toLowerCase()}`);
+    scrollToTop();
   };
+
+  function generateSlug(tag) {
+    return tag.toLowerCase().replace(/\s/g, "-");
+  }
+
   return (
     <>
       {tags && (
@@ -19,7 +34,7 @@ function Tags() {
           {tags.map((tag) => (
             <li key={tag}>
               <Link
-                to={`/tags/${tag.toLowerCase()}`}
+                to={`/tags/${generateSlug(tag)}`}
                 onClick={() => {
                   handleTagClick(tag);
                 }}

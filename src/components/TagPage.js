@@ -7,7 +7,7 @@ import { setCurrentArticle } from "../features/articles/articlesSlice";
 import Pagination from "./Pagination";
 
 function TagPage() {
-  const { filteredPageTitle, currentPage, visibleArticles, totalPages } = useSelector((state) => state.articlesSlice);
+  const { filterTerm, currentPage, visibleArticles, totalPages } = useSelector((state) => state.articlesSlice);
 
   const dispatch = useDispatch();
 
@@ -17,16 +17,16 @@ function TagPage() {
 
   useEffect(() => {
     let title =
-      totalPages === 1
-        ? `${filteredPageTitle} | Array of Sunshine | Front-End WebDev Blog: JavaScript, React, Coding Book Reviews`
-        : `${filteredPageTitle}, Page ${currentPage} | Array of Sunshine | Front-End WebDev Blog: JavaScript, React, Coding Book Reviews`;
+      totalPages === 1 ? `${filterTerm} | Array of Sunshine | Front-End WebDev Blog: JavaScript, React, Coding Book Reviews` : `${filterTerm}, Page ${currentPage} | Array of Sunshine | Front-End WebDev Blog: JavaScript, React, Coding Book Reviews`;
 
     document.title = title;
   }, [currentPage]);
 
   return (
     <>
-      <h2>Articles Tagged: {filteredPageTitle}</h2>
+      <h2>
+        Articles Tagged: <span className="filtered-page-term">{filterTerm}</span>
+      </h2>
       <main className="main--home-page">
         {visibleArticles.map((article) => {
           let articleSlug = `/articles/${article.slug}`;
