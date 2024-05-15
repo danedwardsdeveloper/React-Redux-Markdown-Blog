@@ -21,7 +21,7 @@
 
 ### To-Do List
 
-- [ ] Enable dynamic pagination on individual articles (next article, previous article)
+- [ ] Handle edge cases for NextPrev articles (conditional link rendering for first and last links)
 - [ ] Styling of active nav link
 - [ ] Set up Error page
 - [ ] Style the Error page
@@ -38,6 +38,7 @@
 - [ ] Check propTypes on all relevant components
 - [ ] Invite other programmers to write articles
 - [ ] Stop the article changing when you refresh the page. Install Redux Persist
+- [x] Enable dynamic pagination on individual articles (NextPrev)
 - [x] Remove spaces from tag slug (book%20review)
 - [x] Style filter term page
 - [x] Pagination on Tags pages
