@@ -1,9 +1,45 @@
 # Minimal coding blog made with React & Markdown
 
+<img src="./static/Homepage.png" alt="Homepage screenshot" />
+<p>Homepage screenshot</p>
+<br />
+<p>
+<img width="49%" src="./static/Tags_&_recent_articles.png" alt="Tags & recent articles screenshot" />
+<img width="49%" src="./static/Pagination.png" alt="Footer & pagination screenshot" />
+</p>
+<p>Left: Full article with dynamically rendered recent articles</p>
+
+Tags page screenshot...
+
+### Technologies
+
+- React
+- React router
+- React markdown
+- React syntax highlighter
+- Redux
+
 ### Features
 
-- Blog articles are written as .md files with metadata at the top and added to the articles folder, then they're parsed by `/public/main.js`, and added to src/articles/articles.json
-- Homepage then generates dynamic article previews
+- Write a new article like this:
+
+```markdown
+---
+title: Article title
+date: September 01, 2022
+writer: Dan Edwards
+tags: Book review, Best practice
+---
+
+## Article content with markdown syntax
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has...
+```
+
+- Be careful that the meta info is formatted correctly
+- Pagination.......
+- Recent articles...
+- Blog articles are written as .md files with metadata at the top and added to the articles folder, then they're parsed by and added to src/articles/articles.json
 - Markdown is removed from the truncated previews to make the homepage look neat
 
 ### How to add a new article
@@ -23,7 +59,6 @@
 
 - [ ] Remove more characters from article slugs:
       `book-review-%7C-clean-code`
-- [ ] Fix about page styling
 - [ ] Styling of active nav link
 - [ ] Set up Error page
 - [ ] Style the Error page
@@ -31,12 +66,13 @@
 - [ ] Make the site responsive
 - [ ] Add conditional loading to the article page to handle errors gracefully
 - [ ] Write a test that checks that the number of objects in `articles.json` matches the number of `.md` files in `src/articles`
-- [ ] Add screenshot to ReadMe
+- [x] Add screenshot to ReadMe
 - [ ] Add screenshot to Twitter OG metadata
 - [ ] Demonstrate Markdown format in ReadMe
 - [ ] Clean up the article content
 - [ ] Style social icons into circles
 - [ ] Stop the article changing when you refresh the page. Install Redux Persist
+- [x] Fix about page styling
 - [x] Replace the word 'author' with 'writer' everywhere for consistency
 - [x] Make FilterTermPage h1 say: 'Articles by' for writers, and 'Articles tagged:' for tags
 - [x] Rename TagPage FilterTermPage
@@ -95,8 +131,20 @@
 - [ ] Prevent incorrect article paths from displaying an empty page
 - [ ] Bracket animation on site title
 
-### Helpful resources
+<details closed>
+<summary>
+Useful resources
 
-- [Enabling pagination using React](https://www.educative.io/answers/how-to-implement-pagination-in-reactjs)
-- [CSS Bracket hover animation](https://codepen.io/adatg/pen/BGLVGL?editors=0100)
-- [Codecademy React Router cheatsheet](https://www.codecademy.com/learn/learn-react-router/modules/learn-react-router/cheatsheet)
+</summary> <br />
+<ul>
+<li>
+<a href="https://www.educative.io/answers/how-to-implement-pagination-in-reactjs">Enabling pagination in React</a>
+</li>
+<li>
+<a href="https://codepen.io/adatg/pen/BGLVGL?editors=0100">CSS Bracket hover animation</a>
+</li>
+<li>
+<a href="https://www.codecademy.com/learn/learn-react-router/modules/learn-react-router/cheatsheet">Codecademy React Router cheatsheet</a>
+</li>
+</ul>
+</details>

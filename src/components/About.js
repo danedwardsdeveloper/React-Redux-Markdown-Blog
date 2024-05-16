@@ -17,14 +17,17 @@ function About() {
   return (
     <>
       <main className="main--article">
-        <article className="full-article">
-          <h1 className="article-title--full">About</h1>
-          <p>
-            Array of Sunshine is a blog about front-end web development, with practical JavaScript & React tutorials, and in-depth coding book reviews. Currently also contains AI articles by Google Gemini, and some sonnets by Shakespeare, just to
-            demonstrate writer and tags collections and pagination features. Created by Dan Edwards.
-          </p>
-          <p>Dan is a front-end web developer based in Bolton, UK. Currently training to full-stack with Codecademy.</p>
-        </article>
+        <div className="col">
+          <article className="full-article">
+            <h1 className="article-title--full">About</h1>
+            <p>
+              Array of Sunshine is a blog about front-end web development, with practical JavaScript & React tutorials, and in-depth coding book reviews. Currently also contains AI articles by Google Gemini, and some sonnets by Shakespeare, just to
+              demonstrate writer and tags collections and pagination features. Created by Dan Edwards.
+            </p>
+            <p>Dan is a front-end web developer based in Bolton, UK. Currently training to full-stack with Codecademy.</p>
+          </article>
+        </div>
+
         <SideBar />
       </main>
     </>
