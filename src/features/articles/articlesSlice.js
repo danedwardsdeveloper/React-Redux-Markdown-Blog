@@ -79,9 +79,18 @@ export const articlesSlice = createSlice({
 export const { setPage, setCurrentArticle, filterArticlesByTag, clearFilterTerm } = articlesSlice.actions;
 export default articlesSlice.reducer;
 
+// THis might be a more efficient way to find the recent articles.
+// const recentArticles = [];
+// let count = 0;
+// for (let i = 1; i < ARTICLES.length && count < 5; i++) {
+//   if (ARTICLES[i].id !== currentArticle.id) {
+//     recentArticles.push(ARTICLES[i]);
+//     count++;
+//   }
+// }
+
 // Update recent articles (excluding current and already set previous/next)
 // state.recentArticles = ARTICLES.filter(article =>
 //   article !== currentArticle && article !== previousArticle && article !== nextArticle
 // ).slice(0, 5);
-
 // state.tags = currentArticle.tags;
