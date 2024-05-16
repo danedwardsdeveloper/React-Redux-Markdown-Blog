@@ -6,6 +6,8 @@ import MarkdownRenderer from "./MarkdownRenderer";
 import SideBar from "./SideBar";
 import NextPrev from "./NextPrev";
 
+import { snapToTop } from "../features/utilities";
+
 function Article() {
   const currentArticle = useSelector((state) => state.articlesSlice.currentArticle);
 
@@ -14,10 +16,12 @@ function Article() {
     document.title = title;
   }, [currentArticle]);
 
-  window.scrollTo({
-    top: 0,
-    behavior: "instant",
-  });
+  snapToTop();
+
+  // window.scrollTo({
+  //   top: 0,
+  //   behavior: "instant",
+  // });
 
   return (
     <main className="main--article">
@@ -26,7 +30,7 @@ function Article() {
           <div className="article-header">
             <p>
               by&nbsp;
-              <Link to={`/writers/${currentArticle.authorPath}`}>{currentArticle.author}</Link>
+              <Link to={`/writers/${currentArticle.writerSlug}`}>{currentArticle.writer}</Link>
             </p>
             <h1 className="article-title--full">{currentArticle.title}</h1>
             <p className="article-date">{currentArticle.date}</p>

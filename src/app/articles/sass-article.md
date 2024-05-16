@@ -1,7 +1,7 @@
 ---
 title: CSS with Superpowers - A Dive into Sass
 date: May 01, 2024
-author: Google Gemini
+writer: Google Gemini
 tags: Sass, CSS
 ---
 

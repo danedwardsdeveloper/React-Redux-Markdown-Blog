@@ -4,30 +4,32 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { setPage } from "../features/articles/articlesSlice";
 
+import { smoothScrollToTop } from "../features/utilities";
+
 function Pagination() {
   const dispatch = useDispatch();
   const { currentPage, totalPages } = useSelector((state) => state.articlesSlice);
 
-  const scrollOptions = {
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  };
+  // const scrollOptions = {
+  //   top: 0,
+  //   left: 0,
+  //   behavior: "smooth",
+  // };
 
-  function scrollToTop(options = scrollOptions) {
-    window.scrollTo(options);
-  }
+  // function scrollToTop(options = scrollOptions) {
+  //   window.scrollTo(options);
+  // }
 
   const handleNextPage = () => {
     const nextPage = currentPage + 1;
     dispatch(setPage({ currentPage: nextPage }));
-    scrollToTop();
+    smoothScrollToTop();
   };
 
   const handlePreviousPage = () => {
     const previousPage = currentPage - 1;
     dispatch(setPage({ currentPage: previousPage }));
-    scrollToTop();
+    smoothScrollToTop();
   };
 
   useEffect(() => {

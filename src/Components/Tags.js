@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import { filterArticlesByTag } from "../features/articles/articlesSlice";
+import { findArticlesContaining, setFilterTermType } from "../features/articles/articlesSlice";
 
 function Tags() {
   const { tags } = useSelector((state) => state.articlesSlice);
@@ -19,7 +19,8 @@ function Tags() {
 
   const dispatch = useDispatch();
   const handleTagClick = (tag) => {
-    dispatch(filterArticlesByTag(tag));
+    dispatch(findArticlesContaining(tag));
+    dispatch(setFilterTermType("tag"));
     scrollToTop();
   };
 

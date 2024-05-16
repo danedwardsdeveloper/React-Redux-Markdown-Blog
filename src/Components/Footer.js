@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { smoothScrollToTop } from "../features/utilities";
 
 function useCurrentYear() {
   const [years, setYears] = useState(null);
@@ -12,10 +13,6 @@ function useCurrentYear() {
   }, []);
   return years ?? 2024;
 }
-
-const handleScrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
 
 function Footer() {
   const year = useCurrentYear();
@@ -37,7 +34,12 @@ function Footer() {
         <p className="copyright-notice">&copy; Dan Edwards, {year}</p>
       </div>
       <div className="footer-col-2">
-        <button className="top-of-page" onClick={handleScrollToTop}>
+        <button
+          className="top-of-page"
+          onClick={() => {
+            smoothScrollToTop();
+          }}
+        >
           Top of page
         </button>
       </div>

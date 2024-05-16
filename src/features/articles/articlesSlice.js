@@ -22,6 +22,7 @@ export const articlesSlice = createSlice({
     tags: ARTICLES[0].tags,
     recentArticles: ARTICLES.slice(0, 5),
     filterTerm: "",
+    filterTermType: "",
   },
   reducers: {
     setPage: (state, action) => {
@@ -55,11 +56,11 @@ export const articlesSlice = createSlice({
 
       state.tags = currentArticle.tags;
     },
-    filterArticlesByTag(state, action) {
+    findArticlesContaining(state, action) {
       const filterTerm = action.payload;
       state.filterTerm = filterTerm;
 
-      const filteredArticles = state.allArticles.filter((article) => article.tags.includes(filterTerm) || article.author.includes(filterTerm));
+      const filteredArticles = state.allArticles.filter((article) => article.tags.includes(filterTerm) || article.writer.includes(filterTerm));
       state.filteredArticles = filteredArticles;
 
       state.totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
@@ -67,6 +68,9 @@ export const articlesSlice = createSlice({
       state.visibleArticles = state.filteredArticles.slice(0, 5);
 
       state.currentPage = 1;
+    },
+    setFilterTermType(state, action) {
+      state.filterTermType = action.payload;
     },
     clearFilterTerm(state, action) {
       state.filteredArticles = ARTICLES;
@@ -76,7 +80,7 @@ export const articlesSlice = createSlice({
   },
 });
 
-export const { setPage, setCurrentArticle, filterArticlesByTag, clearFilterTerm } = articlesSlice.actions;
+export const { setPage, setCurrentArticle, findArticlesContaining, clearFilterTerm, setFilterTermType } = articlesSlice.actions;
 export default articlesSlice.reducer;
 
 // THis might be a more efficient way to find the recent articles.

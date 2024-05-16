@@ -4,7 +4,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 import Pagination from "../components/Pagination";
 
-import { setCurrentArticle, filterArticlesByTag } from "../features/articles/articlesSlice";
+import { setCurrentArticle, findArticlesContaining, setFilterTermType } from "../features/articles/articlesSlice";
+
+import { smoothScrollToTop } from "../features/utilities";
 
 const ArticlePreviews = () => {
   const { visibleArticles } = useSelector((state) => state.articlesSlice);
@@ -16,7 +18,9 @@ const ArticlePreviews = () => {
   };
 
   const handleWriterClick = (writer) => {
-    dispatch(filterArticlesByTag(writer));
+    dispatch(findArticlesContaining(writer));
+    dispatch(setFilterTermType("writer"));
+    smoothScrollToTop();
   };
 
   return (
@@ -24,20 +28,20 @@ const ArticlePreviews = () => {
       <main className="main--home-page">
         {visibleArticles.map((article) => {
           let articleSlug = `/articles/${article.slug}`;
-          let authorSlug = `/writers/${article.authorSlug}`;
+          let writerSlug = `/writers/${article.writerSlug}`;
           return (
             <section className="article-preview-container" key={article.id}>
               <div className="article-meta-col">
                 <p className="article-author">
                   by&nbsp;
                   <Link
-                    to={authorSlug}
+                    to={writerSlug}
                     className="article-author"
                     onClick={() => {
-                      handleWriterClick(article.author);
+                      handleWriterClick(article.writer);
                     }}
                   >
-                    {article.author}
+                    {article.writer}
                   </Link>
                 </p>
                 <h2 className="article-title--preview">

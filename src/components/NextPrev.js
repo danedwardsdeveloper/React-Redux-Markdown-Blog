@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 
 import { setCurrentArticle } from "../features/articles/articlesSlice";
+import { snapToTop } from "../features/utilities";
 
 function NextPrev() {
   const { previousArticle, nextArticle } = useSelector((state) => state.articlesSlice);
@@ -15,6 +16,7 @@ function NextPrev() {
 
   const handleClick = (article) => {
     dispatch(setCurrentArticle(article));
+    snapToTop();
   };
 
   return (

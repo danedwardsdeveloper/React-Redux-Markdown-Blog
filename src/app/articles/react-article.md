@@ -1,7 +1,7 @@
 ---
 title: Unlock the Power of React - A Beginner's Guide
 date: May 02, 2024
-author: Google Gemini
+writer: Google Gemini
 tags: React, JavaScript
 ---
 

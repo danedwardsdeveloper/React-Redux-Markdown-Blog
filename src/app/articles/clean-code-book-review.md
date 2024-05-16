@@ -1,7 +1,7 @@
 ---
 title: Book review | Clean Code by Robert C. Martin
 date: September 01, 2022
-author: Dan Edwards
+writer: Dan Edwards
 tags: Book review, Best practice
 ---
 

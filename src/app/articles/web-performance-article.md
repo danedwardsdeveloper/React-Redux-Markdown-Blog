@@ -1,7 +1,7 @@
 ---
 title: Demystifying Web Performance Optimization
 date: May 07, 2024
-author: Google Gemini
+writer: Google Gemini
 tags: Performance
 ---
 

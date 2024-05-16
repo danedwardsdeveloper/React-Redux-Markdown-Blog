@@ -21,14 +21,13 @@
 
 ### To-Do List
 
-- [ ] Rename TagPage FilterTermPage
-- [ ] Make FilterTermPage h1 say: 'Articles by' for writers, and 'Articles tagged:' for tags
+- [ ] Remove more characters from article slugs:
+      `book-review-%7C-clean-code`
 - [ ] Fix about page styling
 - [ ] Styling of active nav link
 - [ ] Set up Error page
 - [ ] Style the Error page
 - [ ] Fix the Markdown code block styling
-- [ ] Replace the word 'author' with 'writer' everywhere for consistency
 - [ ] Make the site responsive
 - [ ] Add conditional loading to the article page to handle errors gracefully
 - [ ] Write a test that checks that the number of objects in `articles.json` matches the number of `.md` files in `src/articles`
@@ -37,9 +36,10 @@
 - [ ] Demonstrate Markdown format in ReadMe
 - [ ] Clean up the article content
 - [ ] Style social icons into circles
-- [ ] Check propTypes on all relevant components
-- [ ] Invite other programmers to write articles
 - [ ] Stop the article changing when you refresh the page. Install Redux Persist
+- [x] Replace the word 'author' with 'writer' everywhere for consistency
+- [x] Make FilterTermPage h1 say: 'Articles by' for writers, and 'Articles tagged:' for tags
+- [x] Rename TagPage FilterTermPage
 - [x] Turn each writer into a page of previews by that writer
 - [x] Handle edge cases for NextPrev articles. (Articles now go round in a circle. If you view the first article, the 'previous' article is the last article, and vice versa. Avoids conditional rendering and a styling issue, plus recommends more content)
 - [x] Enable dynamic pagination on individual articles (NextPrev)
@@ -52,7 +52,7 @@
 - [x] Make recent article links work correctly
 - [x] Display recent articles dynamically
 - [x] Auto update footer copyright year with fallback
-- [x ] Make markdown links open in a new tab
+- [x] Make markdown links open in a new tab
 - [x] Enable preview page sorted by tags
 - [x] Design a sidebar and dynamically display other relevant blog posts
 - [x] Tidy up Home page function

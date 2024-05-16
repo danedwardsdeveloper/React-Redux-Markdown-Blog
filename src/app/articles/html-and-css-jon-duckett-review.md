@@ -1,7 +1,7 @@
 ---
 title: HTML & CSS by Jon Duckett. Is it still relevant?
 date: May 06, 2024
-author: Dan Edwards
+writer: Dan Edwards
 tags: Book review, HTML, CSS
 ---
 
@@ -68,7 +68,6 @@ These units, relative to the viewport size, simplified the creation of responsiv
 - **Animations and Transitions**
   - **CSS Transitions:** Smoothly transition property changes over a set duration, creating simple animations on hover or other interactions, without the need for JavaScript.
   - **CSS Animations:** More powerful control over animations with `@keyframes`, allowing you to define complex, multi-step animation sequences directly within your stylesheets.
-  
 - **Other notable CSS updates**
   - **Calc Function:** Allows calculations within CSS (e.g., `width: calc(100% - 20px);` for dynamic sizing).
   - **Shapes:** Features for creating basic geometric shapes (`circle`, `polygon`) with CSS.

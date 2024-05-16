@@ -1,7 +1,7 @@
 ---
 title: Web Accessibility in Practice | Beyond Checklists
 date: December 25, 2023
-author: Google Gemini
+writer: Google Gemini
 tags: Book review, Accessibility
 ---
 

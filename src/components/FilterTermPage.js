@@ -1,19 +1,45 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-import { setCurrentArticle } from "../features/articles/articlesSlice";
+import { setCurrentArticle, findArticlesContaining, setFilterTermType } from "../features/articles/articlesSlice";
 
 import Pagination from "./Pagination";
 
-function TagPage() {
-  const { filterTerm, currentPage, visibleArticles, totalPages } = useSelector((state) => state.articlesSlice);
+function FilterTermPage() {
+  const { filterTerm, filterTermType, currentPage, visibleArticles, totalPages } = useSelector((state) => state.articlesSlice);
 
   const dispatch = useDispatch();
 
   const handleClick = (article) => {
     dispatch(setCurrentArticle(article));
   };
+
+  const handleWriterClick = (writer) => {
+    dispatch(findArticlesContaining(writer));
+    dispatch(setFilterTermType("writer"));
+  };
+
+  // const generateHeadingWording = () => {
+  //   let headingWording = "";
+  //   switch (filterTermType) {
+  //     case "writer":
+  //       headingWording = "Articles by ";
+  //       break;
+  //     case "tag":
+  //       headingWording = "Articles tagged: ";
+  //       break;
+  //     default:
+  //       headingWording = "Articles related to ";
+  //   }
+  //   return headingWording;
+  // };
+
+  const generateHeadingWording = (filterTermType) =>
+    ({
+      writer: "Articles by ",
+      tag: "Articles tagged: ",
+    }[filterTermType] || "Articles related to ");
 
   useEffect(() => {
     let title =
@@ -25,19 +51,26 @@ function TagPage() {
   return (
     <>
       <h2>
-        Articles Tagged: <span className="filtered-page-term">{filterTerm}</span>
+        {generateHeadingWording(filterTermType)}
+        <span className="filtered-page-term">{filterTerm}</span>
       </h2>
       <main className="main--home-page">
         {visibleArticles.map((article) => {
           let articleSlug = `/articles/${article.slug}`;
-          let authorSlug = `/writers/${article.authorSlug}`;
+          let writerSlug = `/writers/${article.writerSlug}`;
           return (
             <section className="article-preview-container" key={article.id}>
               <div className="article-meta-col">
                 <p className="article-author">
                   by&nbsp;
-                  <Link to={authorSlug} className="article-author">
-                    {article.author}
+                  <Link
+                    to={writerSlug}
+                    className="article-author"
+                    onClick={() => {
+                      handleWriterClick(article.writer);
+                    }}
+                  >
+                    {article.writer}
                   </Link>
                 </p>
                 <h2 className="article-title--preview">
@@ -85,4 +118,4 @@ function TagPage() {
   );
 }
 
-export default TagPage;
+export default FilterTermPage;

@@ -31,7 +31,7 @@ function generateARTICLES() {
     return cleanedStr;
   };
 
-  function generatePath(str) {
+  function generateSlug(str) {
     const removePunctuation = (str) => {
       let punctuationRegex = /[.,/?#!$%^&*;:{}=\-_`~()'"]/g;
       return str.replace(punctuationRegex, "");
@@ -85,18 +85,18 @@ function generateARTICLES() {
         let timestamp = date.getTime() / 1000;
         let content = removeProblemCharacters(parseContent({ lines, metadataIndices }));
         let preview = removeMarkdown(trimArticle(content));
-        let slug = generatePath(metadata.title);
-        let authorSlug = generatePath(metadata.author);
+        let slug = generateSlug(metadata.title);
+        let writerSlug = generateSlug(metadata.writer);
         let tagString = metadata.tags;
         let tags = tagString.split(", ");
 
         article = {
           id: timestamp,
           title: metadata.title,
-          author: metadata.author,
+          writer: metadata.writer,
           date: metadata.date,
           slug: slug,
-          authorSlug: authorSlug,
+          writerSlug: writerSlug,
           tags: tags,
           preview: preview,
           content: content,
