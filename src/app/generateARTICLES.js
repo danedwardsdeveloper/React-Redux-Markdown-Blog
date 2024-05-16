@@ -33,7 +33,7 @@ function generateARTICLES() {
 
   function generateSlug(str) {
     const removePunctuation = (str) => {
-      let punctuationRegex = /[.,/?#!$%^&*;:{}=\-_`~()'"]/g;
+      let punctuationRegex = /[.,/?#!$%^&*;:{}=\-_`~()'"|]/g;
       return str.replace(punctuationRegex, "");
     };
     const addDashes = (str) => {

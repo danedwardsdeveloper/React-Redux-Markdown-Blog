@@ -53,12 +53,10 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 #### Troubleshooting
 
 - Check the `.md` metadata is formatted correctly. There is not much scope for error
-- Check that punctuation in the title isn't causing issues with the path
+- Check that punctuation in the title isn't causing issues with the path. Title cannot contain a colon
 
 ### To-Do List
 
-- [ ] Remove more characters from article slugs:
-      `book-review-%7C-clean-code`
 - [ ] Styling of active nav link
 - [ ] Set up Error page
 - [ ] Style the Error page
@@ -72,6 +70,8 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 - [ ] Clean up the article content
 - [ ] Style social icons into circles
 - [ ] Stop the article changing when you refresh the page. Install Redux Persist
+- [x] Remove more characters from article slugs:
+      `book-review-%7C-clean-code`
 - [x] Fix about page styling
 - [x] Replace the word 'author' with 'writer' everywhere for consistency
 - [x] Make FilterTermPage h1 say: 'Articles by' for writers, and 'Articles tagged:' for tags
