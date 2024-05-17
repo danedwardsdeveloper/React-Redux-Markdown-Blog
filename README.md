@@ -57,13 +57,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Deployment To-Do List
 
+[ ] Blur link on mobile after clicking pagination links
 [ ] Add screenshot to Twitter OG metadata
 [ ] Stop the article changing when you refresh the page. Install Redux Persist
-[ ] Subsequent page URLs
-[ ] Blur link on mobile after clicking pagination links (related to issue above)
 [ ] Clean up the article content
 [ ] Clean up Sass article. Long lines of code busting the layout
 [ ] Clean up the readme
+[ ] Rename repository
 
 ### To-Do List
 
@@ -83,6 +83,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ### To-Do List (Completed)
 
 </summary> <br />
+[x] Subsequent page URLs
+[x] Clean up Pagination component
 - [x] Make the site responsive
 - [x] Nest the sass so it's neat
 - [x] Add screenshot to ReadMe

@@ -21,6 +21,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App state={store.getState()} dispatch={store.dispatch} errorElement={<ErrorPage />} />}>
       <Route index element={<ArticlePreviews />} />
+      <Route path="/:pageNumber" element={<ArticlePreviews />} />
       <Route path="about" element={<About />} />
       <Route path="articles/:slug" element={<Article />} />
       <Route path="writers/:slug" element={<FilterTermPage />} />

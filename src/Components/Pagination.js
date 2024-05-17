@@ -10,22 +10,22 @@ function Pagination() {
   const dispatch = useDispatch();
   const { currentPage, totalPages } = useSelector((state) => state.articlesSlice);
 
-  const handleNextPage = () => {
-    const nextPage = currentPage + 1;
-    dispatch(setPage({ currentPage: nextPage }));
+  const nextPage = currentPage + 1;
+  const previousPage = currentPage - 1;
+
+  const handleClick = (targetPage) => {
+    dispatch(setPage({ currentPage: targetPage }));
     smoothScrollToTop();
   };
 
-  const handlePreviousPage = () => {
-    const previousPage = currentPage - 1;
-    dispatch(setPage({ currentPage: previousPage }));
-    smoothScrollToTop();
+  const generatePath = (targetPage) => {
+    return targetPage === 1 ? `/` : `/page-${targetPage}`;
   };
 
   useEffect(() => {
     let title = `${currentPage === 1 ? "Home" : "Page " + currentPage} | Array of Sunshine | Front-End WebDev Blog: JavaScript, React, Coding Book Reviews`;
     document.title = title;
-  }, [currentPage]);
+  });
 
   return (
     <nav className="pagination">
@@ -35,14 +35,26 @@ function Pagination() {
       <ul>
         <li>
           {currentPage > 1 && (
-            <Link onClick={handlePreviousPage} className="pagination-previous">
+            <Link
+              to={generatePath(previousPage)}
+              onClick={() => {
+                handleClick(previousPage);
+              }}
+              className="pagination-previous"
+            >
               Newer posts
             </Link>
           )}
         </li>
         {currentPage < totalPages && (
           <li>
-            <Link onClick={handleNextPage} className="pagination-next">
+            <Link
+              to={generatePath(nextPage)}
+              onClick={() => {
+                handleClick(nextPage);
+              }}
+              className="pagination-next"
+            >
               Older posts
             </Link>
           </li>
