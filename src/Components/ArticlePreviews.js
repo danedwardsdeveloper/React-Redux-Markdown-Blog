@@ -32,11 +32,11 @@ const ArticlePreviews = () => {
           return (
             <section className="article-preview-container" key={article.id}>
               <div className="article-meta-col">
-                <p className="article-author">
+                <p className="article-writer">
                   by&nbsp;
                   <Link
                     to={writerSlug}
-                    className="article-author"
+                    className="article-writer"
                     onClick={() => {
                       handleWriterClick(article.writer);
                     }}

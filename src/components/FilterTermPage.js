@@ -50,7 +50,7 @@ function FilterTermPage() {
 
   return (
     <>
-      <h2>
+      <h2 className="filter-term-heading">
         {generateHeadingWording(filterTermType)}
         <span className="filtered-page-term">{filterTerm}</span>
       </h2>

@@ -57,19 +57,23 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 ### To-Do List
 
+- [ ] Make the site responsive
+- [ ] Clean up the readme
 - [ ] Styling of active nav link
 - [ ] Set up Error page
 - [ ] Style the Error page
-- [ ] Fix the Markdown code block styling
-- [ ] Make the site responsive
 - [ ] Add conditional loading to the article page to handle errors gracefully
 - [ ] Write a test that checks that the number of objects in `articles.json` matches the number of `.md` files in `src/articles`
-- [x] Add screenshot to ReadMe
 - [ ] Add screenshot to Twitter OG metadata
 - [ ] Demonstrate Markdown format in ReadMe
 - [ ] Clean up the article content
 - [ ] Style social icons into circles
 - [ ] Stop the article changing when you refresh the page. Install Redux Persist
+- [ ] Implement loading progress bar at the top of the page
+- [ ] Clicking on home seems computationally expensive. Make more efficient
+- [ ] Subsequent page URLs
+- [ ] Blur link on mobile after clicking pagination links
+- [x] Add screenshot to ReadMe
 - [x] Remove more characters from article slugs:
       `book-review-%7C-clean-code`
 - [x] Fix about page styling

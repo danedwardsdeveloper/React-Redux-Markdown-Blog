@@ -10,16 +10,6 @@ function Pagination() {
   const dispatch = useDispatch();
   const { currentPage, totalPages } = useSelector((state) => state.articlesSlice);
 
-  // const scrollOptions = {
-  //   top: 0,
-  //   left: 0,
-  //   behavior: "smooth",
-  // };
-
-  // function scrollToTop(options = scrollOptions) {
-  //   window.scrollTo(options);
-  // }
-
   const handleNextPage = () => {
     const nextPage = currentPage + 1;
     dispatch(setPage({ currentPage: nextPage }));
@@ -43,13 +33,13 @@ function Pagination() {
         Page&nbsp;<span>{currentPage}</span>&nbsp;of&nbsp;<span>{totalPages}</span>
       </p>
       <ul>
-        {currentPage > 1 && (
-          <li>
+        <li>
+          {currentPage > 1 && (
             <Link onClick={handlePreviousPage} className="pagination-previous">
               Newer posts
             </Link>
-          </li>
-        )}
+          )}
+        </li>
         {currentPage < totalPages && (
           <li>
             <Link onClick={handleNextPage} className="pagination-next">

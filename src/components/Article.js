@@ -18,24 +18,21 @@ function Article() {
 
   snapToTop();
 
-  // window.scrollTo({
-  //   top: 0,
-  //   behavior: "instant",
-  // });
-
   return (
     <main className="main--article">
       <div className="col">
         <article className="article--full">
           <div className="article-header">
-            <p>
+            <p className="article-writer">
               by&nbsp;
               <Link to={`/writers/${currentArticle.writerSlug}`}>{currentArticle.writer}</Link>
             </p>
             <h1 className="article-title--full">{currentArticle.title}</h1>
             <p className="article-date">{currentArticle.date}</p>
           </div>
-          <MarkdownRenderer children={currentArticle.content} linkTargets="_blank" />
+          <div className="markdown-content">
+            <MarkdownRenderer children={currentArticle.content} linkTargets="_blank" />
+          </div>
         </article>
         <NextPrev />
       </div>

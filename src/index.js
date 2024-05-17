@@ -15,7 +15,7 @@ import ErrorPage from "./components/ErrorPage.js";
 
 import { store } from "./app/store.js";
 
-import "./index.css";
+import "./index.scss";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

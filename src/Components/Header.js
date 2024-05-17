@@ -30,7 +30,7 @@ function Header() {
               </Link>
             </h1>
           </div>
-          <div className="header-column-2">{/* <SearchField /> */}</div>
+          {/* <div className="header-column-2"><SearchField /></div> */}
         </div>
         <div className="header-row header-row-2">
           <nav className="main-nav">
