@@ -13,47 +13,52 @@ Sass (Syntactically Awesome Style Sheets) is a powerful CSS preprocessor. Think 
 
 1. **Variables:** Sass introduces variables, just like in regular programming languages. Define a value once and reuse it everywhere:
 
-   SCSS
-
-   `$primary-color: #3498db;
+   ```scss
+   // SCSS
+   $primary-color: #3498db;
 
    body {
-   background-color: $primary-color;
-   }`
+     background-color: $primary-color;
+   }
+   ```
 
 2. **Nesting:** Replicate the natural hierarchy of your HTML within your CSS for better organization:
 
-   SCSS
-
-   `nav {
-   ul {
-   list-style-type: none;
+   ```scss
+   // SCSS
+   nav {
+     ul {
+       list-style-type: none;
+     }
+     li {
+       display: inline-block;
+     }
    }
-
-   li {
-   display: inline-block;
-   }
-   }`
+   ```
 
 3. **Mixins:** Create reusable blocks of styles, like functions for your CSS:
 
-   SCSS
-
-   `@mixin border-radius($radius) {
-   border-radius: $radius;
+   ```scss
+   // SCSS
+   @mixin border-radius($radius) {
+     border-radius: $radius;
    }
 
    button {
-   @include border-radius(5px);
-   }`
+     @include border-radius(5px);
+   }
+   ```
 
 4. **Logic and Calculations:** Sass supports basic programming concepts:
 
-   SCSS
-
-   `@for $i from 1 through 5 {
-  .item-#{$i} { width: 20% * $i; }
-}`
+   ```scss
+   // SCSS
+   @for $i from 1 through 5 {
+     .item-#{$i} {
+       width: 20% * $i;
+     }
+   }
+   ```
 
 **Getting Started with Sass**
 
@@ -69,39 +74,59 @@ Let's imagine a simple website structure with some common styling needs. Here's 
 
 **Basic CSS:**
 
-CSS
+**Variables**
 
-`/* Variables */
-body { background-color: #f8f8f8; }
-header { background-color: #2980b9; color: #fff; }
-button { background-color: #2980b9;  border: none; color: #fff; padding: 10px 20px; }
-button:hover { background-color: #246a9b; }`
+```css
+/* CSS */
+body {
+  background-color: #f8f8f8;
+}
+
+header {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+button {
+  background-color: #2980b9;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: #246a9b;
+}
+```
 
 **Enhanced with Sass:**
 
-SCSS
+```scss
+// Sass
 
-`/_ Variables _/
+// Variables
 $primary-color: #2980b9;
-$darken-blue: darken($primary-color, 5%); // Sass function!
+$darken-blue: darken($primary-color, 5%); // Sass function
 
-/_ Structure _/
-body { background-color: #f8f8f8; }
+// Structure
+body {
+  background-color: #f8f8f8;
+}
 
 header {
-background-color: $primary-color;
-color: #fff;
-
-button {  
- background-color: $primary-color;  
- border: none;
-color: #fff;
-padding: 10px 20px;
-
-    &:hover { background-color: $darken-blue; }
-
+  background-color: $primary-color;
+  color: #fff;
+  button {
+    background-color: $primary-color;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    &:hover {
+      background-color: $darken-blue;
+    }
+  }
 }
-}`
+```
 
 **Benefits:**
 

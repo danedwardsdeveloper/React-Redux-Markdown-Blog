@@ -13,11 +13,13 @@ Tags page screenshot...
 
 ### Technologies
 
-- React
-- React router
+- React v18.3.1
+- React router v6.23.0
 - React markdown
 - React syntax highlighter
 - Redux
+- Redux toolkit
+- Sass
 
 ### Features
 
@@ -57,13 +59,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Deployment To-Do List
 
-[ ] Blur link on mobile after clicking pagination links
 [ ] Add screenshot to Twitter OG metadata
-[ ] Stop the article changing when you refresh the page. Install Redux Persist
-[ ] Clean up the article content
-[ ] Clean up Sass article. Long lines of code busting the layout
 [ ] Clean up the readme
-[ ] Rename repository
+[ ] Rename the repository `Markdown React Blog`
 
 ### To-Do List
 
@@ -77,6 +75,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 [ ] Implement loading progress bar at the top of the page\
 [ ] Clicking on home seems computationally expensive. Make more efficient\
 [ ] Markdown code blocks: 1st line number is weirdly indented...???\
+[ ] Enable code wrap
 
 <details closed>
 <summary>
@@ -149,6 +148,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 - [ ] Organise `article.md` files into folders, ensuring they can still be read by `main.js`
 - [ ] Prevent incorrect article paths from displaying an empty page
 - [ ] Bracket animation on site title
+- [ ] Stop the article changing when you refresh the page. Install Redux Persist - this is very difficult to set up - I couldn't get it to work. Not much up-to-date help online, will have to read the full docs.
+- [ ] Blur link on mobile after clicking pagination links. Tried `event.target.blur()` but this didn't work. Other people on stackOverflow mention it also doesn't work for them
 
 <details closed>
 <summary>
