@@ -28,12 +28,12 @@ Tags page screenshot...
 title: Article title
 date: September 01, 2022
 writer: Dan Edwards
-tags: Book review, Best practice
+tags: Book review, HTML, Redux
 ---
 
 ## Article content with markdown syntax
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has...
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...
 ```
 
 - Be careful that the meta info is formatted correctly
@@ -55,24 +55,36 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 - Check the `.md` metadata is formatted correctly. There is not much scope for error
 - Check that punctuation in the title isn't causing issues with the path. Title cannot contain a colon
 
+### Deployment To-Do List
+
+[ ] Add screenshot to Twitter OG metadata
+[ ] Stop the article changing when you refresh the page. Install Redux Persist
+[ ] Subsequent page URLs
+[ ] Blur link on mobile after clicking pagination links (related to issue above)
+[ ] Clean up the article content
+[ ] Clean up Sass article. Long lines of code busting the layout
+[ ] Clean up the readme
+
 ### To-Do List
 
-- [ ] Make the site responsive
-- [ ] Clean up the readme
-- [ ] Styling of active nav link
-- [ ] Set up Error page
-- [ ] Style the Error page
-- [ ] Add conditional loading to the article page to handle errors gracefully
-- [ ] Write a test that checks that the number of objects in `articles.json` matches the number of `.md` files in `src/articles`
-- [ ] Add screenshot to Twitter OG metadata
-- [ ] Demonstrate Markdown format in ReadMe
-- [ ] Clean up the article content
-- [ ] Style social icons into circles
-- [ ] Stop the article changing when you refresh the page. Install Redux Persist
-- [ ] Implement loading progress bar at the top of the page
-- [ ] Clicking on home seems computationally expensive. Make more efficient
-- [ ] Subsequent page URLs
-- [ ] Blur link on mobile after clicking pagination links
+[ ] Styling of active nav link - make underline further away from text\n
+[ ] Set up Error page\
+[ ] Style the Error page\
+[ ] Add conditional loading to the article page to handle errors gracefully\
+[ ] Write a test that checks that the number of objects in `articles.json` matches the number of `.md` files in `src/articles`\
+[ ] Demonstrate Markdown format in ReadMe\
+[ ] Style social icons into circles\
+[ ] Implement loading progress bar at the top of the page\
+[ ] Clicking on home seems computationally expensive. Make more efficient\
+[ ] Markdown code blocks: 1st line number is weirdly indented...???\
+
+<details closed>
+<summary>
+### To-Do List (Completed)
+
+</summary> <br />
+- [x] Make the site responsive
+- [x] Nest the sass so it's neat
 - [x] Add screenshot to ReadMe
 - [x] Remove more characters from article slugs:
       `book-review-%7C-clean-code`
@@ -124,6 +136,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 - [x] Fix sidebar recent article paths
 - [x] Turn each tag into a link to a page of relevant article previews
 - [x] Update site title for tags & authors pages
+</details>
 
 ## Nice-to-Have-but-not-Essential To-Do List
 

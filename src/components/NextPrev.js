@@ -22,7 +22,7 @@ function NextPrev() {
   return (
     <nav className="next-prev-section">
       <div className="row">
-        <div className="column">
+        <div className="col col-prev">
           <div className="prev">
             <p className="prev">
               <Link
@@ -47,7 +47,7 @@ function NextPrev() {
             </h3>
           </div>
         </div>
-        <div className="column">
+        <div className="col col-next">
           <div className="next">
             <p className="next">
               <Link

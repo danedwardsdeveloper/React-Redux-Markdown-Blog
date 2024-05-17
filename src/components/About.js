@@ -18,7 +18,7 @@ function About() {
     <>
       <main className="main--article">
         <div className="col">
-          <article className="full-article">
+          <article className="article--full">
             <h1 className="article-title--full">About</h1>
             <p>
               Array of Sunshine is a blog about front-end web development, with practical JavaScript & React tutorials, and in-depth coding book reviews. Currently also contains AI articles by Google Gemini, and some sonnets by Shakespeare, just to
