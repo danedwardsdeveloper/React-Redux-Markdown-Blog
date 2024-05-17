@@ -1,10 +1,14 @@
 import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 import MarkdownRenderer from "./MarkdownRenderer";
 import SideBar from "./SideBar";
 import NextPrev from "./NextPrev";
+
+import { findArticlesContaining, setFilterTermType } from "../features/articles/articlesSlice";
+
+import { smoothScrollToTop } from "../features/utilities";
 
 import { snapToTop } from "../features/utilities";
 
@@ -16,6 +20,13 @@ function Article() {
     document.title = title;
   }, [currentArticle]);
 
+  const dispatch = useDispatch();
+  const handleWriterClick = (writer) => {
+    dispatch(findArticlesContaining(writer));
+    dispatch(setFilterTermType("writer"));
+    smoothScrollToTop();
+  };
+
   snapToTop();
 
   return (
@@ -25,7 +36,14 @@ function Article() {
           <div className="article-header">
             <p className="article-writer">
               by&nbsp;
-              <Link to={`/writers/${currentArticle.writerSlug}`}>{currentArticle.writer}</Link>
+              <Link
+                to={`/writers/${currentArticle.writerSlug}`}
+                onClick={() => {
+                  handleWriterClick(currentArticle.writer);
+                }}
+              >
+                {currentArticle.writer}
+              </Link>
             </p>
             <h1 className="article-title--full">{currentArticle.title}</h1>
             <p className="article-date">{currentArticle.date}</p>

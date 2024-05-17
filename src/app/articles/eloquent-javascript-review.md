@@ -1,7 +1,7 @@
 ---
 title: Book Review | Eloquent JavaScript by Marijn Haverbeke (4th Edition)
 date: October 16, 2018
-writer: Dan Edwards
+writer: Google Gemini
 tags: Book review, JavaScript
 ---
 
