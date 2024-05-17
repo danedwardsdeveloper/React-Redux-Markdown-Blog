@@ -1,5 +1,7 @@
 # Minimal coding blog made with React & Markdown
 
+# [Array of Sunshine(Deployed site)](https://arrayofsunshine.co.uk/)
+
 <img src="./static/Homepage.png" alt="Homepage screenshot" />
 <p>Homepage screenshot</p>
 <br />
@@ -59,9 +61,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Deployment To-Do List
 
-[ ] Add screenshot to Twitter OG metadata
 [ ] Clean up the readme
-[ ] Rename the repository `Markdown React Blog`
+[ ] Rename the repository `Markdown 
+[ ] add `rel="noopener"` to Footer links
+React Blog`
+[ ] Remove unused variables
+[ ] Make link sharing previews dynamic and enable image for all paths
 
 ### To-Do List
 
