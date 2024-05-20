@@ -1,6 +1,6 @@
 ---
 title: HTML & CSS by Jon Duckett. Is it still relevant?
-date: May 06, 2024
+date: May 08, 2024
 writer: Dan Edwards
 tags: Book review, HTML, CSS
 ---
