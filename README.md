@@ -1,94 +1,116 @@
 # Minimal coding blog made with React & Markdown
 
-# [Array of Sunshine(Deployed site)](https://arrayofsunshine.co.uk/)
+<a href="https://arrayofsunshine.co.uk/" target="_blank">
+Deployed site: Array of Sunshine</a>
 
-<img src="./static/Homepage.png" alt="Homepage screenshot" />
-<p>Homepage screenshot</p>
-<br />
-<p>
-<img width="49%" src="./static/Tags_&_recent_articles.png" alt="Tags & recent articles screenshot" />
-<img width="49%" src="./static/Pagination.png" alt="Footer & pagination screenshot" />
-</p>
-<p>Left: Full article with dynamically rendered recent articles</p>
+---
 
-Tags page screenshot...
+Homepage
+
+![Desktop homepage mockup](./design-planning/preview-mockups/Exports/MacBook-Homepage.webp)
+![Tablet & mobile mockup](./design-planning/preview-mockups/Exports/tablet-mobile.webp)
+
+---
+
+Full article
+![Desktop full article mockup](./design-planning/preview-mockups/Exports/MacBook-full-article.webp)
+
+---
+
+Full article with code examples
+![Desktop Full article with code examples mockup](./design-planning/preview-mockups/Exports/MacBook-code.webp)
+
+---
+
+Pagination
+![Desktop pagination & footer mockup](./design-planning/preview-mockups/Exports/MacBook-pagination.webp)
+
+---
+
+Filter term page - click on a tag or writer
+![Desktop homepage mockup](./design-planning/preview-mockups/Exports/MacBook-Filter-page.webp)
 
 ### Technologies
 
-- React v18.3.1
-- React router v6.23.0
+- React `v18.3.1`
+- React router `v6.23.0`
 - React markdown
 - React syntax highlighter
-- Redux
-- Redux toolkit
+- Redux & toolkit
 - Sass
 
 ### Features
 
-- Write a new article like this:
+- Easy-to-maintain blog that supports code blocks
+- High-performance web app that's lightening-fast
+- Each markdown article is converted into a web page
+- Minimal & responsive design
+- Articles automatically sorted chronologically
+- Markdown syntax is removed from the truncated previews to make the homepage look neat
+- Recent articles (on full article page) are displayed dynamically
+- Pagination is handled dynamically
+- Tags and writer collections handled dynamically
+
+### Installation
+
+1. Install dependencies `npm install`
+2. Write `.md` articles in the following format, and add them to `src/app/articles`
 
 ```markdown
 ---
-title: Article title
-date: September 01, 2022
-writer: Dan Edwards
-tags: Book review, HTML, Redux
+title: Why I Quit Hollywood and Started a Web Development Agency
+date: January 01, 2016
+writer: Lindsay Lohan
+tags: Web Design, Celebrity
 ---
 
 ## Article content with markdown syntax
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...
+The Hollywood Hills shimmered in the distance, a constant reminder of the life I was leaving behind. Million-dollar contracts, screaming fans, and the intoxicating allure of the red carpet – it all felt like a faded dream. The truth was, the magic had dimmed. I craved a different kind of creation, something where my vision could truly take center stage. So, with a deep breath and a heart full of trepidation, I announced my retirement from acting. Trading scripts for code, I embarked on a new adventure.
 ```
 
-- Be careful that the meta info is formatted correctly
-- Pagination.......
-- Recent articles...
-- Blog articles are written as .md files with metadata at the top and added to the articles folder, then they're parsed by and added to src/articles/articles.json
-- Markdown is removed from the truncated previews to make the homepage look neat
-
-### How to add a new article
-
-1. Stop running the live server, if applicable
-2. Run `src/app/generateARTICLES.js`
-3. `public/ARTICLES.json` file should be rewritten including the new article. If you've copied & pasted from a different text editor, you'll need to check through the file for characters that cause problems when converted to JSON.
-4. If you find any new ones (highlighted in yellow on my VS Code theme), look up the character code [here](https://www.babelstone.co.uk/Unicode/whatisit.html) and add a replace case to the `removeProblemCharacters` function in `generateARTICLES.js`
-5. Everything will be taken care of dynamically. The newest post will be displayed at the top of the homepage.
+3. Run `generateARTICLES.js`. `ARTICLES.json` will be overwritten.
+4. Run `npm start` to start the live server or...
+5. Run `npm run build` to build a deployable site
 
 #### Troubleshooting
 
 - Check the `.md` metadata is formatted correctly. There is not much scope for error
-- Check that punctuation in the title isn't causing issues with the path. Title cannot contain a colon
-
-### Deployment To-Do List
-
-[ ] Clean up the readme
-[ ] Rename the repository `Markdown 
-[ ] add `rel="noopener"` to Footer links
-React Blog`
-[ ] Remove unused variables
-[ ] Make link sharing previews dynamic and enable image for all paths
+- The date must be exactly as formatted above
+- Tags are comma-separated
+- Check that punctuation in the title isn't causing issues with the path. Title cannot contain a colon.
 
 ### To-Do List
 
-[ ] Styling of active nav link - make underline further away from text\n
-[ ] Set up Error page\
-[ ] Style the Error page\
-[ ] Add conditional loading to the article page to handle errors gracefully\
-[ ] Write a test that checks that the number of objects in `articles.json` matches the number of `.md` files in `src/articles`\
-[ ] Demonstrate Markdown format in ReadMe\
-[ ] Style social icons into circles\
-[ ] Implement loading progress bar at the top of the page\
-[ ] Clicking on home seems computationally expensive. Make more efficient\
-[ ] Markdown code blocks: 1st line number is weirdly indented...???\
-[ ] Enable code wrap
+- [ ] If you refresh the page while viewing an article, the state will change and the content will change. Install Redux Persist
+- [ ] Remove unused variables and rebuild
+- [ ] Make metadata / link sharing previews dynamic and enable image preview for all paths. Install Redux Helmet
+- Refactor some of the repetition in some of the components.
+- [ ] add `rel="noopener"` to Footer links
+- [ ] Styling of active nav link - make underline further away from text
+- [ ] Create an Error page / Component
+- [ ] Style the Error page with useful Back and Home buttons
+- [ ] Add conditional loading to the article page to handle errors gracefully
+- [ ] Write a test that checks that the number of objects in `articles.json` matches the number of `.md` files in `src/articles`
+- [ ] Social icons could be prettier
+- [ ] Implement loading progress bar at the top of the page
+- [ ] Style the scroll bar in the theme colours (Maybe - actually this could be annoying)
+- [ ] Clicking on home seems computationally expensive. Make more efficient, perhaps by expanding the state so that visibleArticles doesn't change when you click a filter term
+- [ ] Fix: Markdown code blocks: 1st line number is weirdly indented.
+- [ ] Enable code wrap
+- [ ] Add subtle fade-in animation to each article preview when scrolling down the homepage
+- [ ] Add copy buttons for each code block
+- [ ] Scroll to the top of the <article> element when clicking on a link
+- [ ] Make the (currently hidden) search bar functional
+- [ ] Organise `article.md` files into folders, ensuring they can still be read by `main.js`
+- [ ] Prevent incorrect article paths from displaying an empty page
+- [ ] Fancy bracket animation on site title. [CSS Bracket hover animation](https://codepen.io/adatg/pen/BGLVGL?editors=0100)
+- [ ] Blur link on mobile after clicking pagination links. Tried `event.target.blur()` but this didn't work. Other people on stackOverflow mention it also doesn't work for them
 
-<details closed>
-<summary>
 ### To-Do List (Completed)
 
-</summary> <br />
-[x] Subsequent page URLs
-[x] Clean up Pagination component
+- [x] Subsequent page URLs
+- [x] Clean up Pagination component
 - [x] Make the site responsive
 - [x] Nest the sass so it's neat
 - [x] Add screenshot to ReadMe
@@ -142,34 +164,9 @@ React Blog`
 - [x] Fix sidebar recent article paths
 - [x] Turn each tag into a link to a page of relevant article previews
 - [x] Update site title for tags & authors pages
-</details>
 
-## Nice-to-Have-but-not-Essential To-Do List
+## Useful resources
 
-- [ ] Add fade-in animations when scrolling down the homepage (Harder than expected)
-- [ ] Add copy buttons for each code block
-- [ ] Scroll to the top of the <article> element when clicking on a link (This seems much harder than expected!)
-- [ ] Make the search bar functional
-- [ ] Organise `article.md` files into folders, ensuring they can still be read by `main.js`
-- [ ] Prevent incorrect article paths from displaying an empty page
-- [ ] Bracket animation on site title
-- [ ] Stop the article changing when you refresh the page. Install Redux Persist - this is very difficult to set up - I couldn't get it to work. Not much up-to-date help online, will have to read the full docs.
-- [ ] Blur link on mobile after clicking pagination links. Tried `event.target.blur()` but this didn't work. Other people on stackOverflow mention it also doesn't work for them
-
-<details closed>
-<summary>
-Useful resources
-
-</summary> <br />
-<ul>
-<li>
-<a href="https://www.educative.io/answers/how-to-implement-pagination-in-reactjs">Enabling pagination in React</a>
-</li>
-<li>
-<a href="https://codepen.io/adatg/pen/BGLVGL?editors=0100">CSS Bracket hover animation</a>
-</li>
-<li>
-<a href="https://www.codecademy.com/learn/learn-react-router/modules/learn-react-router/cheatsheet">Codecademy React Router cheatsheet</a>
-</li>
-</ul>
-</details>
+- [Building a Markdown React blog - YouTube tutorial](https://www.youtube.com/watch?v=gT1v33oA1gI) All the React content is wildly out of date, but it's still helpful for converting mardown into JSON
+- [Enabling pagination in React](https://www.educative.io/answers/how-to-implement-pagination-in-reactjs)
+- [Codecademy React Router cheatsheet](https://www.codecademy.com/learn/learn-react-router/modules/learn-react-router/cheatsheet)
