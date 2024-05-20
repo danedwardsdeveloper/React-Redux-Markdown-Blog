@@ -85,7 +85,7 @@ The Hollywood Hills shimmered in the distance, a constant reminder of the life I
 - [ ] If you refresh the page while viewing an article, the state will change and the content will change. Install Redux Persist
 - [ ] Remove unused variables and rebuild
 - [ ] Make metadata / link sharing previews dynamic and enable image preview for all paths. Install Redux Helmet
-- Refactor some of the repetition in some of the components.
+- [ ] Refactor some of the repetition in some of the components.
 - [ ] add `rel="noopener"` to Footer links
 - [ ] Styling of active nav link - make underline further away from text
 - [ ] Create an Error page / Component
