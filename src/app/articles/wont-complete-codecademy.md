@@ -1,6 +1,6 @@
 ---
 title: Why I won’t be completing the Codecademy Full-Stack Pathway
-date: May 22, 2024
+date: May 20, 2024
 writer: Dan Edwards
 tags: Codecademy, Philosophy
 ---

@@ -607,6 +607,10 @@ footer {
 .markdown-content pre {
   width: 80%;
 }
+.markdown-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
 @media screen and (max-width: 600px) {
   .markdown-content pre {
     width: 100%;
