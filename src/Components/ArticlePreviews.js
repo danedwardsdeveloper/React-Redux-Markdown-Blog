@@ -11,6 +11,13 @@ import {
 	setFilterTermType,
 } from '../features/articles/articlesSlice';
 
+import {
+	baseURL,
+	defaultMetaDescription,
+	baseTitle,
+	defaultKeywords,
+} from '../metadata.js';
+
 import { smoothScrollToTop } from '../features/utilities';
 
 const ArticlePreviews = () => {
@@ -28,25 +35,18 @@ const ArticlePreviews = () => {
 		smoothScrollToTop();
 	};
 
-	const title = `Home | Array of Sunshine | Front-End WebDev Blog: JavaScript,
-					React, Coding book Reviews`;
-
-	const description = `Array of Sunshine is a blog about front-end web development, with practical JavaScript & React tutorials, and in-depth coding book reviews.`;
-
-	const keywords = `front-end development, JavaScript, React, coding books, web development blog, programming tutorials, book reviews`;
-
 	return (
 		<>
 			<Helmet>
-				<title>{title}</title>
-				<meta property="og:title" content={title} />
+				<title>Home | {baseTitle}</title>
+				<meta property="og:title" content={`Home | ${baseTitle}`} />
 
-				<meta name="description" content={description} />
-				<meta property="og:description" content={description} />
+				<meta name="description" content={defaultMetaDescription} />
+				<meta property="og:description" content={defaultMetaDescription} />
 
-				<meta name="keywords" content={keywords} />
+				<meta name="keywords" content={defaultKeywords} />
 
-				<meta property="og:url" content="https://arrayofsunshine.co.uk" />
+				<meta property="og:url" content={baseURL} />
 			</Helmet>
 
 			<main className="main--home-page">

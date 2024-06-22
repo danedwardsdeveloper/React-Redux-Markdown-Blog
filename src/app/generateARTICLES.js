@@ -97,17 +97,19 @@ function generateARTICLES() {
 					parseContent({ lines, metadataIndices })
 				);
 				let preview = removeMarkdown(trimArticle(content));
-				let slug = generateSlug(metadata.title);
+				let title = removeProblemCharacters(metadata.title);
+				let slug = generateSlug(removeProblemCharacters(metadata.title));
 				let writerSlug = generateSlug(metadata.writer);
 				let tagString = metadata.tags;
 				let tags = tagString.split(', ');
 
 				article = {
 					id: timestamp,
-					title: metadata.title,
+					title: title,
 					writer: metadata.writer,
 					date: metadata.date,
 					metadescription: metadata.metadescription,
+					keywords: metadata.keywords,
 					slug: slug,
 					writerSlug: writerSlug,
 					tags: tags,

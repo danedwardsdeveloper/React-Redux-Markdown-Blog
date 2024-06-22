@@ -42,6 +42,8 @@ function Article() {
 		? currentArticle.keywords
 		: defaultKeywords;
 
+	const articleURL = `${baseURL}/${currentArticle.slug}`;
+
 	const dispatch = useDispatch();
 	const handleWriterClick = (writer) => {
 		dispatch(findArticlesContaining(writer));
@@ -62,7 +64,7 @@ function Article() {
 
 				<meta name="keywords" content={keywords} />
 
-				<meta property="og:url" content={URL} />
+				<meta property="og:url" content={articleURL} />
 			</Helmet>
 
 			<main className="main--article">
