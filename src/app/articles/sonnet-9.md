@@ -6,7 +6,7 @@ tags: Sonnet
 ---
 
 Is it for fear to wet a widow’s eye\
-That thou consum’st thyself in single life?\
+That thou consum'st thyself in single life?\
 Ah, if thou issueless shalt hap to die,\
 The world will wail thee like a makeless wife;\
 The world will be thy widow and still weep\
