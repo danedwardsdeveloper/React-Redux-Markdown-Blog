@@ -42,7 +42,19 @@ Filter term page - click on a tag or writer
 
 ### To-Do List
 
--  [ ] Remove punctuation from article slugs
+-  [ ] Add metadata to tags and writer pages
+-  [ ] Generate keywords and meta descriptions for all proper coding articles
+-  [ ] Write another article
+-  [ ] Remove Shakespeare articles
+-  [ ] Rewrite About page
+
+### Tests
+
+-  Check that internal links don't contain problem punctuation
+-  Check that length of `ARTICLES.json` matches number of files in `app/articles`
+
+-  [ ] Write tests for localhost
+-  [ ] Write tests for live site
 
 ### Features
 

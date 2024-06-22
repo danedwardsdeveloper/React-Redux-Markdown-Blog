@@ -5,17 +5,32 @@ function generateARTICLES() {
 	const dirPath = path.join(__dirname, './articles');
 	let articleList = [];
 
-	const removeProblemCharacters = (jsString) => {
-		return jsString.replace(/\u2019|\u00A0|\u2013/g, (match) => {
-			switch (match) {
-				case '\u2019':
-					return `'`;
-				case '\u00A0':
-					return ` `;
-				case '\u2013':
-					return `-`;
+	const replaceProblemCharacters = (jsString) => {
+		return jsString.replace(
+			/\u2018|\u2019|\u00A0|\u2013|\u2014|\u2026|\u00C2|\u00E2/g,
+			(match) => {
+				switch (match) {
+					case '\u2018':
+						return '`';
+					case '\u2019':
+						return `'`;
+					case '\u00A0':
+						return ' ';
+					case '\u2013':
+						return '-';
+					case '\u2014':
+						return '--';
+					case '\u2026':
+						return '...';
+					case '\u00C2':
+						return 'A';
+					case '\u00E2':
+						return 'â';
+					default:
+						return match;
+				}
 			}
-		});
+		);
 	};
 
 	const trimArticle = (str, maxChar = 700) => {
@@ -93,12 +108,12 @@ function generateARTICLES() {
 				let metadata = parseMetadata({ lines, metadataIndices });
 				let date = new Date(metadata.date);
 				let timestamp = date.getTime() / 1000;
-				let content = removeProblemCharacters(
+				let content = replaceProblemCharacters(
 					parseContent({ lines, metadataIndices })
 				);
 				let preview = removeMarkdown(trimArticle(content));
-				let title = removeProblemCharacters(metadata.title);
-				let slug = generateSlug(removeProblemCharacters(metadata.title));
+				let title = replaceProblemCharacters(metadata.title);
+				let slug = generateSlug(replaceProblemCharacters(metadata.title));
 				let writerSlug = generateSlug(metadata.writer);
 				let tagString = metadata.tags;
 				let tags = tagString.split(', ');

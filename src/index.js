@@ -60,4 +60,4 @@ const render = () => {
 
 render();
 
-// reportWebVitals(console.log);
+reportWebVitals(console.log);

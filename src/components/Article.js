@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -27,8 +27,6 @@ function Article() {
 	const currentArticle = useSelector(
 		(state) => state.articlesSlice.currentArticle
 	);
-
-	const URL = `${baseURL}/${currentArticle.slug}`;
 
 	const title = currentArticle.title
 		? `${currentArticle.title} | ${baseTitle}`
