@@ -9,6 +9,8 @@ import {
 	Route,
 } from 'react-router-dom';
 
+import { HelmetProvider } from 'react-helmet-async';
+
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './app/store.js';
@@ -51,13 +53,15 @@ const root = createRoot(document.getElementById('root'));
 const render = () => {
 	root.render(
 		<React.StrictMode>
-			<Provider store={store}>
-				<PersistGate loading={null} persistor={persistor}>
-					<RouterProvider router={router}>
-						<App />
-					</RouterProvider>
-				</PersistGate>
-			</Provider>
+			<HelmetProvider>
+				<Provider store={store}>
+					<PersistGate loading={null} persistor={persistor}>
+						<RouterProvider router={router}>
+							<App />
+						</RouterProvider>
+					</PersistGate>
+				</Provider>
+			</HelmetProvider>
 		</React.StrictMode>
 	);
 };
