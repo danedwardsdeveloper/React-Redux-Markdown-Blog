@@ -13,10 +13,10 @@ export const articlesSlice = createSlice({
 	initialState: {
 		allArticles: ARTICLES,
 		filteredArticles: ARTICLES,
-		visibleArticles: calculateInitialState.visibleArticles,
+		visibleArticles: calculateInitialState().visibleArticles,
 		articlesPerPage: articlesPerPage,
 		currentPage: 1,
-		totalPages: calculateInitialState.totalPages,
+		totalPages: calculateInitialState().totalPages,
 		previousArticle: ARTICLES[ARTICLES.length - 1],
 		currentArticle: ARTICLES[0],
 		nextArticle: ARTICLES[1],
@@ -40,23 +40,21 @@ export const articlesSlice = createSlice({
 		},
 
 		setCurrentArticle(state, action) {
-			let currentArticle = action.payload;
+			const currentArticle = action.payload;
 			state.currentArticle = currentArticle;
 
 			const currentIndex = ARTICLES.findIndex(
 				(article) => article === currentArticle
 			);
 
-			if (currentIndex === 0) {
-				state.previousArticle = ARTICLES[ARTICLES.length - 1];
-			} else {
-				state.previousArticle = ARTICLES[currentIndex - 1];
-			}
-			if (currentIndex === ARTICLES.length - 1) {
-				state.nextArticle = ARTICLES[0];
-			} else {
-				state.nextArticle = ARTICLES[currentIndex + 1];
-			}
+			state.previousArticle =
+				ARTICLES[
+					currentIndex === 0 ? ARTICLES.length - 1 : currentIndex - 1
+				];
+			state.nextArticle =
+				ARTICLES[
+					currentIndex === ARTICLES.length - 1 ? 0 : currentIndex + 1
+				];
 
 			state.recentArticles = ARTICLES.filter(
 				(article) => article !== currentArticle
@@ -80,7 +78,10 @@ export const articlesSlice = createSlice({
 				filteredArticles.length / articlesPerPage
 			);
 
-			state.visibleArticles = state.filteredArticles.slice(0, 5);
+			state.visibleArticles = state.filteredArticles.slice(
+				0,
+				articlesPerPage
+			);
 
 			state.currentPage = 1;
 		},
@@ -89,10 +90,19 @@ export const articlesSlice = createSlice({
 			state.filterTermType = action.payload;
 		},
 
-		clearFilterTerm(state, action) {
+		clearFilterTerm(state) {
 			state.filteredArticles = ARTICLES;
 			state.filterTerm = '';
-			state.totalPages = state.initialState.totalPages;
+			state.totalPages = calculateInitialState().totalPages;
+			state.visibleArticles = state.filteredArticles.slice(
+				0,
+				articlesPerPage
+			);
+			state.currentPage = 1;
+		},
+
+		resetVisibleArticles: (state) => {
+			state.visibleArticles = calculateInitialState().visibleArticles;
 		},
 	},
 });
@@ -103,6 +113,7 @@ export const {
 	findArticlesContaining,
 	clearFilterTerm,
 	setFilterTermType,
+	resetVisibleArticles,
 } = articlesSlice.actions;
 export default articlesSlice.reducer;
 
