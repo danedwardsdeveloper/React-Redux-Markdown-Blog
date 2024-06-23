@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
 
 import {
 	createBrowserRouter,
@@ -10,6 +10,8 @@ import {
 } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor } from './app/store.js';
 
 import App from './app/App';
 import About from './components/About';
@@ -18,7 +20,7 @@ import ArticlePreviews from './components/ArticlePreviews';
 import FilterTermPage from './components/FilterTermPage.js';
 import ErrorPage from './components/ErrorPage.js';
 
-import { store } from './app/store.js';
+// import { store } from './app/store.js';
 
 import './index.scss';
 
@@ -50,9 +52,11 @@ const render = () => {
 	root.render(
 		<React.StrictMode>
 			<Provider store={store}>
-				<RouterProvider router={router}>
-					<App state={store.getState()} />
-				</RouterProvider>
+				<PersistGate loading={null} persistor={persistor}>
+					<RouterProvider router={router}>
+						<App />
+					</RouterProvider>
+				</PersistGate>
 			</Provider>
 		</React.StrictMode>
 	);
@@ -60,4 +64,4 @@ const render = () => {
 
 render();
 
-reportWebVitals(console.log);
+// reportWebVitals(console.log);
