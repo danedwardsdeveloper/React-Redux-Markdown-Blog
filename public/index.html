@@ -35,16 +35,22 @@
 	<body>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
 		<div id="root"></div>
-		<script
-			async
-			defer
-			src="https://scripts.simpleanalyticscdn.com/latest.js"
-		></script>
-		<noscript
-			><img
-				src="https://queue.simpleanalyticscdn.com/noscript.gif"
-				alt=""
-				referrerpolicy="no-referrer-when-downgrade"
-		/></noscript>
+		<script>
+			if (window.location.hostname !== 'localhost') {
+				var script = document.createElement('script');
+				script.async = true;
+				script.defer = true;
+				script.src = 'https://scripts.simpleanalyticscdn.com/latest.js';
+				document.head.appendChild(script);
+
+				var noscript = document.createElement('noscript');
+				var img = document.createElement('img');
+				img.src = 'https://queue.simpleanalyticscdn.com/noscript.gif';
+				img.alt = '';
+				img.referrerPolicy = 'no-referrer-when-downgrade';
+				noscript.appendChild(img);
+				document.head.appendChild(noscript);
+			}
+		</script>
 	</body>
 </html>

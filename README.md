@@ -37,6 +37,7 @@ Filter term page - click on a tag or writer
 -  React markdown
 -  React syntax highlighter
 -  Reach Helmet
+-  Redux Persist
 -  Redux & toolkit
 -  Sass
 
