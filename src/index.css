@@ -606,6 +606,19 @@ footer {
 }
 .markdown-content pre {
   width: 80%;
+  background-color: rgb(40, 42, 54);
+}
+.markdown-content pre .code-block-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.markdown-content pre .code-block-header button {
+  height: -moz-min-content;
+  height: min-content;
+}
+.markdown-content pre .code-block-header .language {
+  color: whitesmoke;
 }
 .markdown-content h3 {
   font-size: 1.6rem;

@@ -43,7 +43,6 @@ Filter term page - click on a tag or writer
 
 ### To-Do List
 
--  [ ] Copy buttons on code blocks
 -  [ ] Add metadata to tags and writer pages
 -  [ ] Generate keywords and meta descriptions for all proper coding articles
 -  [ ] Write another article

@@ -14,49 +14,45 @@ Sass (Syntactically Awesome Style Sheets) is a powerful CSS preprocessor. Think 
 1. **Variables:** Sass introduces variables, just like in regular programming languages. Define a value once and reuse it everywhere:
 
    ```scss
-   // SCSS
    $primary-color: #3498db;
 
    body {
-     background-color: $primary-color;
+   	background-color: $primary-color;
    }
    ```
 
 2. **Nesting:** Replicate the natural hierarchy of your HTML within your CSS for better organization:
 
    ```scss
-   // SCSS
    nav {
-     ul {
-       list-style-type: none;
-     }
-     li {
-       display: inline-block;
-     }
+   	ul {
+   		list-style-type: none;
+   	}
+   	li {
+   		display: inline-block;
+   	}
    }
    ```
 
 3. **Mixins:** Create reusable blocks of styles, like functions for your CSS:
 
    ```scss
-   // SCSS
    @mixin border-radius($radius) {
-     border-radius: $radius;
+   	border-radius: $radius;
    }
 
    button {
-     @include border-radius(5px);
+   	@include border-radius(5px);
    }
    ```
 
 4. **Logic and Calculations:** Sass supports basic programming concepts:
 
    ```scss
-   // SCSS
    @for $i from 1 through 5 {
-     .item-#{$i} {
-       width: 20% * $i;
-     }
+   	.item-#{$i} {
+   		width: 20% * $i;
+   	}
    }
    ```
 
@@ -64,9 +60,9 @@ Sass (Syntactically Awesome Style Sheets) is a powerful CSS preprocessor. Think 
 
 Since your browser reads regular CSS, you'll need to compile your Sass code (.scss or .sass files) into CSS. Here are common ways:
 
-- **Command Line:** Install the Sass compiler (https://sass-lang.com/install). Then, use a command like `sass input.scss output.css`
-- **Build Tools:** Webpack, Gulp, or other build tools can integrate Sass compilation.
-- **Online Tools:** CodePen and similar platforms support Sass.
+-  **Command Line:** Install the Sass compiler (https://sass-lang.com/install). Then, use a command like `sass input.scss output.css`
+-  **Build Tools:** Webpack, Gulp, or other build tools can integrate Sass compilation.
+-  **Online Tools:** CodePen and similar platforms support Sass.
 
 **A Practical Sass Example**
 
@@ -77,70 +73,67 @@ Let's imagine a simple website structure with some common styling needs. Here's 
 **Variables**
 
 ```css
-/* CSS */
 body {
-  background-color: #f8f8f8;
+	background-color: #f8f8f8;
 }
 
 header {
-  background-color: #2980b9;
-  color: #fff;
+	background-color: #2980b9;
+	color: #fff;
 }
 
 button {
-  background-color: #2980b9;
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
+	background-color: #2980b9;
+	border: none;
+	color: #fff;
+	padding: 10px 20px;
 }
 
 button:hover {
-  background-color: #246a9b;
+	background-color: #246a9b;
 }
 ```
 
 **Enhanced with Sass:**
 
 ```scss
-// Sass
-
 // Variables
 $primary-color: #2980b9;
 $darken-blue: darken($primary-color, 5%); // Sass function
 
 // Structure
 body {
-  background-color: #f8f8f8;
+	background-color: #f8f8f8;
 }
 
 header {
-  background-color: $primary-color;
-  color: #fff;
-  button {
-    background-color: $primary-color;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    &:hover {
-      background-color: $darken-blue;
-    }
-  }
+	background-color: $primary-color;
+	color: #fff;
+	button {
+		background-color: $primary-color;
+		border: none;
+		color: #fff;
+		padding: 10px 20px;
+		&:hover {
+			background-color: $darken-blue;
+		}
+	}
 }
 ```
 
 **Benefits:**
 
-- **Organization:** Styles are logically grouped.
-- **Maintenance:** Changing the `$primary-color` updates all dependent styles.
-- **Readability:** Nesting and mixins make the code easier to understand.
+-  **Organization:** Styles are logically grouped.
+-  **Maintenance:** Changing the `$primary-color` updates all dependent styles.
+-  **Readability:** Nesting and mixins make the code easier to understand.
 
 **Exploring Further**
 
 Sass offers much more to enhance your CSS workflow:
 
-- **Modules and Imports:** Break stylesheets down into manageable files.
-- **Functions:** Create your own helper functions for complex calculations.
-- **Control Directives:** Use `@if`, `@for`, and `@each` for conditional logic and looping.
+-  **Modules and Imports:** Break stylesheets down into manageable files.
+-  **Functions:** Create your own helper functions for complex calculations.
+-  **Control Directives:** Use `@if`, `@for`, and `@each` for conditional logic and looping.
 
 **Leveling Up Your CSS Game**
 
