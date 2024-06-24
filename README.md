@@ -43,10 +43,12 @@ Filter term page - click on a tag or writer
 
 ### To-Do List
 
+-  [ ] Remove copy buttons from inline code
+-  [ ] Style the code blocks beautifully
+
 -  [ ] Add search function
 -  [ ] Add metadata to tags and writer pages
 -  [ ] Generate keywords and meta descriptions for all proper coding articles
--  [ ] Write another article
 -  [ ] Remove Shakespeare articles
 -  [ ] Rewrite About page
 
@@ -93,13 +95,6 @@ The Hollywood Hills shimmered in the distance, a constant reminder of the life I
 4. Run `npm start` to start the live server or...
 5. Run `npm run build` to build a deployable site
 
-#### Troubleshooting
-
--  Check the `.md` metadata is formatted correctly. There is not much scope for error
--  The date must be exactly as formatted above
--  Tags are comma-separated
--  Check that punctuation in the title isn't causing issues with the path. Title cannot contain a colon.
-
 ### To-Do List
 
 -  [ ] If you refresh the page while viewing an article, the state will change and the content will change. Install Redux Persist
@@ -127,64 +122,6 @@ The Hollywood Hills shimmered in the distance, a constant reminder of the life I
 -  [ ] Prevent incorrect article paths from displaying an empty page
 -  [ ] Fancy bracket animation on site title. [CSS Bracket hover animation](https://codepen.io/adatg/pen/BGLVGL?editors=0100)
 -  [ ] Blur link on mobile after clicking pagination links. Tried `event.target.blur()` but this didn't work. Other people on stackOverflow mention it also doesn't work for them
-
-### To-Do List (Completed)
-
--  [x] Subsequent page URLs
--  [x] Clean up Pagination component
--  [x] Make the site responsive
--  [x] Nest the sass so it's neat
--  [x] Add screenshot to ReadMe
--  [x] Remove more characters from article slugs:
-       `book-review-%7C-clean-code`
--  [x] Fix about page styling
--  [x] Replace the word 'author' with 'writer' everywhere for consistency
--  [x] Make FilterTermPage h1 say: 'Articles by' for writers, and 'Articles tagged:' for tags
--  [x] Rename TagPage FilterTermPage
--  [x] Turn each writer into a page of previews by that writer
--  [x] Handle edge cases for NextPrev articles. (Articles now go round in a circle. If you view the first article, the 'previous' article is the last article, and vice versa. Avoids conditional rendering and a styling issue, plus recommends more content)
--  [x] Enable dynamic pagination on individual articles (NextPrev)
--  [x] Remove spaces from tag slug (book%20review)
--  [x] Style filter term page
--  [x] Pagination on Tags pages
--  [x] Implement dynamic tags section
--  [x] Turn tags into links to Tag page
--  [x] Clicking on site icon or Home takes you to articles page 1
--  [x] Make recent article links work correctly
--  [x] Display recent articles dynamically
--  [x] Auto update footer copyright year with fallback
--  [x] Make markdown links open in a new tab
--  [x] Enable preview page sorted by tags
--  [x] Design a sidebar and dynamically display other relevant blog posts
--  [x] Tidy up Home page function
--  [x] Display the three most recent articles in the sidebar that aren't the current article
--  [x] Check article bodies for errors
--  [x] Enable dynamic pagination
--  [x] Add 'newer posts' link, which will be hidden on page one.
--  [x] Favicon
--  [x] Add line numbers to code blocks
--  [x] Turn preview text into a link
--  [x] Automatically scroll to the top of the page instantly when clicking on an article link
--  [x] Scroll smoothly when clicking on 'top of page' internal link
--  [x] Add styling to the markdown so it's consistent
--  [x] Generate author links
--  [x] Add code syntax highlighting using a library
--  [x] Remove the word 'post' from the codebase - I prefer the term 'article' and it should be consistent for clarity
--  [x] Display article tags on single article page
--  [x] Display article tags on home page
--  [x] Limit article previews to 5 most recent on home page
--  [x] This article: HTML & CSS by Jon Duckett. Is it still relevant? isn't displaying in full for some reason, possibly because I pasted it from Notion. Fix this error. Solution: wrote a function to find and replace problem characters a weird apostrophe that isn't an apostrope, and an nbsb that looks like a space. Removed question marks from the path
--  [x] Add a `removeProblemCharacters` function to `public/main.js` to prevent problems in `articles.json`
--  [x] Implement dynamic page title (browser tab) changes
--  [x] Buy domain name
--  [x] Add a brief site description to About page
--  [x] Homepage metadata
--  [x] Fix punctuation replacement error. Getting `isn"t` instead of `isn't` etc. Fixed! Prettify was messing everything up - solution was to wrap punctuation in backticks.
--  [x] Conditional rendering of 'Newer posts' & ''Older posts' nav as when appropriate
--  [x] Dynamic page titles when using pagination nav links
--  [x] Fix sidebar recent article paths
--  [x] Turn each tag into a link to a page of relevant article previews
--  [x] Update site title for tags & authors pages
 
 ## Useful resources
 
