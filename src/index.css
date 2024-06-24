@@ -565,7 +565,6 @@ footer {
   padding: 0;
 }
 .markdown-content pre {
-  width: 80%;
   background-color: rgb(40, 42, 54);
 }
 .markdown-content pre .code-block-header {
