@@ -3,6 +3,8 @@ title: HTML & CSS by Jon Duckett. Is it still relevant?
 date: May 08, 2024
 writer: Dan Edwards
 tags: Book review, HTML, CSS
+metadescription: Discover if Jon Duckett's "HTML & CSS" is still relevant in today's fast-evolving web development landscape. This review evaluates its strengths in presenting fundamental concepts and identifies outdated elements and missing modern practices.
+keywords: html & css book review, jon duckett, web development books, html5, css3, coding education, web design, programming books, outdated tech, modern web practices, book relevance, html semantic elements, css grid, flexbox, responsive design, webp images, coding resources
 ---
 
 **I bought this book as it was recommended reading to accompany the Codecademy Full-Stack Engineer career pathway. I am usually very fast to reach for a book whenever I’m learning something new, but I must admit I was suspicious about such an old book on such a fast-changing subject.**
@@ -65,13 +67,13 @@ These units, relative to the viewport size, simplified the creation of responsiv
 
 **CSS Variables:** Native variables in CSS allow you to define reusable values, making your stylesheets more dynamic and maintainable. This reduces repetition and eases style updates.
 
-- **Animations and Transitions**
-  - **CSS Transitions:** Smoothly transition property changes over a set duration, creating simple animations on hover or other interactions, without the need for JavaScript.
-  - **CSS Animations:** More powerful control over animations with `@keyframes`, allowing you to define complex, multi-step animation sequences directly within your stylesheets.
-- **Other notable CSS updates**
-  - **Calc Function:** Allows calculations within CSS (e.g., `width: calc(100% - 20px);` for dynamic sizing).
-  - **Shapes:** Features for creating basic geometric shapes (`circle`, `polygon`) with CSS.
-  - **Filters and Blend Modes:** Graphical effects like `blur`, `grayscale`, `drop-shadow`, and blend modes for manipulating image and element appearance.
+-  **Animations and Transitions**
+   -  **CSS Transitions:** Smoothly transition property changes over a set duration, creating simple animations on hover or other interactions, without the need for JavaScript.
+   -  **CSS Animations:** More powerful control over animations with `@keyframes`, allowing you to define complex, multi-step animation sequences directly within your stylesheets.
+-  **Other notable CSS updates**
+   -  **Calc Function:** Allows calculations within CSS (e.g., `width: calc(100% - 20px);` for dynamic sizing).
+   -  **Shapes:** Features for creating basic geometric shapes (`circle`, `polygon`) with CSS.
+   -  **Filters and Blend Modes:** Graphical effects like `blur`, `grayscale`, `drop-shadow`, and blend modes for manipulating image and element appearance.
 
 **Overall, I’d say this is well worth a read, but not much use as a reference book. And I must say: don’t bother buying this book new. I bought mine on Amazon for £19.99, but there are copies in very good condition on eBay for less than £3. It’s also online as a [PDF](https://wtf.tw/ref/duckett.pdf).**
 

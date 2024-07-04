@@ -3,6 +3,8 @@ title: SvelteKit environment variables - A Simple Guide, 2024
 date: June 01, 2024
 writer: Dan Edwards
 tags: Svelte, SvelteKit, JavaScript
+metadescription: Learn how to properly use environment variables in SvelteKit, including when to avoid them, how to implement them for public information, and best practices for handling sensitive data. Discover built-in SvelteKit features for secure and efficient environment variable management.
+keywords: SvelteKit, environment variables, web development, security, configuration management, frontend development, Vite, server-side rendering, client-side security, .env files, JavaScript frameworks
 ---
 
 SvelteKit has fantastic built-in support for environment variables, but do you really need to use them? This guide will help you determine if you need to use them, and show you how to do it properly.

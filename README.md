@@ -43,8 +43,7 @@ Filter term page - click on a tag or writer
 
 ### To-Do List
 
--  [ ] Remove copy buttons from inline code
--  [ ] Style the code blocks beautifully
+-  [ ] Style the code block copy buttons beautifully
 
 -  [ ] Add search function
 -  [ ] Add metadata to tags and writer pages

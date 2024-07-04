@@ -4,6 +4,7 @@ date: May 22, 2024
 writer: Dan Edwards
 tags: History, Book review
 metadescription: Explore the fascinating story of Anne Lister, 'the first modern lesbian,' and her coded diaries. Discover how her secret writings, cracked after decades, reveal a hidden life of love and defiance in 19th-century England. This blog delves into the history and significance of Lister's diaries, their rediscovery, and their impact on LGBTQ+ history.
+keywords: Anne Lister, secret diaries, coded writing, LGBTQ+ history, 19th-century England, Helena Whitbread, Gentleman Jack, Shibden Hall, lesbian history, historical cryptography, social constraints, hidden identities, literary discoveries, historical preservation, women's history
 ---
 
 As a big fan of [Happy Valley](https://www.metacritic.com/tv/happy-valley/), I recently visited the gorgeous West Yorkshire market town of Hebden Bridge, hoping to see some of the streets where my favourite police drama was filmed. I had forgotten that it is also the the UK’s [lesbian capital](https://www.bbc.co.uk/news/magazine-16962898), so of course, when I went into its delightful [independent bookshop](https://bookcasehebden.wordpress.com/), copies of [Anne Lister’s Secret Diaries](https://www.amazon.co.uk/Secret-Diaries-Lister-Virago-Classics/dp/1844087190) were prominently on display.
