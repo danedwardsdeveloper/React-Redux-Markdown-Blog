@@ -556,32 +556,46 @@ footer {
     line-height: 1.5;
   }
 }
+.markdown-content h2 {
+  font-size: 3rem;
+  margin: 6rem 0 2rem 0;
+}
+.markdown-content h3 {
+  font-size: 1.6rem;
+  margin: 4rem 0 1.5rem 0;
+}
 .markdown-content a {
   text-decoration: underline;
 }
 .markdown-content ul,
 .markdown-content ol {
-  list-style-position: inside;
   padding: 0;
+  margin: 0;
+}
+.markdown-content li {
+  margin-bottom: 1rem;
+}
+.markdown-content ol li::marker {
+  font-size: 3rem;
+  font-weight: bold;
 }
 .markdown-content pre {
   background-color: rgb(40, 42, 54);
+  padding: 20px;
+  border-radius: 5px;
 }
 .markdown-content pre .code-block-header {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  height: 2rem;
 }
 .markdown-content pre .code-block-header button {
-  height: -moz-min-content;
-  height: min-content;
+  width: 60px;
+  height: 25px;
 }
 .markdown-content pre .code-block-header .language {
   color: whitesmoke;
-}
-.markdown-content h3 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
 }
 @media screen and (max-width: 600px) {
   .markdown-content pre {
@@ -593,7 +607,7 @@ footer {
 }
 .markdown-content code {
   font-size: 1.6rem;
-  background-color: rgba(255, 165, 0, 0.5);
-  padding: 0.2rem 0.8rem;
+  background-color: rgba(211, 211, 211, 0.8);
+  padding: 1px 4px;
   border-radius: 3px;
 }/*# sourceMappingURL=index.css.map */

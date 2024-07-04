@@ -30,7 +30,7 @@ const CodeBlock = ({ className, children, ...rest }) => {
 					{...rest}
 					language={match[1]}
 					style={theme}
-					showLineNumbers={true}
+					showLineNumbers={false}
 				>
 					{String(children).replace(/\n$/, '')}
 				</SyntaxHighlighter>
