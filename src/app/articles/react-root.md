@@ -7,8 +7,6 @@ metadescription: Learn how to set up a complex React root with multiple provider
 keywords: complex react root, react setup, multiple providers, react dependencies, react order, redux, apollo provider, intlprovider, themeprovider, react-helmet, react-router, persistgate, react front-end, javascript, web development
 ---
 
-# Creating a Complex React Root: Order and Dependencies
-
 When creating a complex React root, it's crucial to understand the dependencies and order of the various providers and libraries being used. This article will walk you through setting up a comprehensive React application using multiple providers, ensuring that your application is both robust and maintainable.
 
 ## Code Overview
