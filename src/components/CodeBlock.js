@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula as theme } from 'react-syntax-highlighter/dist/esm/styles/prism';
+// import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const CodeBlock = ({ className, children, ...rest }) => {
