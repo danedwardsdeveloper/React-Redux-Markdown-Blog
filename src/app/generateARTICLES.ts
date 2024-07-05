@@ -22,6 +22,8 @@ interface Metadata {
 function generateARTICLES() {
 	const dirPath = path.join(__dirname, './articles');
 	let articleList: Article[] = [];
+	let filesProcessed = 0;
+	let latestArticle: Article | null = null;
 
 	const replaceProblemCharacters = (jsString: string): string => {
 		return jsString.replace(
@@ -88,7 +90,6 @@ function generateARTICLES() {
 		}
 
 		const markdownFiles = files.filter((file) => file.endsWith('.md'));
-		let filesProcessed = 0;
 
 		markdownFiles.forEach((file) => {
 			fs.readFile(path.join(dirPath, file), 'utf8', (err: NodeJS.ErrnoException | null, contents: string) => {
@@ -156,8 +157,18 @@ function generateARTICLES() {
 					content: content,
 				};
 
+				for (let key in article) {
+					if (article[key as keyof Article] === undefined) {
+						console.log(`File "${file}" is missing the "${key}" field.`);
+					}
+				}
+
 				articleList.push(article);
 				filesProcessed++;
+
+				if (!latestArticle || article.id > latestArticle.id) {
+					latestArticle = article;
+				}
 
 				if (filesProcessed === markdownFiles.length) {
 					let sortedList = articleList.sort((a, b) => b.id - a.id);
@@ -172,8 +183,13 @@ function generateARTICLES() {
 							console.log(`Error writing file: ${err}`);
 						} else {
 							console.log('ARTICLES.json has been generated successfully.');
-						}
-					});
+							console.log(`Number of files processed: ${filesProcessed}`);
+							if (latestArticle) {
+								console.log(`Title of the latest article: ${latestArticle.title}`);
+							} else {
+								console.log('No articles were processed.');
+							}
+						});
 				}
 			});
 		});
