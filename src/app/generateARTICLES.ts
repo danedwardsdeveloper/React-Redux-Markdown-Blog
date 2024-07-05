@@ -189,7 +189,8 @@ function generateARTICLES() {
 							} else {
 								console.log('No articles were processed.');
 							}
-						});
+						}
+					});
 				}
 			});
 		});
