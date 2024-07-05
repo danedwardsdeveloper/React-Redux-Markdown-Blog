@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const chalk = require('chalk');
 
 interface Article {
 	id: number;
@@ -94,7 +95,7 @@ function generateARTICLES() {
 		markdownFiles.forEach((file) => {
 			fs.readFile(path.join(dirPath, file), 'utf8', (err: NodeJS.ErrnoException | null, contents: string) => {
 				if (err) {
-					console.log(`Error reading file ${file}: ${err}`);
+					console.log(chalk.red(`Error reading file ${file}: ${err}`));
 					return;
 				}
 
@@ -159,7 +160,7 @@ function generateARTICLES() {
 
 				for (let key in article) {
 					if (article[key as keyof Article] === undefined) {
-						console.log(`File "${file}" is missing the "${key}" field.`);
+						console.log(chalk.yellow(`File "${file}" is missing the "${key}" field.`));
 					}
 				}
 
@@ -180,14 +181,14 @@ function generateARTICLES() {
 					);
 					fs.writeFile(filePath, data, (err: NodeJS.ErrnoException | null) => {
 						if (err) {
-							console.log(`Error writing file: ${err}`);
+							console.log(chalk.red(`Error writing file: ${err}`));
 						} else {
-							console.log('ARTICLES.json has been generated successfully.');
+							console.log(chalk.green('ARTICLES.json has been generated successfully.'));
 							console.log(`Number of files processed: ${filesProcessed}`);
 							if (latestArticle) {
-								console.log(`Title of the latest article: ${latestArticle.title}`);
+								console.log(chalk.blue(`Title of the latest article: ${latestArticle.title}`));
 							} else {
-								console.log('No articles were processed.');
+								console.log(chalk.red('No articles were processed.'));
 							}
 						}
 					});
