@@ -1,0 +1,8 @@
+{
+	"type": "node",
+	"request": "launch",
+	"name": "Run Current TS File",
+	"runtimeArgs": ["-r", "ts-node/register"],
+	"args": ["${relativeFile}"],
+	"env": { "TS_NODE_PROJECT": "${workspaceFolder}/tsconfig.json" }
+}
