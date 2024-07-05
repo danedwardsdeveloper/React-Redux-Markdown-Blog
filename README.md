@@ -63,15 +63,7 @@ Filter term page - click on a tag or writer
 -  [ ] Add search function
 -  [ ] Add metadata to tags and writer pages
 -  [ ] Generate keywords and meta descriptions for all proper coding articles
--  [ ] Remove Shakespeare articles
 -  [ ] Rewrite About page
-
-### Tests
-
--  Check that internal links don't contain problem punctuation
--  Check that length of `ARTICLES.json` matches number of files in `app/articles`
--  [ ] Write tests for localhost
--  [ ] Write tests for live site
 
 ### Installation
 
@@ -94,6 +86,15 @@ The Hollywood Hills shimmered in the distance, a constant reminder of the life I
 3. Run `generateARTICLES.js`. `ARTICLES.json` will be overwritten.
 4. Run `npm start` to start the live server or...
 5. Run `npm run build` to build a deployable site
+
+#### Console log after running generateArticles.ts
+
+```txt
+File "eloquent-javascript-review.md" is missing the "keywords" field.
+ARTICLES.json has been generated successfully.
+Number of files processed: 13
+Title of the latest article: Creating a Complex React Root | Order and Dependencies
+```
 
 ### To-Do List
 
