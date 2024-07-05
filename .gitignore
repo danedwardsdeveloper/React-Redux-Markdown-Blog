@@ -6,5 +6,8 @@
 .idea/
 *.log
 .DS_Store
-generateARTICLES.js
-generateARTICLES.js.map
+src/app/generateARTICLES.js
+src/app/generateARTICLES.js.map
+src/app/ARTICLES.json
+src/app/generateARTICLES.js
+src/app/generateARTICLES.js.map
