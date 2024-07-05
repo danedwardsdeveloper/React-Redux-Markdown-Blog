@@ -22,7 +22,10 @@ const CodeBlock = ({ className, children, ...rest }) => {
 					text={String(children).replace(/\n$/, '')}
 					onCopy={handleCopy}
 				>
-					<button>{copied ? 'Copied!' : 'Copy'}</button>
+					<button className="copy-button">
+						<span className="emoji">{copied ? '✅' : '📋'}&nbsp;</span>
+						<span className="text">Copy</span>
+					</button>
 				</CopyToClipboard>
 			</div>
 			{match ? (

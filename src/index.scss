@@ -1,3 +1,5 @@
+$code-block-background--dark: rgb(40, 42, 54);
+
 :root {
 	font-family: Georgia, serif;
 	font-size: 10px;
@@ -121,6 +123,7 @@ h5 {
 	color: #fe8c00;
 	background: -webkit-linear-gradient(left, #fe8c00, #f83600);
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 header {
@@ -538,8 +541,17 @@ footer {
 			padding: 10px;
 			height: 2rem;
 			button {
-				width: 60px;
-				height: 25px;
+				height: 28px;
+				background-color: $code-block-background--dark;
+				color: darken(whitesmoke, 30%);
+				border: 1px solid darken(whitesmoke, 30%);
+				border-radius: 3px;
+				transition: all 0.2s ease;
+				&:hover {
+					color: whitesmoke;
+					border-color: whitesmoke;
+					// background-color: lighten($code-block-background--dark, 20%);
+				}
 			}
 			.language {
 				color: whitesmoke;

@@ -140,6 +140,7 @@ h5 {
   color: #fe8c00;
   background: -webkit-linear-gradient(left, #fe8c00, #f83600);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -591,8 +592,16 @@ footer {
   height: 2rem;
 }
 .markdown-content pre .code-block-header button {
-  width: 60px;
-  height: 25px;
+  height: 28px;
+  background-color: rgb(40, 42, 54);
+  color: darkgray;
+  border: 1px solid darkgray;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+.markdown-content pre .code-block-header button:hover {
+  color: whitesmoke;
+  border-color: whitesmoke;
 }
 .markdown-content pre .code-block-header .language {
   color: whitesmoke;
