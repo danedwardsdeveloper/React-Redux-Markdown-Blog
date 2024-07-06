@@ -22,7 +22,7 @@ If you’re frustrated with trying to get chalk to work in VS Code, you’ve com
 npm install chalk
 ```
 
-1. Next, you need to import chalk properly - the official docs are out of date in this regard. Chalk is now an ES module, so you need to import it like this:
+2. Next, you need to import chalk properly - the official docs are out of date in this regard. Chalk is now an ES module, so you need to import it like this:
 
 ```jsx
 // myChalkFile.js
@@ -55,7 +55,7 @@ If you don’t have a settings.json, you can create one by running this in the V
 npm init -y
 ```
 
-1. Chalk should now be configured to work properly. You can run the code and view the styled output with this command:
+3. Chalk should now be configured to work properly. You can run the code and view the styled output with this command:
 
 ```bash
 node myChalkFile.js
@@ -90,6 +90,6 @@ Next, configure the extension settings by adding this to your VS Code `settings.
 }
 ```
 
-1. Ensure the code you want to run is your active tab, and use **Command Shift N** as usual to run the code
+2. Ensure the code you want to run is your active tab, and use **Command Shift N** as usual to run the code
 
 -  The code runs, but now in the ‘terminal’ tab, instead of the ‘output’ tab.
