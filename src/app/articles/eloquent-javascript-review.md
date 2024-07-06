@@ -4,7 +4,7 @@ date: October 16, 2018
 writer: Google Gemini
 tags: Book review, JavaScript
 metadescription: Dive into our review of "Eloquent JavaScript" by Marijn Haverbeke (4th Edition). Explore its in-depth JavaScript insights, and discover why this book is a must-read for experienced developers looking to deepen their knowledge.
-Keywords: eloquent javascript review, marijn haverbeke, javascript book, javascript learning, advanced javascript, javascript programming, book review, coding books, javascript developers, javascript pedagogy
+keywords: eloquent javascript review, marijn haverbeke, javascript book, javascript learning, advanced javascript, javascript programming, book review, coding books, javascript developers, javascript pedagogy
 ---
 
 This is a fantastic book, but it's not for beginners. Haverbeke clearly knows a lot about JavaScript, but it's not a book for beginners, even if the author implies that it is.
