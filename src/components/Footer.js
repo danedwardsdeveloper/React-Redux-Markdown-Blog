@@ -23,20 +23,20 @@ function Footer() {
 					<li>
 						<a
 							href="https://dashboard.simpleanalytics.com/arrayofsunshine.co.uk?utm_source=arrayofsunshine.co.uk&utm_content=badge"
-							referrerpolicy="origin"
+							referrerPolicy="origin"
 							target="_blank"
 							rel="noreferrer"
 						>
 							<picture>
 								<source
-									srcset="https://simpleanalyticsbadges.com/arrayofsunshine.co.uk?mode=dark"
+									srcSet="https://simpleanalyticsbadges.com/arrayofsunshine.co.uk?mode=dark"
 									media="(prefers-color-scheme: dark)"
 								/>
 								<img
 									src="https://simpleanalyticsbadges.com/arrayofsunshine.co.uk?mode=light"
 									loading="lazy"
-									referrerpolicy="no-referrer"
-									crossorigin="anonymous"
+									referrerPolicy="no-referrer"
+									crossOrigin="anonymous"
 									alt="Simple analytics badge"
 								/>
 							</picture>
