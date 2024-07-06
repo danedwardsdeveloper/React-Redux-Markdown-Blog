@@ -184,9 +184,9 @@ function generateARTICLES() {
 							console.log(chalk.red(`Error writing file: ${err}`));
 						} else {
 							console.log(chalk.green('ARTICLES.json has been generated successfully.'));
-							console.log(`Number of files processed: ${filesProcessed}`);
+							console.log(chalk.blue(`Number of files processed: ${filesProcessed}`));
 							if (latestArticle) {
-								console.log(chalk.blue(`Title of the latest article: ${latestArticle.title}`));
+								console.log(`Title of the latest article: ${chalk.blue(latestArticle.title)}`);
 							} else {
 								console.log(chalk.red('No articles were processed.'));
 							}
