@@ -28,11 +28,7 @@ function About() {
 				<div className="col">
 					<article className="article--full">
 						<h1 className="article-title--full">About</h1>
-						<p>
-							Array of Sunshine is a full-stack web development blog,
-							with practical JavaScript & React tutorials, and in-depth
-							coding book reviews. Created by Dan Edwards.
-						</p>
+						<p>{defaultMetaDescription} Created by Dan Edwards.</p>
 					</article>
 				</div>
 
