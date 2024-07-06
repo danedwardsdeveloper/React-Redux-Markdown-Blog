@@ -78,7 +78,7 @@ h2 {
   letter-spacing: -0.1rem;
   line-height: 1.25;
   color: #000;
-  font-family: "Arial Black", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a:hover {
@@ -91,7 +91,7 @@ h2,
 h3 {
   margin: 0 0 2rem 0;
   color: #000;
-  font-family: "Arial Black", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h4 {
@@ -104,7 +104,7 @@ h5 {
 
 .article-title--full {
   font-size: 5rem;
-  font-family: "Arial Black", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.2;
 }
 
@@ -128,7 +128,7 @@ h5 {
 }
 .site-title,
 .site-title:visited {
-  font-family: "Arial Black", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   display: inline-block;
   font-size: 2.2rem;
   color: #000;
@@ -425,18 +425,31 @@ footer {
   text-align: end;
 }
 
-.social-icons-list {
+.footer-list {
   margin-top: 0;
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
 }
-.social-icons-list li {
+.footer-list li {
   display: inline-block;
   margin-right: 1rem;
-  padding: 0.1em 1em;
   font-size: 1.6rem;
-  background-color: #eee;
-  border-radius: 3px;
+  border-radius: 2px;
+  height: -moz-min-content;
+  height: min-content;
+}
+.footer-list .social-icon {
+  background-color: #eef3f4;
+  padding: 0.1em 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 8px;
+  transition: all 0.2s ease-in-out;
+}
+.footer-list .social-icon:hover {
+  background-color: #e2eaec;
 }
 
 .copyright-notice {

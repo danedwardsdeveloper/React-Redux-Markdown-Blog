@@ -19,23 +19,45 @@ function Footer() {
 	return (
 		<footer>
 			<div className="footer-col-1">
-				<ul className="social-icons-list">
+				<ul className="footer-list">
 					<li>
+						<a
+							href="https://dashboard.simpleanalytics.com/arrayofsunshine.co.uk?utm_source=arrayofsunshine.co.uk&utm_content=badge"
+							referrerpolicy="origin"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<picture>
+								<source
+									srcset="https://simpleanalyticsbadges.com/arrayofsunshine.co.uk?mode=dark"
+									media="(prefers-color-scheme: dark)"
+								/>
+								<img
+									src="https://simpleanalyticsbadges.com/arrayofsunshine.co.uk?mode=light"
+									loading="lazy"
+									referrerpolicy="no-referrer"
+									crossorigin="anonymous"
+									alt="Simple analytics badge"
+								/>
+							</picture>
+						</a>
+					</li>
+					<li className="social-icon">
 						<a
 							href="https://github.com/danedwardsdeveloper"
 							target="_blank"
 							rel="noreferrer"
 						>
-							GitHub
+							Dan's GitHub
 						</a>
 					</li>
-					<li>
+					<li className="social-icon">
 						<a
 							href="https://danedwardsdeveloper.com/"
 							target="_blank"
 							rel="noreferrer"
 						>
-							CV
+							Dan's CV
 						</a>
 					</li>
 				</ul>
