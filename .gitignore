@@ -6,6 +6,5 @@
 .idea/
 *.log
 .DS_Store
-src/app/ARTICLES.json
 src/app/generateARTICLES.js
 src/app/generateARTICLES.js.map
