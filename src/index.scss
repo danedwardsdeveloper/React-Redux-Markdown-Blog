@@ -54,7 +54,7 @@ p {
 	font-size: 1.6rem;
 	line-height: 1.6;
 	margin-top: 0;
-	margin-bottom: 2.5rem;
+	margin-bottom: 1rem;
 }
 ul,
 ol {
@@ -198,7 +198,7 @@ header nav li:not(:last-child) {
 	font-size: 1.3rem;
 	margin-bottom: 1.5rem;
 	white-space: nowrap;
-	float: right;
+	// float: right;
 	transition: width 0.55s ease;
 	width: 10rem;
 }
@@ -314,6 +314,7 @@ main {
 .article-meta-col {
 	flex: 0 0 40%;
 	max-width: 40%;
+	margin-bottom: 2.5rem;
 }
 @media screen and (max-width: 600px) {
 	.article-meta-col {
@@ -373,7 +374,7 @@ footer {
 	width: 65%;
 }
 .footer-col-2 {
-	width: 35%;
+	min-width: 100px;
 	text-align: end;
 }
 .footer-list {
@@ -383,6 +384,10 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: end;
+	@media screen and (max-width: 600px) {
+		flex-direction: column-reverse;
+		align-items: flex-start;
+	}
 	li {
 		display: inline-block;
 		margin-right: 1rem;
@@ -534,6 +539,7 @@ footer {
 	ol {
 		padding: 0;
 		margin: 0;
+		list-style-position: inside;
 	}
 	li {
 		margin-bottom: 1rem;
@@ -545,6 +551,7 @@ footer {
 	// Code blocks
 	pre {
 		background-color: rgb(40, 42, 54);
+		margin: 0 0 3rem 0;
 		padding: 20px;
 		border-radius: 5px;
 		.code-block-header {
