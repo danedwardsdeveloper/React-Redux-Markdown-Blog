@@ -92,4 +92,4 @@ Next, configure the extension settings by adding this to your VS Code `settings.
 
 2. Ensure the code you want to run is your active tab, and use **Command Shift N** as usual to run the code
 
--  The code runs, but now in the ‘terminal’ tab, instead of the ‘output’ tab.
+-  The code runs, but now in the terminal tab, instead of the output tab.
