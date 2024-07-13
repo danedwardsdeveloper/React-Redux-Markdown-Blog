@@ -109,6 +109,6 @@ Title of the latest article: Creating a Complex React Root | Order and Dependenc
 
 ## Useful resources
 
--  [Building a Markdown React blog - YouTube tutorial](https://www.youtube.com/watch?v=gT1v33oA1gI) All the React content is wildly out of date, but it's still helpful for converting mardown into JSON
+-  [Building a Markdown React blog - YouTube tutorial](https://www.youtube.com/watch?v=gT1v33oA1gI) All the React content is wildly out of date, but it's still helpful for converting markdown into JSON
 -  [Enabling pagination in React](https://www.educative.io/answers/how-to-implement-pagination-in-reactjs)
 -  [Codecademy React Router cheatsheet](https://www.codecademy.com/learn/learn-react-router/modules/learn-react-router/cheatsheet)
