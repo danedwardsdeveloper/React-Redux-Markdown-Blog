@@ -86,7 +86,11 @@ Title of the latest article: Creating a Complex React Root | Order and Dependenc
 
 ### Feature Roadmap
 
+-  [ ] Style the code block buttons like this [example](https://fly.io/docs/flyctl/install/)
+   -  [ ] Code wrap buttons
+   -  [ ] Lovely tooltip
 -  [ ] Refactor some of the repetition in some of the components.
+-  [ ] Codeblock header slightly different colour
 -  [ ] Create an Error page / Component
 -  [ ] Style the Error page with useful Back and Home buttons
 -  [ ] Add conditional loading to the article page to handle errors gracefully
