@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { Helmet } from 'react-helmet-async';
 
-import Pagination from '../components/Pagination';
+import Pagination from './Pagination.jsx';
 
 import {
 	setCurrentArticle,
 	findArticlesContaining,
 	setFilterTermType,
-} from '../features/articles/articlesSlice';
+} from '../features/articles/articlesSlice.js';
 
 import {
 	baseURL,
@@ -18,7 +18,7 @@ import {
 	defaultKeywords,
 } from '../metadata.js';
 
-import { smoothScrollToTop } from '../features/utilities';
+import { smoothScrollToTop } from '../features/utilities.js';
 
 const ArticlePreviews = () => {
 	const { visibleArticles } = useSelector((state) => state.articlesSlice);

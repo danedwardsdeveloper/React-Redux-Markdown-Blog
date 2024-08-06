@@ -13,14 +13,14 @@ import { HelmetProvider } from 'react-helmet-async';
 
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { store, persistor } from './app/store.js';
+import { store, persistor } from './app/store.jsx';
 
-import App from './app/App';
-import About from './components/About';
-import Article from './components/Article';
-import ArticlePreviews from './components/ArticlePreviews';
-import FilterTermPage from './components/FilterTermPage.js';
-import ErrorPage from './components/ErrorPage.js';
+import App from './app/App.jsx';
+import About from './components/About.jsx';
+import Article from './components/Article.jsx';
+import ArticlePreviews from './components/ArticlePreviews.jsx';
+import FilterTermPage from './components/FilterTermPage.jsx';
+import ErrorPage from './components/ErrorPage.jsx';
 
 // import { store } from './app/store.js';
 

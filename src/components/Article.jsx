@@ -3,9 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-import MarkdownRenderer from './MarkdownRenderer';
-import SideBar from './SideBar';
-import NextPrev from './NextPrev';
+import ProgressBar from './ProgressBar.jsx';
+import MarkdownRenderer from './MarkdownRenderer.jsx';
+import SideBar from './SideBar.jsx';
+import NextPrev from './NextPrev.jsx';
 
 import {
 	baseURL,
@@ -17,11 +18,11 @@ import {
 import {
 	findArticlesContaining,
 	setFilterTermType,
-} from '../features/articles/articlesSlice';
+} from '../features/articles/articlesSlice.js';
 
-import { smoothScrollToTop } from '../features/utilities';
+import { smoothScrollToTop } from '../features/utilities.js';
 
-import { snapToTop } from '../features/utilities';
+import { snapToTop } from '../features/utilities.js';
 
 function Article() {
 	const currentArticle = useSelector(
@@ -65,6 +66,7 @@ function Article() {
 				<meta property="og:url" content={articleURL} />
 			</Helmet>
 
+			<ProgressBar />
 			<main className="main--article">
 				<div className="col">
 					<article className="article--full">

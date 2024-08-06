@@ -10,9 +10,6 @@ function ErrorPage() {
 	}, []);
 
 	const navigate = useNavigate();
-	// const handleBackClick = () => {
-	//   navigate("/");
-	// };
 
 	window.scrollTo({
 		top: 0,

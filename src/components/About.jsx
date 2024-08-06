@@ -7,7 +7,7 @@ import {
 	defaultKeywords,
 } from '../metadata.js';
 
-import SideBar from './SideBar';
+import SideBar from './SideBar.jsx';
 
 function About() {
 	return (
